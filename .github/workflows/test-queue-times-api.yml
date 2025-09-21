@@ -1,0 +1,132 @@
+name: Test Queue Times API
+
+on:
+  workflow_dispatch:  # Permette esecuzione manuale
+  schedule:
+    - cron: '*/5 * * * *'  # Ogni 5 minuti (per ora sempre attivo)
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Test Queue Times API
+      run: |
+        echo "🚀 Testing Gardaland Queue Times API..."
+        echo "📅 Current time: $(date)"
+        
+        # Chiamata API
+        echo "📡 Calling API: https://queue-times.com/parks/2/queue_times.json"
+        API_RESPONSE=$(curl -s "https://queue-times.com/parks/2/queue_times.json")
+        
+        # Verifica se la risposta è vuota
+        if [ -z "$API_RESPONSE" ]; then
+          echo "❌ ERROR: API response is empty"
+          exit 1
+        fi
+        
+        # Verifica se la risposta è JSON valido
+        echo "$API_RESPONSE" | jq . > /dev/null 2>&1
+        if [ $? -ne 0 ]; then
+          echo "❌ ERROR: Invalid JSON response"
+          echo "Raw response: $API_RESPONSE"
+          exit 1
+        fi
+        
+        echo "✅ API responded with valid JSON"
+        
+        # Analizza la struttura
+        echo ""
+        echo "📊 API RESPONSE ANALYSIS:"
+        echo "========================"
+        
+        # Conta le lands
+        LANDS_COUNT=$(echo "$API_RESPONSE" | jq '.lands | length')
+        echo "🏞️  Total lands: $LANDS_COUNT"
+        
+        # Lista le lands
+        echo ""
+        echo "🏞️  LANDS LIST:"
+        echo "$API_RESPONSE" | jq -r '.lands[] | "- \(.name) (ID: \(.id))"'
+        
+        # Conta i rides totali
+        echo ""
+        echo "🎢 RIDES ANALYSIS:"
+        TOTAL_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[]] | length')
+        echo "🎢 Total rides: $TOTAL_RIDES"
+        
+        # Lista tutti i rides con dettagli
+        echo ""
+        echo "🎢 ALL RIDES DETAILS:"
+        echo "$API_RESPONSE" | jq -r '.lands[] as $land | $land.rides[] | "- \(.name) (ID: \(.id)) - Open: \(.is_open) - Wait: \(.wait_time)min - Land: \($land.name)"'
+        
+        # Conta rides aperti/chiusi
+        OPEN_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == true)] | length')
+        CLOSED_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == false)] | length')
+        echo ""
+        echo "📊 RIDES STATUS:"
+        echo "🟢 Open rides: $OPEN_RIDES"
+        echo "🔴 Closed rides: $CLOSED_RIDES"
+        
+        # Mostra rides con tempi di attesa > 0
+        echo ""
+        echo "⏱️  RIDES WITH WAIT TIMES:"
+        RIDES_WITH_WAITS=$(echo "$API_RESPONSE" | jq -r '.lands[].rides[] | select(.wait_time > 0) | "- \(.name): \(.wait_time) minutes"')
+        if [ -z "$RIDES_WITH_WAITS" ]; then
+          echo "No rides currently have wait times > 0"
+        else
+          echo "$RIDES_WITH_WAITS"
+        fi
+        
+        # Salva risposta completa per debug
+        echo ""
+        echo "💾 FULL API RESPONSE (for mapping analysis):"
+        echo "============================================="
+        echo "$API_RESPONSE" | jq .
+        
+    - name: Create test wait-times.json
+      run: |
+        echo "📝 Creating test wait-times.json file..."
+        
+        # Chiamata API per creare il file
+        API_RESPONSE=$(curl -s "https://queue-times.com/parks/2/queue_times.json")
+        
+        # Crea il file wait-times.json con timestamp
+        cat > wait-times-test.json << EOF
+        {
+          "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+          "lastUpdate": "$(date +"%H:%M")",
+          "source": "queue-times.com API test",
+          "park_status": "$(echo "$API_RESPONSE" | jq -r 'if (.lands | length) > 0 then "data_available" else "no_data" end')",
+          "raw_data": $(echo "$API_RESPONSE"),
+          "processed_rides": $(echo "$API_RESPONSE" | jq '{
+            total_rides: [.lands[].rides[]] | length,
+            open_rides: [.lands[].rides[] | select(.is_open == true)] | length,
+            rides_with_waits: [.lands[].rides[] | select(.wait_time > 0)] | length,
+            rides_list: [.lands[].rides[] | {
+              name: .name,
+              id: .id,
+              is_open: .is_open,
+              wait_time: .wait_time,
+              land: (.id as $rid | .name as $rname | ($ARGS.positional[0] | .lands[] | select(.rides[] | select(.id == $rid)) | .name))
+            }]
+          }' --args "$API_RESPONSE")
+        }
+        EOF
+        
+        echo "✅ Created wait-times-test.json"
+        
+    - name: Upload test file as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: wait-times-test
+        path: wait-times-test.json
+        
+    - name: Show test file content
+      run: |
+        echo "📄 GENERATED TEST FILE CONTENT:"
+        echo "==============================="
+        cat wait-times-test.json | jq .

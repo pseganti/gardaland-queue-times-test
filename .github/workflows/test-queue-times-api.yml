@@ -1,130 +1,268 @@
-name: Test Queue Times API
+name: Gardaland Wait Times Updater
 
 on:
-  workflow_dispatch:  # Permette esecuzione manuale
   schedule:
-    - cron: '*/5 * * * *'  # Ogni 5 minuti (per ora sempre attivo)
+    - cron: '*/5 * * * *'  # Ogni 5 minuti
+  workflow_dispatch:  # Esecuzione manuale
 
 jobs:
-  test-api:
+  update-wait-times:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
-    - name: Test Queue Times API
-      run: |
-        echo "🚀 Testing Gardaland Queue Times API..."
-        echo "📅 Current time: $(date)"
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         
-        # Chiamata API
-        echo "📡 Calling API: https://queue-times.com/parks/12/queue_times.json"
+    - name: Check if park is open
+      id: park_status
+      run: |
+        echo "🕐 Checking if Gardaland is currently open..."
+        
+        # Ottieni data e ora attuale in fuso orario italiano
+        CURRENT_DATE=$(TZ='Europe/Rome' date '+%Y-%m-%d')
+        CURRENT_TIME=$(TZ='Europe/Rome' date '+%H:%M')
+        CURRENT_HOUR=$(TZ='Europe/Rome' date '+%H')
+        CURRENT_MINUTE=$(TZ='Europe/Rome' date '+%M')
+        
+        echo "📅 Current date (Italy): $CURRENT_DATE"
+        echo "🕐 Current time (Italy): $CURRENT_TIME"
+        
+        # Scarica gli orari da Netlify
+        HOURS_URL="https://paolitickets.netlify.app/opening-hours.json"
+        echo "📡 Fetching opening hours from $HOURS_URL"
+        
+        if ! curl -s "$HOURS_URL" -o opening-hours.json; then
+          echo "❌ Failed to fetch opening hours from Netlify"
+          echo "⚠️ Using fallback hours (10:00-23:00)"
+          if [ $CURRENT_HOUR -ge 10 ] && [ $CURRENT_HOUR -lt 23 ]; then
+            echo "🎢 Park should be open (fallback)"
+            echo "is_open=true" >> $GITHUB_OUTPUT
+          else
+            echo "🌙 Park is likely closed (fallback)"
+            echo "is_open=false" >> $GITHUB_OUTPUT
+          fi
+          exit 0
+        fi
+        
+        # Verifica che il file scaricato sia JSON valido
+        if ! jq . opening-hours.json > /dev/null 2>&1; then
+          echo "❌ Downloaded file is not valid JSON"
+          echo "⚠️ Using fallback hours"
+          if [ $CURRENT_HOUR -ge 10 ] && [ $CURRENT_HOUR -lt 23 ]; then
+            echo "🎢 Park should be open (fallback)"
+            echo "is_open=true" >> $GITHUB_OUTPUT
+          else
+            echo "🌙 Park is likely closed (fallback)"
+            echo "is_open=false" >> $GITHUB_OUTPUT
+          fi
+          exit 0
+        fi
+        
+        echo "✅ Successfully downloaded opening hours"
+        
+        # Estrai orari per oggi
+        OPEN_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].open // empty")
+        CLOSE_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].close // empty")
+        
+        if [ -z "$OPEN_TIME" ] || [ -z "$CLOSE_TIME" ] || [ "$OPEN_TIME" = "null" ] || [ "$CLOSE_TIME" = "null" ]; then
+          echo "📅 No opening hours found for $CURRENT_DATE - park is closed today"
+          echo "is_open=false" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        
+        echo "🕐 Today's hours: $OPEN_TIME - $CLOSE_TIME"
+        
+        # Converti orari in minuti per confronto
+        OPEN_HOUR=$(echo $OPEN_TIME | cut -d: -f1)
+        OPEN_MIN=$(echo $OPEN_TIME | cut -d: -f2)
+        CLOSE_HOUR=$(echo $CLOSE_TIME | cut -d: -f1)
+        CLOSE_MIN=$(echo $CLOSE_TIME | cut -d: -f2)
+        
+        OPEN_MINUTES=$((OPEN_HOUR * 60 + OPEN_MIN))
+        CLOSE_MINUTES=$((CLOSE_HOUR * 60 + CLOSE_MIN))
+        CURRENT_MINUTES=$((CURRENT_HOUR * 60 + CURRENT_MINUTE))
+        
+        # Gestisci chiusura dopo mezzanotte (es. 01:00)
+        if [ $CLOSE_HOUR -lt 6 ]; then
+          CLOSE_MINUTES=$((CLOSE_MINUTES + 1440))  # +24 ore
+          if [ $CURRENT_HOUR -lt 6 ]; then
+            CURRENT_MINUTES=$((CURRENT_MINUTES + 1440))
+          fi
+        fi
+        
+        echo "🔢 Open: ${OPEN_MINUTES}min, Close: ${CLOSE_MINUTES}min, Current: ${CURRENT_MINUTES}min"
+        
+        # Verifica se il parco è aperto
+        if [ $CURRENT_MINUTES -ge $OPEN_MINUTES ] && [ $CURRENT_MINUTES -lt $CLOSE_MINUTES ]; then
+          echo "🎢 Park is OPEN ($OPEN_TIME - $CLOSE_TIME)"
+          echo "is_open=true" >> $GITHUB_OUTPUT
+        else
+          echo "🔒 Park is CLOSED (outside $OPEN_TIME - $CLOSE_TIME)"
+          echo "is_open=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Fetch wait times from API
+      if: steps.park_status.outputs.is_open == 'true'
+      id: fetch_times
+      run: |
+        echo "📡 Fetching wait times from queue-times.com API..."
+        
+        # Chiamata API Gardaland
         API_RESPONSE=$(curl -s "https://queue-times.com/parks/12/queue_times.json")
         
-        # Verifica se la risposta è vuota
+        # Verifica se la risposta è valida
         if [ -z "$API_RESPONSE" ]; then
           echo "❌ ERROR: API response is empty"
+          echo "api_success=false" >> $GITHUB_OUTPUT
           exit 1
         fi
         
-        # Verifica se la risposta è JSON valido
+        # Verifica JSON valido
         echo "$API_RESPONSE" | jq . > /dev/null 2>&1
         if [ $? -ne 0 ]; then
           echo "❌ ERROR: Invalid JSON response"
-          echo "Raw response: $API_RESPONSE"
+          echo "api_success=false" >> $GITHUB_OUTPUT
           exit 1
         fi
         
         echo "✅ API responded with valid JSON"
         
-        # Analizza la struttura
-        echo ""
-        echo "📊 API RESPONSE ANALYSIS:"
-        echo "========================"
-        
-        # Conta le lands
-        LANDS_COUNT=$(echo "$API_RESPONSE" | jq '.lands | length')
-        echo "🏞️  Total lands: $LANDS_COUNT"
-        
-        # Lista le lands
-        echo ""
-        echo "🏞️  LANDS LIST:"
-        echo "$API_RESPONSE" | jq -r '.lands[] | "- \(.name) (ID: \(.id))"'
-        
-        # Conta i rides totali
-        echo ""
-        echo "🎢 RIDES ANALYSIS:"
-        TOTAL_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[]] | length')
-        echo "🎢 Total rides: $TOTAL_RIDES"
-        
-        # Lista tutti i rides con dettagli
-        echo ""
-        echo "🎢 ALL RIDES DETAILS:"
-        echo "$API_RESPONSE" | jq -r '.lands[] as $land | $land.rides[] | "- \(.name) (ID: \(.id)) - Open: \(.is_open) - Wait: \(.wait_time)min - Land: \($land.name)"'
-        
-        # Conta rides aperti/chiusi
-        OPEN_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == true)] | length')
-        CLOSED_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == false)] | length')
-        echo ""
-        echo "📊 RIDES STATUS:"
-        echo "🟢 Open rides: $OPEN_RIDES"
-        echo "🔴 Closed rides: $CLOSED_RIDES"
-        
-        # Mostra rides con tempi di attesa > 0
-        echo ""
-        echo "⏱️  RIDES WITH WAIT TIMES:"
-        RIDES_WITH_WAITS=$(echo "$API_RESPONSE" | jq -r '.lands[].rides[] | select(.wait_time > 0) | "- \(.name): \(.wait_time) minutes"')
-        if [ -z "$RIDES_WITH_WAITS" ]; then
-          echo "No rides currently have wait times > 0"
-        else
-          echo "$RIDES_WITH_WAITS"
-        fi
-        
-        # Salva risposta completa per debug
-        echo ""
-        echo "💾 FULL API RESPONSE (for mapping analysis):"
-        echo "============================================="
-        echo "$API_RESPONSE" | jq .
-        
-    - name: Create test wait-times.json
-      run: |
-        echo "📝 Creating test wait-times.json file..."
-        
-        # Chiamata API per creare il file
-        API_RESPONSE=$(curl -s "https://queue-times.com/parks/12/queue_times.json")
-        
-        # Crea timestamp
-        TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-        LAST_UPDATE=$(date +"%H:%M")
-        
-        # Conta statistiche
+        # Statistiche rapide
         TOTAL_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[]] | length')
         OPEN_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == true)] | length')
         RIDES_WITH_WAITS=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.wait_time > 0)] | length')
         
-        # Crea il file JSON
-        echo "{" > wait-times-test.json
-        echo "  \"timestamp\": \"$TIMESTAMP\"," >> wait-times-test.json
-        echo "  \"lastUpdate\": \"$LAST_UPDATE\"," >> wait-times-test.json
-        echo "  \"source\": \"queue-times.com API test\"," >> wait-times-test.json
-        echo "  \"total_rides\": $TOTAL_RIDES," >> wait-times-test.json
-        echo "  \"open_rides\": $OPEN_RIDES," >> wait-times-test.json
-        echo "  \"rides_with_waits\": $RIDES_WITH_WAITS," >> wait-times-test.json
-        echo "  \"raw_data\": " >> wait-times-test.json
-        echo "$API_RESPONSE" >> wait-times-test.json
-        echo "}" >> wait-times-test.json
+        echo "📊 Total rides: $TOTAL_RIDES"
+        echo "🟢 Open rides: $OPEN_RIDES"
+        echo "⏱️ Rides with wait times: $RIDES_WITH_WAITS"
         
-        echo "✅ Created wait-times-test.json"
-        
-    - name: Upload test file as artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: wait-times-test
-        path: wait-times-test.json
-        
-    - name: Show test file content
+        # Salva la risposta per il prossimo step
+        echo "$API_RESPONSE" > api_response.json
+        echo "api_success=true" >> $GITHUB_OUTPUT
+
+    - name: Create wait times mapping
+      if: steps.fetch_times.outputs.api_success == 'true'
       run: |
-        echo "📄 GENERATED TEST FILE CONTENT:"
-        echo "==============================="
-        cat wait-times-test.json
+        echo "🗺️ Creating ride name mapping..."
+        
+        API_RESPONSE=$(cat api_response.json)
+        TIMESTAMP=$(TZ='Europe/Rome' date -u +"%Y-%m-%dT%H:%M:%SZ")
+        LAST_UPDATE=$(TZ='Europe/Rome' date +"%H:%M")
+        
+        # Crea mappatura tra nomi API e nostri ID
+        cat > wait-times.json << 'EOF'
+        {
+          "timestamp": "TIMESTAMP_PLACEHOLDER",
+          "lastUpdate": "LAST_UPDATE_PLACEHOLDER", 
+          "source": "queue-times.com",
+          "status": "active",
+          "rides": {
+            "blue-tornado": {"name": "Blue Tornado", "wait_time": null, "is_open": false},
+            "oblivion": {"name": "Oblivion The Black Hole", "wait_time": null, "is_open": false},
+            "raptor": {"name": "Raptor", "wait_time": null, "is_open": false},
+            "shaman": {"name": "Shaman", "wait_time": null, "is_open": false},
+            "space-vertigo": {"name": "Space Vertigo", "wait_time": null, "is_open": false},
+            "magic-house": {"name": "Magic House", "wait_time": null, "is_open": false},
+            "fuga-da-atlantide": {"name": "Fuga da Atlantide", "wait_time": null, "is_open": false},
+            "colorado-boat": {"name": "Colorado Boat", "wait_time": null, "is_open": false},
+            "jumanji-the-adventure": {"name": "Jumanji - The Adventure", "wait_time": null, "is_open": false},
+            "jumanji-the-labyrinth": {"name": "Jumanji The Labyrinth", "wait_time": null, "is_open": false},
+            "jungle-rapids": {"name": "Jungle Rapids", "wait_time": null, "is_open": false},
+            "mammut": {"name": "Mammut", "wait_time": null, "is_open": false},
+            "cinema-4d": {"name": "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds", "wait_time": null, "is_open": false},
+            "animal-treasure-island": {"name": "Animal Treasure Island", "wait_time": null, "is_open": false},
+            "dragon-rush": {"name": "Dragon Rush", "wait_time": null, "is_open": false},
+            "wolf-legend": {"name": "Wolf Legend", "wait_time": null, "is_open": false},
+            "ortobruco-tour": {"name": "Ortobruco Tour", "wait_time": null, "is_open": false},
+            "volaplano": {"name": "Volaplano", "wait_time": null, "is_open": false},
+            "peter-pan": {"name": "Peter Pan", "wait_time": null, "is_open": false}
+          },
+          "raw_api_data": API_RESPONSE_PLACEHOLDER
+        }
+        EOF
+        
+        # Sostituisci i placeholder
+        sed -i "s/TIMESTAMP_PLACEHOLDER/$TIMESTAMP/g" wait-times.json
+        sed -i "s/LAST_UPDATE_PLACEHOLDER/$LAST_UPDATE/g" wait-times.json
+        
+        # Inserisci la risposta API (escape dei caratteri speciali)
+        ESCAPED_API=$(echo "$API_RESPONSE" | sed 's/\\/\\\\/g' | sed 's/"/\\"/g' | tr -d '\n\r')
+        sed -i "s/API_RESPONSE_PLACEHOLDER/$ESCAPED_API/g" wait-times.json
+        
+        # Aggiorna i tempi di attesa usando jq
+        echo "⏱️ Mapping wait times to our ride IDs..."
+        
+        # Mappa i tempi di attesa per ogni giostra
+        TEMP_FILE=$(mktemp)
+        cat wait-times.json | jq --argjson api_data "$API_RESPONSE" '
+          .rides["blue-tornado"].wait_time = ($api_data.lands[].rides[] | select(.name == "Blue Tornado") | .wait_time) |
+          .rides["blue-tornado"].is_open = ($api_data.lands[].rides[] | select(.name == "Blue Tornado") | .is_open) |
+          .rides["oblivion"].wait_time = ($api_data.lands[].rides[] | select(.name == "Oblivion The Black Hole") | .wait_time) |
+          .rides["oblivion"].is_open = ($api_data.lands[].rides[] | select(.name == "Oblivion The Black Hole") | .is_open) |
+          .rides["raptor"].wait_time = ($api_data.lands[].rides[] | select(.name == "Raptor") | .wait_time) |
+          .rides["raptor"].is_open = ($api_data.lands[].rides[] | select(.name == "Raptor") | .is_open) |
+          .rides["shaman"].wait_time = ($api_data.lands[].rides[] | select(.name == "Shaman") | .wait_time) |
+          .rides["shaman"].is_open = ($api_data.lands[].rides[] | select(.name == "Shaman") | .is_open) |
+          .rides["space-vertigo"].wait_time = ($api_data.lands[].rides[] | select(.name == "Space Vertigo") | .wait_time) |
+          .rides["space-vertigo"].is_open = ($api_data.lands[].rides[] | select(.name == "Space Vertigo") | .is_open) |
+          .rides["magic-house"].wait_time = ($api_data.lands[].rides[] | select(.name == "Magic House") | .wait_time) |
+          .rides["magic-house"].is_open = ($api_data.lands[].rides[] | select(.name == "Magic House") | .is_open) |
+          .rides["fuga-da-atlantide"].wait_time = ($api_data.lands[].rides[] | select(.name == "Fuga da Atlantide") | .wait_time) |
+          .rides["fuga-da-atlantide"].is_open = ($api_data.lands[].rides[] | select(.name == "Fuga da Atlantide") | .is_open) |
+          .rides["colorado-boat"].wait_time = ($api_data.lands[].rides[] | select(.name == "Colorado Boat") | .wait_time) |
+          .rides["colorado-boat"].is_open = ($api_data.lands[].rides[] | select(.name == "Colorado Boat") | .is_open) |
+          .rides["jumanji-the-adventure"].wait_time = ($api_data.lands[].rides[] | select(.name == "Jumanji - The Adventure") | .wait_time) |
+          .rides["jumanji-the-adventure"].is_open = ($api_data.lands[].rides[] | select(.name == "Jumanji - The Adventure") | .is_open) |
+          .rides["jumanji-the-labyrinth"].wait_time = ($api_data.lands[].rides[] | select(.name == "Jumanji The Labyrinth") | .wait_time) |
+          .rides["jumanji-the-labyrinth"].is_open = ($api_data.lands[].rides[] | select(.name == "Jumanji The Labyrinth") | .is_open) |
+          .rides["jungle-rapids"].wait_time = ($api_data.lands[].rides[] | select(.name == "Jungle Rapids") | .wait_time) |
+          .rides["jungle-rapids"].is_open = ($api_data.lands[].rides[] | select(.name == "Jungle Rapids") | .is_open) |
+          .rides["mammut"].wait_time = ($api_data.lands[].rides[] | select(.name == "Mammut") | .wait_time) |
+          .rides["mammut"].is_open = ($api_data.lands[].rides[] | select(.name == "Mammut") | .is_open) |
+          .rides["ortobruco-tour"].wait_time = ($api_data.lands[].rides[] | select(.name == "Ortobruco Tour") | .wait_time) |
+          .rides["ortobruco-tour"].is_open = ($api_data.lands[].rides[] | select(.name == "Ortobruco Tour") | .is_open) |
+          .rides["volaplano"].wait_time = ($api_data.lands[].rides[] | select(.name == "Volaplano") | .wait_time) |
+          .rides["volaplano"].is_open = ($api_data.lands[].rides[] | select(.name == "Volaplano") | .is_open) |
+          .rides["peter-pan"].wait_time = ($api_data.lands[].rides[] | select(.name == "Peter Pan") | .wait_time) |
+          .rides["peter-pan"].is_open = ($api_data.lands[].rides[] | select(.name == "Peter Pan") | .is_open)
+        ' > $TEMP_FILE
+        
+        mv $TEMP_FILE wait-times.json
+        
+        echo "✅ Wait times mapping completed"
+        
+        # Mostra riassunto
+        echo "📊 WAIT TIMES SUMMARY:"
+        echo "====================="
+        cat wait-times.json | jq -r '.rides | to_entries[] | select(.value.is_open == true and .value.wait_time > 0) | "\(.key): \(.value.wait_time) minutes"'
+
+    - name: Commit updated wait times
+      if: steps.fetch_times.outputs.api_success == 'true'
+      run: |
+        echo "💾 Committing updated wait times..."
+        
+        # Configura git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Aggiungi il file aggiornato
+        git add wait-times.json
+        
+        # Controlla se ci sono cambiamenti
+        if git diff --staged --quiet; then
+          echo "ℹ️ No changes to commit"
+        else
+          # Commit con timestamp
+          COMMIT_TIME=$(TZ='Europe/Rome' date '+%Y-%m-%d %H:%M')
+          git commit -m "Update wait times - $COMMIT_TIME"
+          git push
+          echo "✅ Wait times updated and pushed to repository"
+        fi
+
+    - name: Park closed notification
+      if: steps.park_status.outputs.is_open == 'false'
+      run: |
+        echo "🌙 Gardaland appears to be closed - skipping wait times update"
+        echo "ℹ️ This job will run again in 5 minutes"

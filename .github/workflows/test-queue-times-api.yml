@@ -224,6 +224,14 @@ jobs:
           .rides["jungle-rapids"].is_open = ($api_data.lands[].rides[] | select(.name == "Jungle Rapids") | .is_open) |
           .rides["mammut"].wait_time = ($api_data.lands[].rides[] | select(.name == "Mammut") | .wait_time) |
           .rides["mammut"].is_open = ($api_data.lands[].rides[] | select(.name == "Mammut") | .is_open) |
+          .rides["cinema-4d"].wait_time = ($api_data.lands[].rides[] | select(.name == "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds") | .wait_time) |
+          .rides["cinema-4d"].is_open = ($api_data.lands[].rides[] | select(.name == "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds") | .is_open) |
+          .rides["animal-treasure-island"].wait_time = ($api_data.lands[].rides[] | select(.name == "Animal Treasure Island") | .wait_time) |
+          .rides["animal-treasure-island"].is_open = ($api_data.lands[].rides[] | select(.name == "Animal Treasure Island") | .is_open) |
+          .rides["dragon-rush"].wait_time = ($api_data.lands[].rides[] | select(.name == "Dragon Rush") | .wait_time) |
+          .rides["dragon-rush"].is_open = ($api_data.lands[].rides[] | select(.name == "Dragon Rush") | .is_open) |
+          .rides["wolf-legend"].wait_time = ($api_data.lands[].rides[] | select(.name == "Wolf Legend") | .wait_time) |
+          .rides["wolf-legend"].is_open = ($api_data.lands[].rides[] | select(.name == "Wolf Legend") | .is_open) |
           .rides["ortobruco-tour"].wait_time = ($api_data.lands[].rides[] | select(.name == "Ortobruco Tour") | .wait_time) |
           .rides["ortobruco-tour"].is_open = ($api_data.lands[].rides[] | select(.name == "Ortobruco Tour") | .is_open) |
           .rides["volaplano"].wait_time = ($api_data.lands[].rides[] | select(.name == "Volaplano") | .wait_time) |

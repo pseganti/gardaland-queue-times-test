@@ -19,8 +19,8 @@ jobs:
         echo "📅 Current time: $(date)"
         
         # Chiamata API
-        echo "📡 Calling API: https://queue-times.com/parks/2/queue_times.json"
-        API_RESPONSE=$(curl -s "https://queue-times.com/parks/2/queue_times.json")
+        echo "📡 Calling API: https://queue-times.com/parks/12/queue_times.json"
+        API_RESPONSE=$(curl -s "https://queue-times.com/parks/12/queue_times.json")
         
         # Verifica se la risposta è vuota
         if [ -z "$API_RESPONSE" ]; then
@@ -96,26 +96,17 @@ jobs:
         
         # Crea il file wait-times.json con timestamp
         cat > wait-times-test.json << EOF
-        {
-          "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
-          "lastUpdate": "$(date +"%H:%M")",
-          "source": "queue-times.com API test",
-          "park_status": "$(echo "$API_RESPONSE" | jq -r 'if (.lands | length) > 0 then "data_available" else "no_data" end')",
-          "raw_data": $(echo "$API_RESPONSE"),
-          "processed_rides": $(echo "$API_RESPONSE" | jq '{
-            total_rides: [.lands[].rides[]] | length,
-            open_rides: [.lands[].rides[] | select(.is_open == true)] | length,
-            rides_with_waits: [.lands[].rides[] | select(.wait_time > 0)] | length,
-            rides_list: [.lands[].rides[] | {
-              name: .name,
-              id: .id,
-              is_open: .is_open,
-              wait_time: .wait_time,
-              land: (.id as $rid | .name as $rname | ($ARGS.positional[0] | .lands[] | select(.rides[] | select(.id == $rid)) | .name))
-            }]
-          }' --args "$API_RESPONSE")
-        }
-        EOF
+{
+  "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "lastUpdate": "$(date +"%H:%M")",
+  "source": "queue-times.com API test",
+  "park_status": "$(echo "$API_RESPONSE" | jq -r 'if (.lands | length) > 0 then "data_available" else "no_data" end')",
+  "total_rides": $(echo "$API_RESPONSE" | jq '[.lands[].rides[]] | length'),
+  "open_rides": $(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == true)] | length'),
+  "rides_with_waits": $(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.wait_time > 0)] | length'),
+  "raw_data": $(echo "$API_RESPONSE")
+}
+EOF
         
         echo "✅ Created wait-times-test.json"
         

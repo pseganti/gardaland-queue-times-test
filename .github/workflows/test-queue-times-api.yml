@@ -5,6 +5,9 @@ on:
     - cron: '*/5 * * * *'  # Ogni 5 minuti
   workflow_dispatch:  # Esecuzione manuale
 
+permissions:
+  contents: write  # Necessario per commit e push
+
 jobs:
   update-wait-times:
     runs-on: ubuntu-latest

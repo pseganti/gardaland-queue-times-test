@@ -92,21 +92,28 @@ jobs:
         echo "📝 Creating test wait-times.json file..."
         
         # Chiamata API per creare il file
-        API_RESPONSE=$(curl -s "https://queue-times.com/parks/2/queue_times.json")
+        API_RESPONSE=$(curl -s "https://queue-times.com/parks/12/queue_times.json")
         
-        # Crea il file wait-times.json con timestamp
-        cat > wait-times-test.json << EOF
-{
-  "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
-  "lastUpdate": "$(date +"%H:%M")",
-  "source": "queue-times.com API test",
-  "park_status": "$(echo "$API_RESPONSE" | jq -r 'if (.lands | length) > 0 then "data_available" else "no_data" end')",
-  "total_rides": $(echo "$API_RESPONSE" | jq '[.lands[].rides[]] | length'),
-  "open_rides": $(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == true)] | length'),
-  "rides_with_waits": $(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.wait_time > 0)] | length'),
-  "raw_data": $(echo "$API_RESPONSE")
-}
-EOF
+        # Crea timestamp
+        TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        LAST_UPDATE=$(date +"%H:%M")
+        
+        # Conta statistiche
+        TOTAL_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[]] | length')
+        OPEN_RIDES=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.is_open == true)] | length')
+        RIDES_WITH_WAITS=$(echo "$API_RESPONSE" | jq '[.lands[].rides[] | select(.wait_time > 0)] | length')
+        
+        # Crea il file JSON
+        echo "{" > wait-times-test.json
+        echo "  \"timestamp\": \"$TIMESTAMP\"," >> wait-times-test.json
+        echo "  \"lastUpdate\": \"$LAST_UPDATE\"," >> wait-times-test.json
+        echo "  \"source\": \"queue-times.com API test\"," >> wait-times-test.json
+        echo "  \"total_rides\": $TOTAL_RIDES," >> wait-times-test.json
+        echo "  \"open_rides\": $OPEN_RIDES," >> wait-times-test.json
+        echo "  \"rides_with_waits\": $RIDES_WITH_WAITS," >> wait-times-test.json
+        echo "  \"raw_data\": " >> wait-times-test.json
+        echo "$API_RESPONSE" >> wait-times-test.json
+        echo "}" >> wait-times-test.json
         
         echo "✅ Created wait-times-test.json"
         
@@ -120,4 +127,4 @@ EOF
       run: |
         echo "📄 GENERATED TEST FILE CONTENT:"
         echo "==============================="
-        cat wait-times-test.json | jq .
+        cat wait-times-test.json

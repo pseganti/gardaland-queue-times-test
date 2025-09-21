@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-21T16:58:16Z",
-  "lastUpdate": "18:58",
+  "timestamp": "2025-09-21T17:00:05Z",
+  "lastUpdate": "19:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -66,23 +66,23 @@
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds",
-      "wait_time": null,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": null,
-      "is_open": false
+      "wait_time": 0,
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": null,
-      "is_open": false
+      "wait_time": 45,
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": null,
-      "is_open": false
+      "wait_time": 30,
+      "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",

@@ -33,7 +33,7 @@ jobs:
         echo "🕐 Current time (Italy): $CURRENT_TIME"
         
         # Scarica gli orari da Netlify
-        HOURS_URL="https://paolitickets.netlify.app/opening-hours.json"
+        HOURS_URL="https://paolotickets.netlify.app/opening-hours.json"
         echo "📡 Fetching opening hours from $HOURS_URL"
         
         if ! curl -s "$HOURS_URL" -o opening-hours.json; then

@@ -2,7 +2,7 @@ name: Gardaland Wait Times Updater
 
 on:
   schedule:
-    - cron: '*/9 * * * *'  # Ogni 5 minuti
+    - cron: '*/5 * * * *'  # Ogni 5 minuti
   workflow_dispatch:  # Esecuzione manuale
 
 permissions:

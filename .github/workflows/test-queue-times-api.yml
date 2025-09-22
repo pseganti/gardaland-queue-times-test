@@ -287,8 +287,16 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # Aggiungi il file aggiornato
-        git add wait-times.json
+        # Crea file headers per CORS
+        cat > _headers << 'EOF'
+        /*
+          Access-Control-Allow-Origin: *
+          Access-Control-Allow-Methods: GET
+          Access-Control-Allow-Headers: Content-Type
+        EOF
+    
+        # Aggiungi i file aggiornati
+        git add wait-times.json _headers
         
         # Controlla se ci sono cambiamenti
         if git diff --staged --quiet; then

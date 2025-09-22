@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-22T14:13:31Z",
-  "lastUpdate": "16:13",
+  "timestamp": "2025-09-22T14:15:44Z",
+  "lastUpdate": "16:15",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -118,7 +118,7 @@
             "name": "Magic House",
             "is_open": true,
             "wait_time": 0,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 1905,
@@ -146,7 +146,7 @@
             "name": "Space Vertigo",
             "is_open": true,
             "wait_time": 0,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           }
         ]
       },
@@ -166,7 +166,7 @@
             "name": "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds",
             "is_open": true,
             "wait_time": 10,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 445,
@@ -180,7 +180,7 @@
             "name": "Dragon Rush",
             "is_open": true,
             "wait_time": 10,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 444,
@@ -201,7 +201,7 @@
             "name": "Jumanji The Labyrinth",
             "is_open": true,
             "wait_time": 0,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 453,
@@ -235,21 +235,21 @@
             "name": "Baby Pilota",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 11778,
             "name": "Baby Tour",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 6687,
             "name": "Doremifarm",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 6685,
@@ -263,7 +263,7 @@
             "name": "Funny Express",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 6684,
@@ -298,7 +298,7 @@
             "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 6693,
@@ -312,7 +312,7 @@
             "name": "Peppa Pig Land - La Casa di Peppa Pig",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 11781,
@@ -333,14 +333,14 @@
             "name": "Prezzemolo Land",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 15081,
             "name": "Prezzemolo Magic Village",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2025-09-22T14:09:52.000Z"
+            "last_updated": "2025-09-22T14:15:00.000Z"
           },
           {
             "id": 6692,

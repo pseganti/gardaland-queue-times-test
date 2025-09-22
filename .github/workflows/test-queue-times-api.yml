@@ -2,7 +2,7 @@ name: Gardaland Wait Times Updater
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Ogni 5 minuti
+    - cron: '*/9 * * * *'  # Ogni 5 minuti
   workflow_dispatch:  # Esecuzione manuale
 
 permissions:
@@ -65,17 +65,46 @@ jobs:
         
         echo "✅ Successfully downloaded opening hours"
         
-        # Estrai orari per oggi
-        OPEN_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].open // empty")
-        CLOSE_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].close // empty")
-        
-        if [ -z "$OPEN_TIME" ] || [ -z "$CLOSE_TIME" ] || [ "$OPEN_TIME" = "null" ] || [ "$CLOSE_TIME" = "null" ]; then
-          echo "📅 No opening hours found for $CURRENT_DATE - park is closed today"
-          echo "is_open=false" >> $GITHUB_OUTPUT
-          exit 0
-        fi
-        
-        echo "🕐 Today's hours: $OPEN_TIME - $CLOSE_TIME"
+        # DEBUG: Mostra struttura file scaricato
+echo "🔍 DEBUG: Struttura file opening-hours.json"
+echo "📄 Prime 10 righe del file:"
+head -10 opening-hours.json
+
+echo "🗓️ DEBUG: Cercando orari per data: $CURRENT_DATE"
+
+# DEBUG: Verifica se esiste la chiave gardaland
+HAS_GARDALAND=$(cat opening-hours.json | jq -r 'has("gardaland")')
+echo "🎢 Has 'gardaland' key: $HAS_GARDALAND"
+
+# DEBUG: Mostra tutte le date disponibili per gardaland
+echo "📅 Date disponibili in gardaland:"
+cat opening-hours.json | jq -r '.gardaland | keys[]' | head -5
+echo "... (prime 5 date)"
+
+# Estrai orari per oggi
+OPEN_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].open // empty")
+CLOSE_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].close // empty")
+
+# DEBUG: Mostra risultati estrazione
+echo "🕐 DEBUG: Orari estratti per $CURRENT_DATE:"
+echo "   OPEN_TIME = '$OPEN_TIME'"
+echo "   CLOSE_TIME = '$CLOSE_TIME'"
+
+# DEBUG: Mostra anche i giorni vicini
+YESTERDAY=$(TZ='Europe/Rome' date -d "yesterday" '+%Y-%m-%d')
+TOMORROW=$(TZ='Europe/Rome' date -d "tomorrow" '+%Y-%m-%d')
+echo "🗓️ DEBUG: Orari giorni vicini:"
+echo "   Ieri ($YESTERDAY): $(cat opening-hours.json | jq -r ".gardaland[\"$YESTERDAY\"].open // \"N/A\"") - $(cat opening-hours.json | jq -r ".gardaland[\"$YESTERDAY\"].close // \"N/A\"")"
+echo "   Domani ($TOMORROW): $(cat opening-hours.json | jq -r ".gardaland[\"$TOMORROW\"].open // \"N/A\"") - $(cat opening-hours.json | jq -r ".gardaland[\"$TOMORROW\"].close // \"N/A\"")"
+
+if [ -z "$OPEN_TIME" ] || [ -z "$CLOSE_TIME" ] || [ "$OPEN_TIME" = "null" ] || [ "$CLOSE_TIME" = "null" ]; then
+  echo "❌ DEBUG: Nessun orario trovato per $CURRENT_DATE"
+  echo "📅 Park is closed today - STOPPING workflow"
+  echo "is_open=false" >> $GITHUB_OUTPUT
+  exit 0
+fi
+
+echo "✅ DEBUG: Orari validi trovati: $OPEN_TIME - $CLOSE_TIME"
         
         # Converti orari in minuti per confronto
         OPEN_HOUR=$(echo $OPEN_TIME | cut -d: -f1)

@@ -2,7 +2,7 @@ name: Gardaland Wait Times Updater
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Ogni 5 minuti
+    - cron: '*/9 * * * *'  # Ogni 9 minuti (ridotto da 5)
   workflow_dispatch:  # Esecuzione manuale
 
 permissions:
@@ -37,74 +37,39 @@ jobs:
         echo "📡 Fetching opening hours from $HOURS_URL"
         
         if ! curl -s "$HOURS_URL" -o opening-hours.json; then
-          echo "❌ Failed to fetch opening hours from Netlify"
-          echo "⚠️ Using fallback hours (10:00-23:00)"
-          if [ $CURRENT_HOUR -ge 10 ] && [ $CURRENT_HOUR -lt 23 ]; then
-            echo "🎢 Park should be open (fallback)"
-            echo "is_open=true" >> $GITHUB_OUTPUT
-          else
-            echo "🌙 Park is likely closed (fallback)"
-            echo "is_open=false" >> $GITHUB_OUTPUT
-          fi
+          echo "❌ Failed to fetch opening hours from Netlify - STOPPING"
+          echo "is_open=false" >> $GITHUB_OUTPUT
           exit 0
         fi
         
         # Verifica che il file scaricato sia JSON valido
         if ! jq . opening-hours.json > /dev/null 2>&1; then
-          echo "❌ Downloaded file is not valid JSON"
-          echo "⚠️ Using fallback hours"
-          if [ $CURRENT_HOUR -ge 10 ] && [ $CURRENT_HOUR -lt 23 ]; then
-            echo "🎢 Park should be open (fallback)"
-            echo "is_open=true" >> $GITHUB_OUTPUT
-          else
-            echo "🌙 Park is likely closed (fallback)"
-            echo "is_open=false" >> $GITHUB_OUTPUT
-          fi
+          echo "❌ Downloaded file is not valid JSON - STOPPING"
+          echo "is_open=false" >> $GITHUB_OUTPUT
           exit 0
         fi
         
         echo "✅ Successfully downloaded opening hours"
         
-        # DEBUG: Mostra struttura file scaricato
-        echo "🔍 DEBUG: Struttura file opening-hours.json"
-        echo "📄 Prime 10 righe del file:"
-        head -10 opening-hours.json
-
-        echo "🗓️ DEBUG: Cercando orari per data: $CURRENT_DATE"
-
-        # DEBUG: Verifica se esiste la chiave gardaland
-        HAS_GARDALAND=$(cat opening-hours.json | jq -r 'has("gardaland")')
-        echo "🎢 Has 'gardaland' key: $HAS_GARDALAND"
-
-        # DEBUG: Mostra tutte le date disponibili per gardaland
-        echo "📅 Date disponibili in gardaland:"
-        cat opening-hours.json | jq -r '.gardaland | keys[]' | head -5
-        echo "... (prime 5 date)"
-
+        # DEBUG: Mostra info per troubleshooting
+        echo "🗓️ Looking for date: $CURRENT_DATE"
+        
         # Estrai orari per oggi
         OPEN_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].open // empty")
         CLOSE_TIME=$(cat opening-hours.json | jq -r ".gardaland[\"$CURRENT_DATE\"].close // empty")
-
-        # DEBUG: Mostra risultati estrazione
-        echo "🕐 DEBUG: Orari estratti per $CURRENT_DATE:"
+        
+        echo "🕐 Extracted times for $CURRENT_DATE:"
         echo "   OPEN_TIME = '$OPEN_TIME'"
         echo "   CLOSE_TIME = '$CLOSE_TIME'"
 
-        # DEBUG: Mostra anche i giorni vicini
-        YESTERDAY=$(TZ='Europe/Rome' date -d "yesterday" '+%Y-%m-%d')
-        TOMORROW=$(TZ='Europe/Rome' date -d "tomorrow" '+%Y-%m-%d')
-        echo "🗓️ DEBUG: Orari giorni vicini:"
-        echo "   Ieri ($YESTERDAY): $(cat opening-hours.json | jq -r ".gardaland[\"$YESTERDAY\"].open // \"N/A\"") - $(cat opening-hours.json | jq -r ".gardaland[\"$YESTERDAY\"].close // \"N/A\"")"
-        echo "   Domani ($TOMORROW): $(cat opening-hours.json | jq -r ".gardaland[\"$TOMORROW\"].open // \"N/A\"") - $(cat opening-hours.json | jq -r ".gardaland[\"$TOMORROW\"].close // \"N/A\"")"
-
+        # Se non ci sono orari per oggi, il parco è chiuso
         if [ -z "$OPEN_TIME" ] || [ -z "$CLOSE_TIME" ] || [ "$OPEN_TIME" = "null" ] || [ "$CLOSE_TIME" = "null" ]; then
-          echo "❌ DEBUG: Nessun orario trovato per $CURRENT_DATE"
-          echo "📅 Park is closed today - STOPPING workflow"
+          echo "🔒 No opening hours found for $CURRENT_DATE - Park is CLOSED"
           echo "is_open=false" >> $GITHUB_OUTPUT
           exit 0
         fi
 
-        echo "✅ DEBUG: Orari validi trovati: $OPEN_TIME - $CLOSE_TIME"
+        echo "✅ Valid opening hours found: $OPEN_TIME - $CLOSE_TIME"
         
         # Converti orari in minuti per confronto
         OPEN_HOUR=$(echo $OPEN_TIME | cut -d: -f1)
@@ -312,5 +277,5 @@ jobs:
     - name: Park closed notification
       if: steps.park_status.outputs.is_open == 'false'
       run: |
-        echo "🌙 Gardaland appears to be closed - skipping wait times update"
-        echo "ℹ️ This job will run again in 5 minutes"
+        echo "🌙 Gardaland is closed or hours unavailable - skipping wait times update"
+        echo "ℹ️ This job will run again in 9 minutes"

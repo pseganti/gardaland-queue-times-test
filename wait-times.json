@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-01-03T13:28:04Z",
-  "lastUpdate": "14:28",
+  "timestamp": "2026-01-03T13:47:27Z",
+  "lastUpdate": "14:47",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "magic-house": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 40,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {
@@ -110,43 +110,43 @@
             "id": 450,
             "name": "Blue Tornado",
             "is_open": true,
-            "wait_time": 40,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "wait_time": 35,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 448,
             "name": "Magic House",
             "is_open": true,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 1905,
             "name": "Oblivion The Black Hole",
-            "is_open": false,
-            "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "is_open": true,
+            "wait_time": 15,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 452,
             "name": "Raptor",
-            "is_open": false,
-            "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "is_open": true,
+            "wait_time": 5,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 443,
             "name": "Shaman",
             "is_open": true,
-            "wait_time": 25,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "wait_time": 20,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6696,
             "name": "Space Vertigo",
             "is_open": true,
-            "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "wait_time": 0,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           }
         ]
       },
@@ -159,70 +159,70 @@
             "name": "Animal Treasure Island",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 10756,
             "name": "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds",
             "is_open": true,
             "wait_time": 10,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 445,
             "name": "Colorado Boat",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 3740,
             "name": "Dragon Rush",
             "is_open": true,
-            "wait_time": 40,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "wait_time": 30,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 444,
             "name": "Fuga da Atlantide",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 10557,
             "name": "Jumanji - The Adventure",
             "is_open": true,
             "wait_time": 40,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 11806,
             "name": "Jumanji The Labyrinth",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 453,
             "name": "Jungle Rapids",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 454,
             "name": "Mammut",
             "is_open": true,
             "wait_time": 35,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 13626,
             "name": "Wolf Legend",
             "is_open": true,
             "wait_time": 15,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           }
         ]
       },
@@ -235,140 +235,140 @@
             "name": "Baby Pilota",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 11778,
             "name": "Baby Tour",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6687,
             "name": "Doremifarm",
             "is_open": true,
-            "wait_time": 10,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "wait_time": 5,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6685,
             "name": "Flying Island",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6686,
             "name": "Funny Express",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6684,
             "name": "Giostra Cavalli",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 11782,
             "name": "L'Albero di Prezzemolo",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6689,
             "name": "Monorotaia",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 447,
             "name": "Ortobruco Tour",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6695,
             "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6693,
             "name": "Peppa Pig Land - L'isola dei Pirati",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 11780,
             "name": "Peppa Pig Land - La Casa di Peppa Pig",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 11781,
             "name": "Peppa Pig Land - La Mongolfiera di Peppa Pig",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6690,
             "name": "Peter Pan",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 11784,
             "name": "Prezzemolo Land",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 15081,
             "name": "Prezzemolo Magic Village",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6692,
             "name": "Rocket Factory",
             "is_open": true,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6691,
             "name": "Superbaby",
             "is_open": false,
             "wait_time": 0,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 6683,
             "name": "Transgardaland Express",
             "is_open": true,
             "wait_time": 5,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "last_updated": "2026-01-03T13:44:04.000Z"
           },
           {
             "id": 449,
             "name": "Volaplano",
             "is_open": true,
-            "wait_time": 20,
-            "last_updated": "2026-01-03T13:24:07.000Z"
+            "wait_time": 10,
+            "last_updated": "2026-01-03T13:44:04.000Z"
           }
         ]
       }

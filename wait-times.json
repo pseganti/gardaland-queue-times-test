@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-02T10:20:46Z",
-  "lastUpdate": "12:20",
+  "timestamp": "2026-04-02T10:31:42Z",
+  "lastUpdate": "12:31",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,177 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
       "wait_time": 15,
+      "is_open": true
+    },
+    "shaman": {
+      "name": "Shaman",
+      "wait_time": 15,
+      "is_open": true
+    },
+    "space-vertigo": {
+      "name": "Space Vertigo",
+      "wait_time": 25,
+      "is_open": true
+    },
+    "magic-house": {
+      "name": "Magic House",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "fuga-da-atlantide": {
+      "name": "Fuga da Atlantide",
+      "wait_time": 0,
+      "is_open": false
+    },
+    "colorado-boat": {
+      "name": "Colorado Boat",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "jumanji-the-adventure": {
+      "name": "Jumanji - The Adventure",
+      "wait_time": 35,
+      "is_open": true
+    },
+    "jumanji-the-labyrinth": {
+      "name": "Jumanji The Labyrinth",
+      "wait_time": 0,
+      "is_open": true
+    },
+    "jungle-rapids": {
+      "name": "Jungle Rapids",
+      "wait_time": 0,
+      "is_open": true
+    },
+    "mammut": {
+      "name": "Mammut",
+      "wait_time": 30,
+      "is_open": true
+    },
+    "cinema-4d": {
+      "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
+      "wait_time": 0,
+      "is_open": false
+    },
+    "animal-treasure-island": {
+      "name": "Animal Treasure Island",
+      "wait_time": 0,
+      "is_open": false
+    },
+    "dragon-rush": {
+      "name": "Dragon Rush",
+      "wait_time": 45,
+      "is_open": true
+    },
+    "wolf-legend": {
+      "name": "Wolf Legend",
+      "wait_time": 25,
+      "is_open": true
+    },
+    "ortobruco-tour": {
+      "name": "Ortobruco Tour",
+      "wait_time": 10,
+      "is_open": true
+    },
+    "volaplano": {
+      "name": "Volaplano",
+      "wait_time": 35,
+      "is_open": true
+    },
+    "peter-pan": {
+      "name": "Peter Pan",
+      "wait_time": 0,
+      "is_open": true
+    },
+    "baby-pilota": {
+      "name": "Baby Pilota",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "baby-tour": {
+      "name": "Baby Tour",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "doremifarm": {
+      "name": "Doremifarm",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "flying-island": {
+      "name": "Flying Island",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "funny-express": {
+      "name": "Funny Express",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "giostra-cavalli": {
+      "name": "Giostra Cavalli",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "albero-prezzemolo": {
+      "name": "L'Albero di Prezzemolo",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "monorotaia": {
+      "name": "Monorotaia",
+      "wait_time": 0,
+      "is_open": true
+    },
+    "peppa-pig-trenino": {
+      "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "peppa-pig-pirati": {
+      "name": "Peppa Pig Land - L'isola dei Pirati",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "peppa-pig-casa": {
+      "name": "Peppa Pig Land - La Casa di Peppa Pig",
+      "wait_time": 0,
+      "is_open": false
+    },
+    "peppa-pig-mongolfiera": {
+      "name": "Peppa Pig Land - La Mongolfiera di Peppa Pig",
+      "wait_time": 5,
+      "is_open": true
+    },
+    "prezzemolo-land": {
+      "name": "Prezzemolo Land",
+      "wait_time": 0,
+      "is_open": false
+    },
+    "prezzemolo-magic-village": {
+      "name": "Prezzemolo Magic Village",
+      "wait_time": 0,
+      "is_open": false
+    },
+    "rocket-factory": {
+      "name": "Rocket Factory",
+      "wait_time": 0,
+      "is_open": true
+    },
+    "superbaby": {
+      "name": "Superbaby",
+      "wait_time": 0,
+      "is_open": true
+    },
+    "transgardaland-express": {
+      "name": "Transgardaland Express",
+      "wait_time": 5,
       "is_open": true
     }
   }

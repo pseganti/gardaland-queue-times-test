@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-02T10:31:42Z",
-  "lastUpdate": "12:31",
+  "timestamp": "2026-04-02T10:38:56Z",
+  "lastUpdate": "12:38",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "magic-house": {

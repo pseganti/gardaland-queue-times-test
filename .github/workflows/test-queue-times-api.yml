@@ -14,7 +14,7 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         
@@ -131,36 +131,75 @@ jobs:
         
         TIMESTAMP=$(TZ='Europe/Rome' date -u +"%Y-%m-%dT%H:%M:%SZ")
         LAST_UPDATE=$(TZ='Europe/Rome' date +"%H:%M")
-        
+
+        echo "🎢 Nomi giostre dall'API:"
+        jq -r '.lands[].rides[].name' api_response.json
+
+        # Costruisce il JSON in modo sicuro con jq, senza sed
+        # Il nome del Cinema 4D contiene apostrofo, lo passiamo come --arg per sicurezza
         jq -n \
           --arg timestamp "$TIMESTAMP" \
           --arg lastUpdate "$LAST_UPDATE" \
+          --arg cinema4d "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato" \
+          --arg albero "L'Albero di Prezzemolo" \
+          --arg peppaPirati "Peppa Pig Land - L'isola dei Pirati" \
           --slurpfile api api_response.json \
           '
-          def findRide(n): $api[0].lands[].rides[] | select(.name == n);
-          def rideObj(n): 
-            (try findRide(n) catch null) as $r |
+          def findRide(n): first($api[0].lands[].rides[] | select(.name == n)) // null;
+          def rideObj(n):
+            findRide(n) as $r |
             if $r then { wait_time: $r.wait_time, is_open: $r.is_open }
             else { wait_time: null, is_open: false }
             end;
+
           {
             timestamp: $timestamp,
             lastUpdate: $lastUpdate,
             source: "queue-times.com",
             status: "active",
             rides: {
-              "blue-tornado": ({ name: "Blue Tornado" } + rideObj("Blue Tornado")),
-              "oblivion": ({ name: "Oblivion The Black Hole" } + rideObj("Oblivion The Black Hole")),
-              "raptor": ({ name: "Raptor" } + rideObj("Raptor"))
+              "blue-tornado":             ({ name: "Blue Tornado" }             + rideObj("Blue Tornado")),
+              "oblivion":                 ({ name: "Oblivion The Black Hole" }   + rideObj("Oblivion The Black Hole")),
+              "raptor":                   ({ name: "Raptor" }                    + rideObj("Raptor")),
+              "shaman":                   ({ name: "Shaman" }                    + rideObj("Shaman")),
+              "space-vertigo":            ({ name: "Space Vertigo" }             + rideObj("Space Vertigo")),
+              "magic-house":              ({ name: "Magic House" }               + rideObj("Magic House")),
+              "fuga-da-atlantide":        ({ name: "Fuga da Atlantide" }         + rideObj("Fuga da Atlantide")),
+              "colorado-boat":            ({ name: "Colorado Boat" }             + rideObj("Colorado Boat")),
+              "jumanji-the-adventure":    ({ name: "Jumanji - The Adventure" }   + rideObj("Jumanji - The Adventure")),
+              "jumanji-the-labyrinth":    ({ name: "Jumanji The Labyrinth" }     + rideObj("Jumanji The Labyrinth")),
+              "jungle-rapids":            ({ name: "Jungle Rapids" }             + rideObj("Jungle Rapids")),
+              "mammut":                   ({ name: "Mammut" }                    + rideObj("Mammut")),
+              "cinema-4d":               ({ name: $cinema4d }                   + rideObj($cinema4d)),
+              "animal-treasure-island":   ({ name: "Animal Treasure Island" }    + rideObj("Animal Treasure Island")),
+              "dragon-rush":              ({ name: "Dragon Rush" }               + rideObj("Dragon Rush")),
+              "wolf-legend":              ({ name: "Wolf Legend" }               + rideObj("Wolf Legend")),
+              "ortobruco-tour":           ({ name: "Ortobruco Tour" }            + rideObj("Ortobruco Tour")),
+              "volaplano":                ({ name: "Volaplano" }                 + rideObj("Volaplano")),
+              "peter-pan":               ({ name: "Peter Pan" }                 + rideObj("Peter Pan")),
+              "baby-pilota":             ({ name: "Baby Pilota" }               + rideObj("Baby Pilota")),
+              "baby-tour":               ({ name: "Baby Tour" }                 + rideObj("Baby Tour")),
+              "doremifarm":              ({ name: "Doremifarm" }                + rideObj("Doremifarm")),
+              "flying-island":           ({ name: "Flying Island" }             + rideObj("Flying Island")),
+              "funny-express":           ({ name: "Funny Express" }             + rideObj("Funny Express")),
+              "giostra-cavalli":         ({ name: "Giostra Cavalli" }           + rideObj("Giostra Cavalli")),
+              "albero-prezzemolo":       ({ name: $albero }                     + rideObj($albero)),
+              "monorotaia":              ({ name: "Monorotaia" }                + rideObj("Monorotaia")),
+              "peppa-pig-trenino":       ({ name: "Peppa Pig Land - Il Trenino di Nonno Pig" }     + rideObj("Peppa Pig Land - Il Trenino di Nonno Pig")),
+              "peppa-pig-pirati":        ({ name: $peppaPirati }                + rideObj($peppaPirati)),
+              "peppa-pig-casa":          ({ name: "Peppa Pig Land - La Casa di Peppa Pig" }        + rideObj("Peppa Pig Land - La Casa di Peppa Pig")),
+              "peppa-pig-mongolfiera":   ({ name: "Peppa Pig Land - La Mongolfiera di Peppa Pig" } + rideObj("Peppa Pig Land - La Mongolfiera di Peppa Pig")),
+              "prezzemolo-land":         ({ name: "Prezzemolo Land" }           + rideObj("Prezzemolo Land")),
+              "prezzemolo-magic-village":({ name: "Prezzemolo Magic Village" }  + rideObj("Prezzemolo Magic Village")),
+              "rocket-factory":          ({ name: "Rocket Factory" }            + rideObj("Rocket Factory")),
+              "superbaby":               ({ name: "Superbaby" }                 + rideObj("Superbaby")),
+              "transgardaland-express":  ({ name: "Transgardaland Express" }    + rideObj("Transgardaland Express"))
             }
           }
           ' > wait-times.json
         
         echo "jq exit code: $?"
         echo "File size: $(wc -c < wait-times.json)"
-        cat wait-times.json
-        
-        echo "✅ wait-times.json created"
         echo ""
         echo "📊 WAIT TIMES SUMMARY:"
         echo "====================="

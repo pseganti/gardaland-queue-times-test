@@ -132,8 +132,6 @@ jobs:
         TIMESTAMP=$(TZ='Europe/Rome' date -u +"%Y-%m-%dT%H:%M:%SZ")
         LAST_UPDATE=$(TZ='Europe/Rome' date +"%H:%M")
         
-        # Mappa dei nomi API -> nostri ID
-        # Usiamo jq per costruire tutto il JSON in modo sicuro
         jq -n \
           --arg timestamp "$TIMESTAMP" \
           --arg lastUpdate "$LAST_UPDATE" \
@@ -145,35 +143,22 @@ jobs:
             if $r then { wait_time: $r.wait_time, is_open: $r.is_open }
             else { wait_time: null, is_open: false }
             end;
-
           {
             timestamp: $timestamp,
             lastUpdate: $lastUpdate,
             source: "queue-times.com",
             status: "active",
             rides: {
-              "blue-tornado":           ({ name: "Blue Tornado" }           + rideObj("Blue Tornado")),
-              "oblivion":               ({ name: "Oblivion The Black Hole" } + rideObj("Oblivion The Black Hole")),
-              "raptor":                 ({ name: "Raptor" }                  + rideObj("Raptor")),
-              "shaman":                 ({ name: "Shaman" }                  + rideObj("Shaman")),
-              "space-vertigo":          ({ name: "Space Vertigo" }           + rideObj("Space Vertigo")),
-              "magic-house":            ({ name: "Magic House" }             + rideObj("Magic House")),
-              "fuga-da-atlantide":      ({ name: "Fuga da Atlantide" }       + rideObj("Fuga da Atlantide")),
-              "colorado-boat":          ({ name: "Colorado Boat" }           + rideObj("Colorado Boat")),
-              "jumanji-the-adventure":  ({ name: "Jumanji - The Adventure" } + rideObj("Jumanji - The Adventure")),
-              "jumanji-the-labyrinth":  ({ name: "Jumanji The Labyrinth" }   + rideObj("Jumanji The Labyrinth")),
-              "jungle-rapids":          ({ name: "Jungle Rapids" }           + rideObj("Jungle Rapids")),
-              "mammut":                 ({ name: "Mammut" }                  + rideObj("Mammut")),
-              "cinema-4d":              ({ name: "Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds" } + rideObj("Cinema 4D Experience:  Prezzemolo and the Mystery of the Hidden Worlds")),
-              "animal-treasure-island": ({ name: "Animal Treasure Island" }  + rideObj("Animal Treasure Island")),
-              "dragon-rush":            ({ name: "Dragon Rush" }             + rideObj("Dragon Rush")),
-              "wolf-legend":            ({ name: "Wolf Legend" }             + rideObj("Wolf Legend")),
-              "ortobruco-tour":         ({ name: "Ortobruco Tour" }          + rideObj("Ortobruco Tour")),
-              "volaplano":              ({ name: "Volaplano" }               + rideObj("Volaplano")),
-              "peter-pan":              ({ name: "Peter Pan" }               + rideObj("Peter Pan"))
+              "blue-tornado": ({ name: "Blue Tornado" } + rideObj("Blue Tornado")),
+              "oblivion": ({ name: "Oblivion The Black Hole" } + rideObj("Oblivion The Black Hole")),
+              "raptor": ({ name: "Raptor" } + rideObj("Raptor"))
             }
           }
           ' > wait-times.json
+        
+        echo "jq exit code: $?"
+        echo "File size: $(wc -c < wait-times.json)"
+        cat wait-times.json
         
         echo "✅ wait-times.json created"
         echo ""

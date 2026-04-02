@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-02T11:31:48Z",
-  "lastUpdate": "13:31",
+  "timestamp": "2026-04-02T12:10:15Z",
+  "lastUpdate": "14:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 0,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "cinema-4d": {
@@ -72,21 +72,21 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 50,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-trenino": {

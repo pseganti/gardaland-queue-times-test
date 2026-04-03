@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-03T11:54:50Z",
-  "lastUpdate": "13:54",
+  "timestamp": "2026-04-03T13:01:40Z",
+  "lastUpdate": "15:01",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,22 +11,22 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,12 +61,12 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 35,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 35,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "peppa-pig-trenino": {

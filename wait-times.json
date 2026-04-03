@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-03T14:04:56Z",
-  "lastUpdate": "16:04",
+  "timestamp": "2026-04-03T14:58:44Z",
+  "lastUpdate": "16:58",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,27 +11,27 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 15,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,17 +41,17 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jungle-rapids": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 55,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "flying-island": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-trenino": {

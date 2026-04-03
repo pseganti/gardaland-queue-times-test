@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-03T08:44:32Z",
-  "lastUpdate": "10:44",
+  "timestamp": "2026-04-03T09:40:06Z",
+  "lastUpdate": "11:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "shaman": {
@@ -26,53 +26,53 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 30,
+      "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 0,
+      "wait_time": 25,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
@@ -81,8 +81,8 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 45,
       "is_open": true
     },
     "peter-pan": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "flying-island": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-casa": {

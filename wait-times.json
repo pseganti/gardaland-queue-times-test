@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-04T10:20:14Z",
-  "lastUpdate": "12:20",
+  "timestamp": "2026-04-04T10:56:19Z",
+  "lastUpdate": "12:56",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 30,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "space-vertigo": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 45,
+      "wait_time": 50,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,17 +76,17 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 50,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -121,7 +121,7 @@
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "giostra-cavalli": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-casa": {

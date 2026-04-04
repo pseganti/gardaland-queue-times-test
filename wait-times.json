@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-04T11:32:18Z",
-  "lastUpdate": "13:32",
+  "timestamp": "2026-04-04T11:55:32Z",
+  "lastUpdate": "13:55",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,27 +11,27 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -66,7 +66,7 @@
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 45,
+      "wait_time": 30,
       "is_open": true
     },
     "peter-pan": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "flying-island": {

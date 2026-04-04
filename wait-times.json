@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-04T08:07:00Z",
-  "lastUpdate": "10:07",
+  "timestamp": "2026-04-04T08:58:10Z",
+  "lastUpdate": "10:58",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,13 +11,13 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -26,18 +26,18 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
@@ -56,13 +56,13 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 45,
+      "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 25,
       "is_open": true
     },
     "peter-pan": {
@@ -102,37 +102,37 @@
     "baby-pilota": {
       "name": "Baby Pilota",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "baby-tour": {
       "name": "Baby Tour",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "giostra-cavalli": {
       "name": "Giostra Cavalli",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "albero-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "monorotaia": {
       "name": "Monorotaia",
@@ -141,13 +141,13 @@
     },
     "peppa-pig-trenino": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "peppa-pig-casa": {
       "name": "Peppa Pig Land - La Casa di Peppa Pig",
@@ -156,8 +156,8 @@
     },
     "peppa-pig-mongolfiera": {
       "name": "Peppa Pig Land - La Mongolfiera di Peppa Pig",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "prezzemolo-land": {
       "name": "Prezzemolo Land",
@@ -181,8 +181,8 @@
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     }
   }
 }

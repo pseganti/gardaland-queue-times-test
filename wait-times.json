@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-05T13:13:56Z",
-  "lastUpdate": "15:13",
+  "timestamp": "2026-04-05T14:01:24Z",
+  "lastUpdate": "16:01",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -31,22 +31,22 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 20,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 45,
+      "wait_time": 55,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
@@ -71,17 +71,17 @@
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 50,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {

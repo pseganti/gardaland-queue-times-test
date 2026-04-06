@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-06T09:21:22Z",
-  "lastUpdate": "11:21",
+  "timestamp": "2026-04-06T10:35:19Z",
+  "lastUpdate": "12:35",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "oblivion": {
@@ -16,37 +16,37 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 15,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 30,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 45,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,28 +76,28 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 35,
+      "wait_time": 25,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "baby-pilota": {
       "name": "Baby Pilota",
@@ -131,13 +131,13 @@
     },
     "albero-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "monorotaia": {
       "name": "Monorotaia",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peppa-pig-trenino": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
@@ -172,12 +172,12 @@
     "rocket-factory": {
       "name": "Rocket Factory",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "superbaby": {
       "name": "Superbaby",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",

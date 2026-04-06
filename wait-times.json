@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-06T11:31:10Z",
-  "lastUpdate": "13:31",
+  "timestamp": "2026-04-06T13:45:50Z",
+  "lastUpdate": "15:45",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 15,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 40,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 35,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d": {
@@ -71,12 +71,12 @@
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

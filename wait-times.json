@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-07T11:32:28Z",
-  "lastUpdate": "13:32",
+  "timestamp": "2026-04-07T12:38:55Z",
+  "lastUpdate": "14:38",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 30,
+      "wait_time": 15,
       "is_open": true
     },
     "cinema-4d": {
@@ -71,7 +71,7 @@
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "dragon-rush": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-trenino": {

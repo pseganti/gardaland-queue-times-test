@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-10T13:47:32Z",
-  "lastUpdate": "15:47",
+  "timestamp": "2026-04-10T14:40:01Z",
+  "lastUpdate": "16:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-10T11:28:30Z",
-  "lastUpdate": "13:28",
+  "timestamp": "2026-04-10T12:07:29Z",
+  "lastUpdate": "14:07",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

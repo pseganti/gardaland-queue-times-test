@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-10T14:40:01Z",
-  "lastUpdate": "16:40",
+  "timestamp": "2026-04-10T15:33:56Z",
+  "lastUpdate": "17:33",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "oblivion": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 40,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {

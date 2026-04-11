@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-11T12:00:41Z",
-  "lastUpdate": "14:00",
+  "timestamp": "2026-04-11T13:18:52Z",
+  "lastUpdate": "15:18",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,22 +11,22 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,17 +76,17 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-tour": {

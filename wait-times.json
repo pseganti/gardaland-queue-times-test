@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-11T14:51:18Z",
-  "lastUpdate": "16:51",
+  "timestamp": "2026-04-11T15:22:39Z",
+  "lastUpdate": "17:22",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {

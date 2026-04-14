@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-14T11:31:01Z",
-  "lastUpdate": "13:31",
+  "timestamp": "2026-04-14T12:41:46Z",
+  "lastUpdate": "14:41",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "funny-express": {

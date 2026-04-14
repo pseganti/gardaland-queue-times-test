@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-14T12:41:46Z",
-  "lastUpdate": "14:41",
+  "timestamp": "2026-04-14T14:24:29Z",
+  "lastUpdate": "16:24",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "wolf-legend": {

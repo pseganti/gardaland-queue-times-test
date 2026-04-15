@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-15T10:16:52Z",
-  "lastUpdate": "12:16",
+  "timestamp": "2026-04-15T11:29:59Z",
+  "lastUpdate": "13:29",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "magic-house": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-16T10:51:49Z",
-  "lastUpdate": "12:51",
+  "timestamp": "2026-04-16T11:52:37Z",
+  "lastUpdate": "13:52",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -26,8 +26,8 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-trenino": {

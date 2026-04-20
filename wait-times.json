@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-20T12:54:32Z",
-  "lastUpdate": "14:54",
+  "timestamp": "2026-04-20T14:48:28Z",
+  "lastUpdate": "16:48",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "volaplano": {

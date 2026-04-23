@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-04-23T11:17:11Z",
-  "lastUpdate": "13:17",
+  "timestamp": "2026-04-23T12:11:22Z",
+  "lastUpdate": "14:11",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "magic-house": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 45,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -72,11 +72,11 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {

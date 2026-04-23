@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-23T12:11:22Z",
-  "lastUpdate": "14:11",
+  "timestamp": "2026-04-23T14:12:53Z",
+  "lastUpdate": "16:12",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -31,8 +31,8 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "mammut": {
@@ -72,11 +72,11 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-tour": {

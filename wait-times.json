@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-04-25T08:14:06Z",
-  "lastUpdate": "10:14",
+  "timestamp": "2026-04-25T09:12:41Z",
+  "lastUpdate": "11:12",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 30,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 35,
       "is_open": true
     },
     "shaman": {
@@ -26,17 +26,17 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 25,
       "is_open": true
     },
     "peter-pan": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "funny-express": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-casa": {

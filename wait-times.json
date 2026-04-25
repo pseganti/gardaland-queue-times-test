@@ -1,28 +1,28 @@
 {
-  "timestamp": "2026-04-24T15:42:31Z",
-  "lastUpdate": "17:42",
+  "timestamp": "2026-04-25T08:14:06Z",
+  "lastUpdate": "10:14",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "space-vertigo": {
       "name": "Space Vertigo",
@@ -36,58 +36,58 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "volaplano": {
       "name": "Volaplano",
@@ -96,8 +96,8 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "baby-pilota": {
       "name": "Baby Pilota",
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "funny-express": {
@@ -137,7 +137,7 @@
     "monorotaia": {
       "name": "Monorotaia",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "peppa-pig-trenino": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
@@ -146,7 +146,7 @@
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-casa": {
@@ -172,12 +172,12 @@
     "rocket-factory": {
       "name": "Rocket Factory",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "superbaby": {
       "name": "Superbaby",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",

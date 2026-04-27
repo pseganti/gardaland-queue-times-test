@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-27T10:12:25Z",
-  "lastUpdate": "12:12",
+  "timestamp": "2026-04-27T12:00:09Z",
+  "lastUpdate": "14:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 30,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -21,22 +21,22 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,8 +76,8 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 35,
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 30,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

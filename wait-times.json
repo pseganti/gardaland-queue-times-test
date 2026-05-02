@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-02T11:59:02Z",
-  "lastUpdate": "13:59",
+  "timestamp": "2026-05-02T13:40:04Z",
+  "lastUpdate": "15:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 55,
+      "wait_time": 65,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 50,
+      "wait_time": 60,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 55,
+      "wait_time": 80,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 55,
+      "wait_time": 75,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 80,
+      "wait_time": 85,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 35,
+      "wait_time": 55,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 65,
+      "wait_time": 70,
       "is_open": true
     },
     "cinema-4d": {
@@ -71,27 +71,27 @@
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 55,
+      "wait_time": 70,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 50,
+      "wait_time": 60,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 25,
+      "wait_time": 35,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 45,
+      "wait_time": 30,
       "is_open": true
     },
     "peter-pan": {
@@ -116,12 +116,12 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "giostra-cavalli": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-casa": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "superbaby": {

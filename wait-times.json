@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-02T13:40:04Z",
-  "lastUpdate": "15:40",
+  "timestamp": "2026-05-02T14:33:37Z",
+  "lastUpdate": "16:33",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,17 +11,17 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 65,
+      "wait_time": 75,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 65,
+      "wait_time": 60,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 60,
+      "wait_time": 50,
       "is_open": true
     },
     "space-vertigo": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 85,
+      "wait_time": 80,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 55,
+      "wait_time": 45,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 70,
+      "wait_time": 90,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,17 +76,17 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 70,
+      "wait_time": 80,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 60,
+      "wait_time": 40,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 35,
+      "wait_time": 25,
       "is_open": true
     },
     "volaplano": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 30,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-trenino": {

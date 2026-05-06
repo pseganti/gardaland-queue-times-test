@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-06T11:18:51Z",
-  "lastUpdate": "13:18",
+  "timestamp": "2026-05-06T13:05:26Z",
+  "lastUpdate": "15:05",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,8 +61,8 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -87,7 +87,7 @@
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "volaplano": {
       "name": "Volaplano",

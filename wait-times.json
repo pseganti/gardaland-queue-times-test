@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-11T11:24:07Z",
-  "lastUpdate": "13:24",
+  "timestamp": "2026-05-11T14:02:36Z",
+  "lastUpdate": "16:02",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -81,12 +81,12 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
@@ -131,7 +131,7 @@
     },
     "albero-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "monorotaia": {

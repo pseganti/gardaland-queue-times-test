@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-10T15:10:17Z",
-  "lastUpdate": "17:10",
+  "timestamp": "2026-05-11T11:24:07Z",
+  "lastUpdate": "13:24",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "oblivion": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -121,7 +121,7 @@
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "giostra-cavalli": {
@@ -131,7 +131,7 @@
     },
     "albero-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "monorotaia": {

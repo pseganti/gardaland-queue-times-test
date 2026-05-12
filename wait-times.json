@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-05-12T10:17:49Z",
-  "lastUpdate": "12:17",
+  "timestamp": "2026-05-12T12:21:32Z",
+  "lastUpdate": "14:21",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -36,12 +36,12 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -61,12 +61,12 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

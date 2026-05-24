@@ -1,27 +1,27 @@
 {
-  "timestamp": "2026-05-24T11:40:42Z",
-  "lastUpdate": "13:40",
+  "timestamp": "2026-05-24T12:46:41Z",
+  "lastUpdate": "14:46",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "mammut": {
@@ -72,16 +72,16 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-trenino": {

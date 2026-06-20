@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-06-20T15:25:55Z",
-  "lastUpdate": "17:25",
+  "timestamp": "2026-06-20T17:01:39Z",
+  "lastUpdate": "19:01",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,42 +11,42 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
@@ -141,7 +141,7 @@
     },
     "peppa-pig-trenino": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-pirati": {

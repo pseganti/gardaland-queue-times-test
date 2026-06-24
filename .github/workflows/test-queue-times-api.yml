@@ -227,6 +227,7 @@ jobs:
         else
           COMMIT_TIME=$(TZ='Europe/Rome' date '+%Y-%m-%d %H:%M')
           git commit -m "Update wait times - $COMMIT_TIME"
+          git pull --rebase origin main
           git push
           echo "✅ Wait times updated and pushed to repository"
         fi

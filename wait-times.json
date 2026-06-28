@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-06-28T15:52:44Z",
-  "lastUpdate": "17:52",
+  "timestamp": "2026-06-28T17:00:29Z",
+  "lastUpdate": "19:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "wolf-legend": {

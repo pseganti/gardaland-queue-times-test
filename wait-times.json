@@ -1,33 +1,33 @@
 {
-  "timestamp": "2026-06-30T14:43:33Z",
-  "lastUpdate": "16:43",
+  "timestamp": "2026-06-30T16:55:07Z",
+  "lastUpdate": "18:55",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
@@ -36,8 +36,8 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
@@ -56,13 +56,13 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -81,18 +81,18 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-05T15:45:36Z",
-  "lastUpdate": "17:45",
+  "timestamp": "2026-07-05T16:46:40Z",
+  "lastUpdate": "18:46",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
@@ -36,13 +36,13 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "wolf-legend": {
@@ -87,7 +87,7 @@
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "volaplano": {
       "name": "Volaplano",

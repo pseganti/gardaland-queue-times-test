@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-07-05T17:49:23Z",
-  "lastUpdate": "19:49",
+  "timestamp": "2026-07-05T18:52:37Z",
+  "lastUpdate": "20:52",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "superbaby": {

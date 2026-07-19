@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-07-19T19:31:55Z",
-  "lastUpdate": "21:31",
+  "timestamp": "2026-07-19T20:25:12Z",
+  "lastUpdate": "22:25",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,8 +11,8 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "raptor": {
       "name": "Raptor",
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "wolf-legend": {

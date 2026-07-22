@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-07-22T15:12:11Z",
-  "lastUpdate": "17:12",
+  "timestamp": "2026-07-22T16:48:19Z",
+  "lastUpdate": "18:48",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 30,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,22 +76,22 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 20,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-trenino": {

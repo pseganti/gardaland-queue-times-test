@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-26T11:04:17Z",
-  "lastUpdate": "13:04",
+  "timestamp": "2026-07-26T12:12:20Z",
+  "lastUpdate": "14:12",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 55,
+      "wait_time": 30,
       "is_open": true
     },
     "oblivion": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-tour": {

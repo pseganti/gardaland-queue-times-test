@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-07-26T18:16:06Z",
-  "lastUpdate": "20:16",
+  "timestamp": "2026-07-26T19:39:14Z",
+  "lastUpdate": "21:39",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d": {

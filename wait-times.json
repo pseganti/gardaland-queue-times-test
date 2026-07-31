@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-31T12:20:20Z",
-  "lastUpdate": "14:20",
+  "timestamp": "2026-07-31T14:42:27Z",
+  "lastUpdate": "16:42",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 20,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {

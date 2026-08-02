@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-02T19:35:35Z",
-  "lastUpdate": "21:35",
+  "timestamp": "2026-08-02T20:31:49Z",
+  "lastUpdate": "22:31",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
@@ -31,8 +31,8 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
@@ -41,13 +41,13 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-trenino": {

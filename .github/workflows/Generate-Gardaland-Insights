@@ -1,0 +1,42 @@
+name: Generate Gardaland Insights
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # ogni notte alle 04:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate-insights:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run insights script
+        run: node scripts/generate-gardaland-insights.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          git add gardaland-insights.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ Nessuna modifica da committare"
+          else
+            git commit -m "chore: aggiorna previsioni Gardaland"
+            git pull --rebase origin main
+            git push
+            echo "✅ gardaland-insights.json aggiornato e pubblicato"
+          fi

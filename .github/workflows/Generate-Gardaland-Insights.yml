@@ -23,7 +23,7 @@ jobs:
           node-version: '20'
 
       - name: Run insights script
-        run: node scripts/generate-gardaland-insights.mjs
+        run: node .github/workflows/scripts/generate-gardaland-insights.mjs
 
       - name: Commit and push if changed
         run: |

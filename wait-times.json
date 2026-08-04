@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04T16:29:21Z",
-  "lastUpdate": "18:29",
+  "timestamp": "2026-08-04T18:12:06Z",
+  "lastUpdate": "20:12",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 25,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,13 +56,13 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",

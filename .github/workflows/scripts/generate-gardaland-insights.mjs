@@ -47,16 +47,19 @@ async function fetchJsonSafe(url) {
 
 async function fetchWeather() {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${GARDALAND_LAT}&longitude=${GARDALAND_LON}` +
-    `&daily=weathercode,temperature_2m_max,precipitation_probability_max&timezone=Europe%2FRome&forecast_days=${DAYS_AHEAD}`;
+    `&daily=weather_code,temperature_2m_max,precipitation_probability_max&timezone=Europe%2FRome&forecast_days=${DAYS_AHEAD}`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error(`Open-Meteo HTTP ${res.status}`);
+  if (!res.ok) {
+    const body = await res.text().catch(() => '');
+    throw new Error(`Open-Meteo HTTP ${res.status}: ${body}`);
+  }
   const data = await res.json();
   const byDate = {};
   data.daily.time.forEach((dateStr, i) => {
     byDate[dateStr] = {
       tempMax: data.daily.temperature_2m_max[i],
       precipProb: data.daily.precipitation_probability_max[i],
-      weatherCode: data.daily.weathercode[i]
+      weatherCode: data.daily.weather_code[i]
     };
   });
   return byDate;

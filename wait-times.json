@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05T15:36:59Z",
-  "lastUpdate": "17:36",
+  "timestamp": "2026-08-05T18:47:34Z",
+  "lastUpdate": "20:47",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
@@ -36,13 +36,13 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -141,7 +141,7 @@
     },
     "peppa-pig-trenino": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-pirati": {

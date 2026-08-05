@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-08-04T18:58:47.336Z",
+  "generatedAt": "2026-08-05T06:20:20.601Z",
   "crowdForecast": [
-    {
-      "date": "2026-08-04",
-      "label": "martedì 4 agosto",
-      "hours": "10:00-23:00",
-      "crowdLevel": "63%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-08-05",
       "label": "mercoledì 5 agosto",
@@ -35,40 +28,47 @@
       "hours": "10:00-23:00",
       "crowdLevel": "86%*",
       "advice": "express_recommended"
+    },
+    {
+      "date": "2026-08-09",
+      "label": "domenica 9 agosto",
+      "hours": "10:00-23:00",
+      "crowdLevel": "79%*",
+      "advice": "express_recommended"
     }
   ],
   "bestDays": [
-    {
-      "date": "2026-08-05",
-      "label": "mercoledì 5 agosto",
-      "hours": "10:00-23:00",
-      "crowdLevel": "63%*",
-      "weather": {
-        "tempMax": 37.6,
-        "precipProb": 13,
-        "weatherCode": 2
-      }
-    },
-    {
-      "date": "2026-08-06",
-      "label": "giovedì 6 agosto",
-      "hours": "10:00-23:00",
-      "crowdLevel": "67%*",
-      "weather": {
-        "tempMax": 37.3,
-        "precipProb": 25,
-        "weatherCode": 80
-      }
-    },
     {
       "date": "2026-08-11",
       "label": "martedì 11 agosto",
       "hours": "10:00-23:00",
       "crowdLevel": "72%*",
       "weather": {
-        "tempMax": 32.1,
-        "precipProb": 5,
-        "weatherCode": 45
+        "tempMax": 35.8,
+        "precipProb": 6,
+        "weatherCode": 2
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "label": "mercoledì 12 agosto",
+      "hours": "10:00-23:00",
+      "crowdLevel": "73%*",
+      "weather": {
+        "tempMax": 35.8,
+        "precipProb": 4,
+        "weatherCode": 1
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "label": "venerdì 14 agosto",
+      "hours": "10:00-23:00",
+      "crowdLevel": "74%*",
+      "weather": {
+        "tempMax": 37.9,
+        "precipProb": 6,
+        "weatherCode": 1
       }
     }
   ]

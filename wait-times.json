@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-07T14:37:55Z",
-  "lastUpdate": "16:37",
+  "timestamp": "2026-08-07T15:33:26Z",
+  "lastUpdate": "17:33",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 30,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "fuga-da-atlantide": {

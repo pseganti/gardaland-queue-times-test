@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-07T16:28:34Z",
-  "lastUpdate": "18:28",
+  "timestamp": "2026-08-07T17:25:29Z",
+  "lastUpdate": "19:25",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 25,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
@@ -46,8 +46,8 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -76,13 +76,13 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-tour": {

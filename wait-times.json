@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-07T20:01:49Z",
-  "lastUpdate": "22:01",
+  "timestamp": "2026-08-07T20:52:12Z",
+  "lastUpdate": "22:52",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -47,7 +47,7 @@
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 0,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "ortobruco-tour": {

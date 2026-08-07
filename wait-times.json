@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-07T17:25:29Z",
-  "lastUpdate": "19:25",
+  "timestamp": "2026-08-07T18:11:13Z",
+  "lastUpdate": "20:11",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,8 +61,8 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {

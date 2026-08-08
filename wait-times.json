@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-08T13:59:50Z",
-  "lastUpdate": "15:59",
+  "timestamp": "2026-08-08T14:39:59Z",
+  "lastUpdate": "16:39",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -17,7 +17,7 @@
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "volaplano": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-casa": {

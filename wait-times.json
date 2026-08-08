@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-08T13:15:04Z",
-  "lastUpdate": "15:15",
+  "timestamp": "2026-08-08T13:59:50Z",
+  "lastUpdate": "15:59",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -17,7 +17,7 @@
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "shaman": {
       "name": "Shaman",
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-tour": {

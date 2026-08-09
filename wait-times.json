@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-09T19:32:54Z",
-  "lastUpdate": "21:32",
+  "timestamp": "2026-08-09T20:00:34Z",
+  "lastUpdate": "22:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -121,7 +121,7 @@
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "giostra-cavalli": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-trenino": {

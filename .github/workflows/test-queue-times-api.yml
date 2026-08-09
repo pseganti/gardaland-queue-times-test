@@ -2,7 +2,7 @@ name: Gardaland Wait Times Updater
 
 on:
   schedule:
-    - cron: '*/3 * * * *'  # Ogni 9 minuti (ridotto da 5)
+    - cron: '*/3 * * * *'  # Ogni 3 minuti
   workflow_dispatch:  # Esecuzione manuale
 
 permissions:
@@ -69,13 +69,15 @@ jobs:
         CLOSE_HOUR=$(echo $CLOSE_TIME | cut -d: -f1)
         CLOSE_MIN=$(echo $CLOSE_TIME | cut -d: -f2)
         
-        OPEN_MINUTES=$((OPEN_HOUR * 60 + OPEN_MIN))
-        CLOSE_MINUTES=$((CLOSE_HOUR * 60 + CLOSE_MIN))
-        CURRENT_MINUTES=$((CURRENT_HOUR * 60 + CURRENT_MINUTE))
+        # 10# forza la base 10: senza questo, bash legge "08"/"09" come ottale
+        # non valido e l'aritmetica sottostante fallisce silenziosamente.
+        OPEN_MINUTES=$((10#$OPEN_HOUR * 60 + 10#$OPEN_MIN))
+        CLOSE_MINUTES=$((10#$CLOSE_HOUR * 60 + 10#$CLOSE_MIN))
+        CURRENT_MINUTES=$((10#$CURRENT_HOUR * 60 + 10#$CURRENT_MINUTE))
         
-        if [ $CLOSE_HOUR -lt 6 ]; then
+        if [ $((10#$CLOSE_HOUR)) -lt 6 ]; then
           CLOSE_MINUTES=$((CLOSE_MINUTES + 1440))
-          if [ $CURRENT_HOUR -lt 6 ]; then
+          if [ $((10#$CURRENT_HOUR)) -lt 6 ]; then
             CURRENT_MINUTES=$((CURRENT_MINUTES + 1440))
           fi
         fi
@@ -236,4 +238,4 @@ jobs:
       if: steps.park_status.outputs.is_open == 'false'
       run: |
         echo "🌙 Gardaland is closed or hours unavailable - skipping wait times update"
-        echo "ℹ️ This job will run again in 9 minutes"
+        echo "ℹ️ This job will run again in 3 minutes"

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-11T15:40:34Z",
-  "lastUpdate": "17:40",
+  "timestamp": "2026-08-11T15:41:48Z",
+  "lastUpdate": "17:41",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "oblivion": {

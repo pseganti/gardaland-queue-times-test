@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-11T20:20:36Z",
-  "lastUpdate": "22:20",
+  "timestamp": "2026-08-11T20:30:44Z",
+  "lastUpdate": "22:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "oblivion": {
@@ -46,8 +46,8 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-trenino": {

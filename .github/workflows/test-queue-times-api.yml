@@ -2,8 +2,8 @@ name: Gardaland Wait Times Updater
 
 on:
   schedule:
-    - cron: '*/3 * * * *'  # Ogni 3 minuti
-  workflow_dispatch:  # Esecuzione manuale
+    - cron: '*/15 * * * *'  # Fallback: ogni 15 minuti (il trigger principale è esterno, via cron-job.org + workflow_dispatch)
+  workflow_dispatch:  # Esecuzione manuale / trigger esterno
 
 permissions:
   contents: write  # Necessario per commit e push
@@ -238,4 +238,4 @@ jobs:
       if: steps.park_status.outputs.is_open == 'false'
       run: |
         echo "🌙 Gardaland is closed or hours unavailable - skipping wait times update"
-        echo "ℹ️ This job will run again in 3 minutes"
+        echo "ℹ️ This job will run again in 15 minutes"

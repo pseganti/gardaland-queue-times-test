@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-11T18:50:34Z",
-  "lastUpdate": "20:50",
+  "timestamp": "2026-08-11T19:00:58Z",
+  "lastUpdate": "21:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "ortobruco-tour": {

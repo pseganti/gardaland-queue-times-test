@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-11T17:30:46Z",
-  "lastUpdate": "19:30",
+  "timestamp": "2026-08-11T17:40:40Z",
+  "lastUpdate": "19:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d": {

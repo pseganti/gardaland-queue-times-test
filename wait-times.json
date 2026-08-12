@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T14:10:32Z",
-  "lastUpdate": "16:10",
+  "timestamp": "2026-08-12T14:20:45Z",
+  "lastUpdate": "16:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d": {
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "baby-pilota": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-trenino": {

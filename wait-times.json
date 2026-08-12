@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T15:10:32Z",
-  "lastUpdate": "17:10",
+  "timestamp": "2026-08-12T15:15:51Z",
+  "lastUpdate": "17:15",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T16:40:33Z",
-  "lastUpdate": "18:40",
+  "timestamp": "2026-08-12T16:50:33Z",
+  "lastUpdate": "18:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {

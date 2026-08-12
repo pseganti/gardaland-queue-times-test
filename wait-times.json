@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T13:10:31Z",
-  "lastUpdate": "15:10",
+  "timestamp": "2026-08-12T13:20:31Z",
+  "lastUpdate": "15:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -36,8 +36,8 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-12T19:50:33Z",
-  "lastUpdate": "21:50",
+  "timestamp": "2026-08-12T20:00:55Z",
+  "lastUpdate": "22:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {

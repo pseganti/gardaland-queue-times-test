@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T10:00:55Z",
-  "lastUpdate": "12:00",
+  "timestamp": "2026-08-12T10:10:34Z",
+  "lastUpdate": "12:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,17 +16,17 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d": {
@@ -77,7 +77,7 @@
     "dragon-rush": {
       "name": "Dragon Rush",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
@@ -87,7 +87,7 @@
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
@@ -97,7 +97,7 @@
     "peter-pan": {
       "name": "Peter Pan",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "baby-pilota": {
       "name": "Baby Pilota",
@@ -137,7 +137,7 @@
     "monorotaia": {
       "name": "Monorotaia",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peppa-pig-trenino": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
@@ -172,12 +172,12 @@
     "rocket-factory": {
       "name": "Rocket Factory",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "superbaby": {
       "name": "Superbaby",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",

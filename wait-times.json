@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T10:10:34Z",
-  "lastUpdate": "12:10",
+  "timestamp": "2026-08-12T10:20:34Z",
+  "lastUpdate": "12:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {

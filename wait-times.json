@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-12T11:32:12Z",
-  "lastUpdate": "13:32",
+  "timestamp": "2026-08-12T11:40:34Z",
+  "lastUpdate": "13:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-trenino": {

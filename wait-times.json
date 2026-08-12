@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-12T14:00:58Z",
-  "lastUpdate": "16:00",
+  "timestamp": "2026-08-12T14:07:24Z",
+  "lastUpdate": "16:07",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion": {
@@ -87,7 +87,7 @@
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-trenino": {

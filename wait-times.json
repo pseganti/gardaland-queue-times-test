@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-13T16:26:35Z",
-  "lastUpdate": "18:26",
+  "timestamp": "2026-08-13T16:30:45Z",
+  "lastUpdate": "18:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-trenino": {

@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-13T08:40:33Z",
-  "lastUpdate": "10:40",
+  "timestamp": "2026-08-13T08:50:34Z",
+  "lastUpdate": "10:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

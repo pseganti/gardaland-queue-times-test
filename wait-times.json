@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-13T10:40:38Z",
-  "lastUpdate": "12:40",
+  "timestamp": "2026-08-13T10:50:33Z",
+  "lastUpdate": "12:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "cinema-4d": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-13T10:20:40Z",
-  "lastUpdate": "12:20",
+  "timestamp": "2026-08-13T10:30:51Z",
+  "lastUpdate": "12:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d": {

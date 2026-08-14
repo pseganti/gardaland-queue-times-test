@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-14T20:20:32Z",
-  "lastUpdate": "22:20",
+  "timestamp": "2026-08-14T20:30:49Z",
+  "lastUpdate": "22:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-trenino": {

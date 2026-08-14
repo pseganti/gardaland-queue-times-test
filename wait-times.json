@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-14T18:50:34Z",
-  "lastUpdate": "20:50",
+  "timestamp": "2026-08-14T19:00:58Z",
+  "lastUpdate": "21:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion": {
@@ -16,8 +16,8 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-trenino": {

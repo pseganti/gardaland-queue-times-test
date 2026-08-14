@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-14T10:09:12Z",
-  "lastUpdate": "12:09",
+  "timestamp": "2026-08-14T10:10:33Z",
+  "lastUpdate": "12:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -177,7 +177,7 @@
     "superbaby": {
       "name": "Superbaby",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",

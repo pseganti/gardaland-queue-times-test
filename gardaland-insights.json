@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-08-13T05:28:11.322Z",
+  "generatedAt": "2026-08-14T05:25:57.092Z",
   "crowdForecast": [
-    {
-      "date": "2026-08-13",
-      "label": "giovedì 13 agosto",
-      "hours": "10:00-23:00",
-      "crowdLevel": "75%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-08-14",
       "label": "venerdì 14 agosto",
@@ -35,29 +28,25 @@
       "hours": "10:00-23:00",
       "crowdLevel": "83%*",
       "advice": "express_recommended"
-    }
-  ],
-  "bestDays": [
-    {
-      "date": "2026-08-14",
-      "label": "venerdì 14 agosto",
-      "hours": "10:00-23:00",
-      "crowdLevel": "74%*",
-      "weather": {
-        "tempMax": 35,
-        "precipProb": 8,
-        "weatherCode": 2
-      }
     },
     {
       "date": "2026-08-18",
       "label": "martedì 18 agosto",
       "hours": "10:00-23:00",
       "crowdLevel": "79%*",
+      "advice": "express_recommended"
+    }
+  ],
+  "bestDays": [
+    {
+      "date": "2026-08-18",
+      "label": "martedì 18 agosto",
+      "hours": "10:00-23:00",
+      "crowdLevel": "79%*",
       "weather": {
-        "tempMax": 32.3,
-        "precipProb": 23,
-        "weatherCode": 3
+        "tempMax": 30.5,
+        "precipProb": 19,
+        "weatherCode": 45
       }
     },
     {
@@ -66,9 +55,20 @@
       "hours": "10:00-23:00",
       "crowdLevel": "79%*",
       "weather": {
-        "tempMax": 35,
-        "precipProb": 18,
-        "weatherCode": 2
+        "tempMax": 33.8,
+        "precipProb": 10,
+        "weatherCode": 3
+      }
+    },
+    {
+      "date": "2026-08-16",
+      "label": "domenica 16 agosto",
+      "hours": "10:00-23:00",
+      "crowdLevel": "85%*",
+      "weather": {
+        "tempMax": 36.4,
+        "precipProb": 3,
+        "weatherCode": 3
       }
     }
   ]

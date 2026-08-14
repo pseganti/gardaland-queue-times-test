@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-14T14:50:32Z",
-  "lastUpdate": "16:50",
+  "timestamp": "2026-08-14T15:00:58Z",
+  "lastUpdate": "17:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "cinema-4d": {

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-14T10:00:56Z",
-  "lastUpdate": "12:00",
+  "timestamp": "2026-08-14T10:09:12Z",
+  "lastUpdate": "12:09",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "oblivion": {
@@ -22,11 +22,11 @@
     "shaman": {
       "name": "Shaman",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {

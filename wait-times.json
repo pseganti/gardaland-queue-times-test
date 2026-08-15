@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T08:40:34Z",
-  "lastUpdate": "10:40",
+  "timestamp": "2026-08-15T08:46:20Z",
+  "lastUpdate": "10:46",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "cinema-4d": {

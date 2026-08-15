@@ -33,7 +33,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-          git add gardaland-calendar-data.json
+          git add gardaland-calendar-export.json
 
           if git diff --staged --quiet; then
             echo "ℹ️ Nessuna modifica al calendario da committare"
@@ -41,5 +41,5 @@ jobs:
             git commit -m "chore: aggiorna calendario affluenza Gardaland"
             git pull --rebase origin main
             git push
-            echo "✅ gardaland-calendar-data.json aggiornato e pubblicato"
+            echo "✅ gardaland-calendar-export.json aggiornato e pubblicato"
           fi

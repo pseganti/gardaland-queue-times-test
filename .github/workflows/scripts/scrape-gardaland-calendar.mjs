@@ -1,18 +1,17 @@
 // ============================================
 // scrape-gardaland-calendar.mjs
 // Estrae il calendario di affluenza da queue-times.com
-// e aggiorna gardaland-calendar-data.json nella root del repo.
+// e aggiorna gardaland-calendar-export.json nella root del repo.
 //
 // Uso: node .github/workflows/scripts/scrape-gardaland-calendar.mjs
 // ============================================
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import path from 'node:path';
 import * as cheerio from 'cheerio';
 
 const TARGET_URL = 'https://queue-times.com/parks/12/calendar';
-const OUTPUT_FILE = 'gardaland-calendar-data.json';
+const OUTPUT_FILE = 'gardaland-calendar-export.json';
 
 const MONTH_MAP = {
   'January': '01', 'February': '02', 'March': '03', 'April': '04',
@@ -146,7 +145,7 @@ async function scrapeCalendar() {
 
   const calendarData = await loadExistingData();
 
-  // Aggiorna mese
+  // Aggiorna o sovrascrive il mese estratto
   calendarData.months[monthKey] = {
     monthKey,
     month: monthName,
@@ -165,6 +164,7 @@ async function scrapeCalendar() {
     }
   });
 
+  // Timestamp globale aggiornamento
   calendarData.metadata.lastUpdated = new Date().toISOString();
   calendarData.metadata.totalMonths = Object.keys(calendarData.months).length;
 

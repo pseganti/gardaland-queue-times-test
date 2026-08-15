@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created": "2026-08-15T17:23:15.278Z",
-    "lastUpdated": "2026-08-15T17:23:15.278Z",
+    "lastUpdated": "2026-08-15T17:43:17.180Z",
     "totalMonths": 1
   },
   "months": {
@@ -9,9 +9,266 @@
       "monthKey": "2026-08",
       "month": "August",
       "year": 2026,
-      "totalDays": 0,
-      "days": [],
-      "extractedAt": "2026-08-15T17:23:15.278Z",
+      "totalDays": 31,
+      "days": [
+        {
+          "date": "2026-08-01",
+          "crowdLevel": "38%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-08-02",
+          "crowdLevel": "37%",
+          "crowdIntensity": "low",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-08-03",
+          "crowdLevel": "44%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-04",
+          "crowdLevel": "48%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-08-05",
+          "crowdLevel": "43%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-08-06",
+          "crowdLevel": "50%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-08-07",
+          "crowdLevel": "54%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-08-08",
+          "crowdLevel": "45%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-08-09",
+          "crowdLevel": "44%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-08-10",
+          "crowdLevel": "57%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-11",
+          "crowdLevel": "58%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [
+            "Rainy Day"
+          ],
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-08-12",
+          "crowdLevel": "61%",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-08-13",
+          "crowdLevel": "54%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-08-14",
+          "crowdLevel": "46%",
+          "crowdIntensity": "medium",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-08-15",
+          "crowdLevel": "87%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [
+            "Public Holiday"
+          ],
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-08-16",
+          "crowdLevel": "85%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-08-17",
+          "crowdLevel": "81%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-18",
+          "crowdLevel": "79%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-08-19",
+          "crowdLevel": "80%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-08-20",
+          "crowdLevel": "82%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [
+            "Rainy Day"
+          ],
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-08-21",
+          "crowdLevel": "80%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [
+            "Rainy Day"
+          ],
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-08-22",
+          "crowdLevel": "91%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-08-23",
+          "crowdLevel": "87%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-08-24",
+          "crowdLevel": "85%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-25",
+          "crowdLevel": "82%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-08-26",
+          "crowdLevel": "82%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-08-27",
+          "crowdLevel": "83%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-08-28",
+          "crowdLevel": "82%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-08-29",
+          "crowdLevel": "92%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-08-30",
+          "crowdLevel": "87%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-08-31",
+          "crowdLevel": "85%*",
+          "crowdIntensity": "high",
+          "hours": "10:00-23:00",
+          "events": [],
+          "dayOfWeek": "Monday"
+        }
+      ],
+      "extractedAt": "2026-08-15T17:43:17.180Z",
       "source": "https://queue-times.com/parks/12/calendar"
     }
   }

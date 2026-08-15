@@ -1,11 +1,3 @@
-// ============================================
-// scrape-gardaland-calendar.mjs
-// Estrae il calendario di affluenza da queue-times.com
-// e aggiorna gardaland-calendar-export.json nella root del repo.
-//
-// Uso: node .github/workflows/scripts/scrape-gardaland-calendar.mjs
-// ============================================
-
 import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import * as cheerio from 'cheerio';
@@ -35,7 +27,6 @@ async function loadExistingData() {
     const raw = await readFile(OUTPUT_FILE, 'utf-8');
     return JSON.parse(raw);
   } catch (err) {
-    console.warn(`⚠️ Impossibile leggere ${OUTPUT_FILE}, creo nuova struttura: ${err.message}`);
     return {
       metadata: {
         created: new Date().toISOString(),
@@ -51,7 +42,8 @@ async function scrapeCalendar() {
   console.log(`📡 Fetching calendar page from ${TARGET_URL}...`);
   const res = await fetch(TARGET_URL, {
     headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept-Language': 'en-US,en;q=0.9'
     }
   });
 
@@ -62,10 +54,19 @@ async function scrapeCalendar() {
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  const titleText = $('.subtitle').text().trim();
-  const [monthName, yearStr] = titleText.split(' ');
+  const titleText = $('.subtitle, h1, h2').text().trim();
+  let monthName = '', yearStr = '';
+  
+  for (const key of Object.keys(MONTH_MAP)) {
+    if (titleText.includes(key)) {
+      monthName = key;
+      const match = titleText.match(/\b(20\d{2})\b/);
+      if (match) yearStr = match[1];
+      break;
+    }
+  }
 
-  if (!monthName || !yearStr || !MONTH_MAP[monthName]) {
+  if (!monthName || !yearStr) {
     throw new Error(`Impossibile parsare mese e anno dal titolo: "${titleText}"`);
   }
 
@@ -75,7 +76,8 @@ async function scrapeCalendar() {
 
   const days = [];
 
-  $('.tile a[href*="/calendar/"]').each((_, el) => {
+  // Selettore esteso per trovare tutti i link ai singoli giorni del calendario
+  $('a[href*="/calendar/"]').each((_, el) => {
     const tile = $(el);
     const href = tile.attr('href') || '';
     const match = href.match(/\/(\d{4})\/(\d{2})\/(\d{2})$/);
@@ -84,38 +86,31 @@ async function scrapeCalendar() {
       const [, tileYear, tileMonth, day] = match;
       const date = `${tileYear}-${tileMonth}-${day}`;
 
-      // Livello affollamento (%)
+      // Verifica se la data appartiene al mese estratto
+      if (`${tileYear}-${tileMonth}` !== monthKey) return;
+
       let crowdLevel = 'N/A';
-      tile.find('.tag').each((_, tag) => {
+      tile.find('.tag, span').each((_, tag) => {
         const text = $(tag).text().trim();
         if (text.includes('%') && !text.includes(':')) {
           crowdLevel = text;
         }
       });
 
-      // Orari ed Eventi Speciali
       let hours = 'N/A';
       const events = [];
-      const hoursTag = tile.find('.tag-multiline');
+      const fullText = tile.text();
 
-      if (hoursTag.length > 0) {
-        const hoursText = hoursTag.text().trim();
-        const hourMatch = hoursText.match(/(\d{1,2}:\d{2}-\d{1,2}:\d{2})/);
-        if (hourMatch) hours = hourMatch[1];
+      const hourMatch = fullText.match(/(\d{1,2}:\d{2}-\d{1,2}:\d{2})/);
+      if (hourMatch) hours = hourMatch[1];
 
-        if (hoursText.includes('🌙')) events.push('Night is Magic');
-        if (hoursText.includes('🍺')) events.push('Oktoberfest');
-        if (hoursText.includes('🏖️')) events.push('Public Holiday');
-        if (hoursText.includes('🎃')) events.push('Halloween');
-      }
+      if (fullText.includes('🌙')) events.push('Night is Magic');
+      if (fullText.includes('🍺')) events.push('Oktoberfest');
+      if (fullText.includes('🏖️')) events.push('Public Holiday');
+      if (fullText.includes('🎃')) events.push('Halloween');
+      if (fullText.includes('🌧️')) events.push('Rainy Day');
 
-      const dayTag = tile.find('.tag:not(.tag-multiline)');
-      if (dayTag.length > 0 && dayTag.text().includes('🌧️')) {
-        events.push('Rainy Day');
-      }
-
-      // Intensità colore
-      const style = tile.attr('style') || '';
+      const style = tile.attr('style') || tile.parent().attr('style') || '';
       const bgMatch = style.match(/background:\s*rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       let crowdIntensity = 'unknown';
 
@@ -130,22 +125,30 @@ async function scrapeCalendar() {
         else if (r > 250 && g < 100) crowdIntensity = 'very-high';
       }
 
-      days.push({
-        date,
-        crowdLevel,
-        crowdIntensity,
-        hours,
-        events,
-        dayOfWeek: new Date(date).toLocaleDateString('en-US', { weekday: 'long' })
-      });
+      // Evita duplicati
+      if (!days.some(d => d.date === date)) {
+        days.push({
+          date,
+          crowdLevel,
+          crowdIntensity,
+          hours,
+          events,
+          dayOfWeek: new Date(date).toLocaleDateString('en-US', { weekday: 'long' })
+        });
+      }
     }
   });
 
   days.sort((a, b) => new Date(a.date) - new Date(b.date));
 
+  console.log(`🔎 Giorni trovati per ${monthKey}: ${days.length}`);
+
+  if (days.length === 0) {
+    throw new Error(`Nessun giorno estratto per ${monthKey}. Verificare la struttura HTML del sito.`);
+  }
+
   const calendarData = await loadExistingData();
 
-  // Aggiorna o sovrascrive il mese estratto
   calendarData.months[monthKey] = {
     monthKey,
     month: monthName,
@@ -156,23 +159,14 @@ async function scrapeCalendar() {
     source: TARGET_URL
   };
 
-  // Pulisci mesi passati
-  const currentMonthKey = new Date().toISOString().substring(0, 7);
-  Object.keys(calendarData.months).forEach(key => {
-    if (key < currentMonthKey) {
-      delete calendarData.months[key];
-    }
-  });
-
-  // Timestamp globale aggiornamento
   calendarData.metadata.lastUpdated = new Date().toISOString();
   calendarData.metadata.totalMonths = Object.keys(calendarData.months).length;
 
   await writeFile(OUTPUT_FILE, JSON.stringify(calendarData, null, 2), 'utf-8');
-  console.log(`✅ ${OUTPUT_FILE} aggiornato con successo per il mese ${monthKey} (${days.length} giorni).`);
+  console.log(`✅ ${OUTPUT_FILE} aggiornato con successo (${days.length} giorni).`);
 }
 
 scrapeCalendar().catch(err => {
-  console.error('❌ Errore durante lo scraping del calendario:', err);
+  console.error('❌ Errore durante lo scraping:', err);
   process.exit(1);
 });

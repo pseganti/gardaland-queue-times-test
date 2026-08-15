@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T19:00:52Z",
-  "lastUpdate": "21:00",
+  "timestamp": "2026-08-15T19:06:15Z",
+  "lastUpdate": "21:06",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "funny-express": {

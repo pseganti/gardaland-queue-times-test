@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T08:00:54Z",
-  "lastUpdate": "10:00",
+  "timestamp": "2026-08-15T08:10:32Z",
+  "lastUpdate": "10:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -57,7 +57,7 @@
     "jungle-rapids": {
       "name": "Jungle Rapids",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "mammut": {
       "name": "Mammut",
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-15T11:00:52Z",
-  "lastUpdate": "13:00",
+  "timestamp": "2026-08-15T11:10:31Z",
+  "lastUpdate": "13:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d": {

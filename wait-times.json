@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T13:00:53Z",
-  "lastUpdate": "15:00",
+  "timestamp": "2026-08-15T13:10:33Z",
+  "lastUpdate": "15:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "colorado-boat": {
@@ -62,7 +62,7 @@
     "mammut": {
       "name": "Mammut",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "cinema-4d": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-trenino": {

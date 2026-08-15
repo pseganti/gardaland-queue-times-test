@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "created": "2026-08-15T17:23:15.278Z",
+    "lastUpdated": "2026-08-15T17:23:15.278Z",
+    "totalMonths": 1
+  },
+  "months": {
+    "2026-08": {
+      "monthKey": "2026-08",
+      "month": "August",
+      "year": 2026,
+      "totalDays": 0,
+      "days": [],
+      "extractedAt": "2026-08-15T17:23:15.278Z",
+      "source": "https://queue-times.com/parks/12/calendar"
+    }
+  }
+}

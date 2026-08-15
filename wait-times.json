@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T17:30:43Z",
-  "lastUpdate": "19:30",
+  "timestamp": "2026-08-15T17:37:08Z",
+  "lastUpdate": "19:37",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-labyrinth": {

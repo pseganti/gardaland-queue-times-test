@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T13:40:34Z",
-  "lastUpdate": "15:40",
+  "timestamp": "2026-08-15T13:50:31Z",
+  "lastUpdate": "15:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -9,14 +9,14 @@
       "wait_time": 0,
       "is_open": false
     },
-    "oblivion": {
+    "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
       "wait_time": 5,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -64,7 +64,7 @@
       "wait_time": 25,
       "is_open": true
     },
-    "cinema-4d": {
+    "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
       "wait_time": 10,
       "is_open": true
@@ -129,7 +129,7 @@
       "wait_time": 5,
       "is_open": true
     },
-    "albero-prezzemolo": {
+    "l-albero-di-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
       "wait_time": 5,
       "is_open": true
@@ -139,22 +139,22 @@
       "wait_time": 5,
       "is_open": true
     },
-    "peppa-pig-trenino": {
+    "peppa-pig-land-il-trenino-di-nonno-pig": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
       "wait_time": 5,
       "is_open": true
     },
-    "peppa-pig-pirati": {
+    "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
       "wait_time": 5,
       "is_open": true
     },
-    "peppa-pig-casa": {
+    "peppa-pig-land-la-casa-di-peppa-pig": {
       "name": "Peppa Pig Land - La Casa di Peppa Pig",
       "wait_time": 0,
       "is_open": false
     },
-    "peppa-pig-mongolfiera": {
+    "peppa-pig-land-la-mongolfiera-di-peppa-pig": {
       "name": "Peppa Pig Land - La Mongolfiera di Peppa Pig",
       "wait_time": 5,
       "is_open": true

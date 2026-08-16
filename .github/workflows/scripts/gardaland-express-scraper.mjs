@@ -34,52 +34,55 @@ async function runScraper() {
   });
 
   const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0',
     locale: 'it-IT'
   });
 
   const page = await context.newPage();
 
-  console.log('Inizializzazione sessione e recupero X-CSRF-Token...');
-  
-  // Variabile per salvare il token intercettato
-  let csrfToken = null;
+  // Variabile per catturare l'X-CSRF-Token reale intercettando il traffico di rete nativo
+  let capturedCsrfToken = null;
 
-  // Intercettiamo le intestazioni di qualsiasi richiesta inviata dal sito per catturare l'X-CSRF-Token
   page.on('request', request => {
     const headers = request.headers();
     if (headers['x-csrf-token']) {
-      csrfToken = headers['x-csrf-token'];
+      capturedCsrfToken = headers['x-csrf-token'];
     }
   });
 
+  console.log('Inizializzazione sessione web Gardaland...');
   try {
+    // Carichiamo la pagina dello shop per innescare la creazione di app_session e dei token
     await page.goto('https://tickets.gardaland.it/b2c/expressSale/express', {
       waitUntil: 'networkidle',
       timeout: 60000
     });
 
-    // Se non intercettato dalle richieste, recuperiamo il token dai cookie
-    if (!csrfToken) {
-      const cookies = await context.cookies();
-      const csrfCookie = cookies.find(c => c.name.toLowerCase().includes('csrf') || c.name.toLowerCase().includes('xsrf'));
-      if (csrfCookie) {
-        csrfToken = csrfCookie.value;
-      }
-    }
-
-    console.log(`Token CSRF individuato: ${csrfToken ? csrfToken.substring(0, 10) + '...' : 'NON TROVATO (tentativo fallback)'}`);
+    // Attesa tecnica per consentire il completamento dei moduli Angular in background
+    await page.waitForTimeout(4000);
 
   } catch (err) {
-    console.error('Errore durante l\'inizializzazione della pagina:', err.message);
+    console.error('Errore durante il caricamento iniziale:', err.message);
   }
+
+  // Se non intercettato dalle chiamate della pagina, estraiamo il cookie app_session
+  if (!capturedCsrfToken) {
+    const cookies = await context.cookies();
+    const appSessionCookie = cookies.find(c => c.name === 'app_session');
+    if (appSessionCookie) {
+      capturedCsrfToken = appSessionCookie.value;
+      console.log('Token recuperato dal cookie app_session.');
+    }
+  }
+
+  console.log(`Token di sessione/CSRF pronto: ${capturedCsrfToken ? capturedCsrfToken.substring(0, 15) + '...' : 'NON PRESENTE'}`);
 
   let existingData = {};
   if (fs.existsSync(OUTPUT_FILE)) {
     try {
       existingData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
     } catch (e) {
-      console.warn('File JSON esistente non valido.');
+      console.warn('File JSON preesistente vuoto o non valido.');
     }
   }
 
@@ -100,7 +103,7 @@ async function runScraper() {
           headers['X-CSRF-Token'] = token;
         }
 
-        // Step 1: dayPerformance con credentials: include
+        // Step 1: dayPerformance
         const resDay = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/dayPerformance', {
           method: 'POST',
           credentials: 'include',
@@ -116,10 +119,13 @@ async function runScraper() {
         });
 
         if (!resDay.ok) {
-          return { error: `dayPerformance HTTP ${resDay.status}` };
+          const errText = await resDay.text();
+          return { error: `dayPerformance HTTP ${resDay.status}: ${errText.substring(0, 100)}` };
         }
 
         const dayData = await resDay.json();
+
+        // Estrazione di performanceAk (sia se la risposta è un Array o un Oggetto)
         let performanceAk = null;
         if (Array.isArray(dayData) && dayData.length > 0) {
           performanceAk = dayData[0].performanceAk || dayData[0].ak;
@@ -128,7 +134,7 @@ async function runScraper() {
         }
 
         if (!performanceAk) {
-          return { error: 'performanceAk non trovato', rawDay: dayData };
+          return { error: 'performanceAk non trovato', rawPayload: JSON.stringify(dayData).substring(0, 150) };
         }
 
         // Step 2: performanceProducts
@@ -145,7 +151,8 @@ async function runScraper() {
         });
 
         if (!resProd.ok) {
-          return { error: `performanceProducts HTTP ${resProd.status}` };
+          const errText = await resProd.text();
+          return { error: `performanceProducts HTTP ${resProd.status}: ${errText.substring(0, 100)}` };
         }
 
         const productsData = await resProd.json();
@@ -154,7 +161,7 @@ async function runScraper() {
       } catch (err) {
         return { error: err.message };
       }
-    }, { date: dateStr, token: csrfToken });
+    }, { date: dateStr, token: capturedCsrfToken });
 
     if (result.success) {
       console.log(`SUCCESS [${dateStr}] - PerformanceAk: ${result.performanceAk}`);
@@ -165,6 +172,9 @@ async function runScraper() {
       };
     } else {
       console.warn(`FAIL [${dateStr}]: ${result.error}`);
+      if (result.rawPayload) {
+        console.warn(` Payload grezzo ricevuto: ${result.rawPayload}`);
+      }
     }
 
     await page.waitForTimeout(1000);
@@ -183,7 +193,7 @@ async function runScraper() {
   });
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(cleanedData, null, 2));
-  console.log(`\nSalvataggio completato! Dimensione file: ${fs.statSync(OUTPUT_FILE).size} bytes`);
+  console.log(`\nSalvataggio completato! Dimensione file finale: ${fs.statSync(OUTPUT_FILE).size} bytes`);
 }
 
 runScraper();

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created": "2026-08-15T17:23:15.278Z",
-    "lastUpdated": "2026-08-15T17:43:17.180Z",
+    "lastUpdated": "2026-08-16T02:58:37.391Z",
     "totalMonths": 1
   },
   "months": {
@@ -69,7 +69,7 @@
         },
         {
           "date": "2026-08-08",
-          "crowdLevel": "45%",
+          "crowdLevel": "44%",
           "crowdIntensity": "medium",
           "hours": "10:00-23:00",
           "events": [],
@@ -127,8 +127,8 @@
         },
         {
           "date": "2026-08-15",
-          "crowdLevel": "87%*",
-          "crowdIntensity": "high",
+          "crowdLevel": "53%",
+          "crowdIntensity": "medium",
           "hours": "10:00-23:00",
           "events": [
             "Public Holiday"
@@ -145,10 +145,12 @@
         },
         {
           "date": "2026-08-17",
-          "crowdLevel": "81%*",
+          "crowdLevel": "83%*",
           "crowdIntensity": "high",
           "hours": "10:00-23:00",
-          "events": [],
+          "events": [
+            "Rainy Day"
+          ],
           "dayOfWeek": "Monday"
         },
         {
@@ -169,7 +171,7 @@
         },
         {
           "date": "2026-08-20",
-          "crowdLevel": "82%*",
+          "crowdLevel": "80%*",
           "crowdIntensity": "high",
           "hours": "10:00-23:00",
           "events": [
@@ -179,7 +181,7 @@
         },
         {
           "date": "2026-08-21",
-          "crowdLevel": "80%*",
+          "crowdLevel": "74%*",
           "crowdIntensity": "high",
           "hours": "10:00-23:00",
           "events": [
@@ -192,7 +194,9 @@
           "crowdLevel": "91%*",
           "crowdIntensity": "high",
           "hours": "10:00-23:00",
-          "events": [],
+          "events": [
+            "Rainy Day"
+          ],
           "dayOfWeek": "Saturday"
         },
         {
@@ -268,7 +272,7 @@
           "dayOfWeek": "Monday"
         }
       ],
-      "extractedAt": "2026-08-15T17:43:17.180Z",
+      "extractedAt": "2026-08-16T02:58:37.391Z",
       "source": "https://queue-times.com/parks/12/calendar"
     }
   }

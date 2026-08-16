@@ -26,112 +26,99 @@ function getTargetDates() {
 async function runScraper() {
   const todayStr = formatDate(new Date());
   const targetDates = getTargetDates();
-  console.log(`Avvio API-Context Scraper Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
+  console.log(`Avvio UI-Driven Scraper Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
 
-  // 1. Avvia Chromium e crea un contesto con gestione automatica di cookie/sessioni
-  const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+  const browser = await chromium.launch({ 
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
-  // Usiamo il client API nativo di Playwright legato al contesto
-  const request = context.request;
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    locale: 'it-IT',
+    viewport: { width: 1280, height: 800 }
+  });
 
-  console.log('Inizializzazione sessione e acquisizione cookie...');
-  // Prima chiamata GET alla home dei biglietti per farsi assegnare la sessione
-  await request.get('https://tickets.gardaland.it/b2c/ticketSale/tickets');
+  const page = await context.newPage();
+  const capturedData = {};
 
+  // Intercettazione delle risposte di rete autenticate
+  page.on('response', async (response) => {
+    const url = response.url();
+    if (url.includes('/performanceProducts') && response.status() === 200) {
+      try {
+        const json = await response.json();
+        console.log(`[NET INTERCEPT] Risposta performanceProducts catturata!`);
+        if (Array.isArray(json) && json.length > 0) {
+          const perfAk = json[0].performanceAk || json[0].ak || 'CURRENT';
+          capturedData[perfAk] = json;
+        }
+      } catch (e) {
+        console.error('Errore durante la lettura del JSON intercettato:', e.message);
+      }
+    }
+  });
+
+  console.log('Caricamento portale biglietti Gardaland Express...');
+  try {
+    await page.goto('https://tickets.gardaland.it/b2c/expressSale/express', {
+      waitUntil: 'networkidle',
+      timeout: 60000
+    });
+
+    // Gestione del banner dei cookie
+    try {
+      const cookieButton = page.locator('#onetrust-accept-btn-handler, button:has-text("Accetta"), .cookie-accept-btn');
+      if (await cookieButton.isVisible({ timeout: 5000 })) {
+        await cookieButton.click();
+        console.log('Banner cookie gestito.');
+      }
+    } catch (e) {
+      // Prosegui se non visibile
+    }
+
+    // Attesa del caricamento completo dell'interfaccia Angular
+    await page.waitForTimeout(4000);
+
+    // Selezione delle date sul calendario dell'interfaccia per forzare le chiamate API
+    for (const dateStr of targetDates) {
+      const dayNumber = parseInt(dateStr.split('-')[2], 10);
+      console.log(`Navigazione calendario per il giorno ${dateStr} (Giorno ${dayNumber})...`);
+
+      const dayCell = page.locator(`td:not(.disabled) :text-is("${dayNumber}"), .calendar-day:has-text("${dayNumber}")`).first();
+      
+      if (await dayCell.isVisible({ timeout: 3000 })) {
+        await dayCell.click();
+        await page.waitForTimeout(2500);
+      } else {
+        console.log(`Elemento giorno ${dayNumber} non direttamente visibile/selezionabile.`);
+      }
+    }
+
+  } catch (err) {
+    console.error('Errore durante la navigazione della SPA:', err.message);
+  }
+
+  // Lettura ed eventuale merge dei dati preesistenti
   let existingData = {};
   if (fs.existsSync(OUTPUT_FILE)) {
     try {
       existingData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
     } catch (e) {
-      console.warn('File JSON vuoto o non valido.');
+      console.warn('File JSON preesistente non valido o vuoto.');
     }
   }
 
   const freshData = {};
-  const commonHeaders = {
-    'Accept': 'application/json, text/plain, */*',
-    'Content-Type': 'application/json',
-    'X-API-KEY': '42',
-    'Origin': 'https://tickets.gardaland.it',
-    'Referer': 'https://tickets.gardaland.it/'
-  };
-
-  for (const dateStr of targetDates) {
-    console.log(`\n--- Elaborazione data: ${dateStr} ---`);
-
-    try {
-      // Step 1: Richiesta dayPerformance
-      const resDay = await request.post('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/dayPerformance', {
-        headers: commonHeaders,
-        data: {
-          locale: 'en-GB',
-          sellitemAk: 'FAST30',
-          day: dateStr,
-          eventAk: 'GDL.EVN67',
-          searchAttributes: {},
-          useSumEnvelopeCapacity: false
-        }
-      });
-
-      console.log(`[${dateStr}] Status dayPerformance: ${resDay.status()}`);
-
-      if (!resDay.ok()) {
-        console.warn(`[${dateStr}] Errore dayPerformance HTTP ${resDay.status()}`);
-        continue;
-      }
-
-      const dayPerfData = await resDay.json();
-
-      let performanceAk = null;
-      if (Array.isArray(dayPerfData) && dayPerfData.length > 0) {
-        performanceAk = dayPerfData[0].performanceAk || dayPerfData[0].ak;
-      } else if (dayPerfData && typeof dayPerfData === 'object') {
-        performanceAk = dayPerfData.performanceAk || dayPerfData.ak;
-      }
-
-      if (!performanceAk) {
-        console.warn(`[${dateStr}] Nessun performanceAk trovato nel payload`);
-        continue;
-      }
-
-      console.log(`[${dateStr}] Estratto performanceAk: ${performanceAk}`);
-
-      // Step 2: Richiesta performanceProducts
-      const resProd = await request.post('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/performanceProducts', {
-        headers: commonHeaders,
-        data: {
-          locale: 'en-GB',
-          performanceAks: [performanceAk],
-          components: null,
-          offerCode: 'FAST30'
-        }
-      });
-
-      console.log(`[${dateStr}] Status performanceProducts: ${resProd.status()}`);
-
-      if (resProd.ok()) {
-        const productsData = await resProd.json();
-        freshData[dateStr] = {
-          updatedAt: new Date().toISOString(),
-          performanceAk: performanceAk,
-          products: productsData
-        };
-        console.log(`SUCCESS [${dateStr}] Dati salvati con successo.`);
-      } else {
-        console.warn(`[${dateStr}] Errore performanceProducts HTTP ${resProd.status()}`);
-      }
-
-    } catch (err) {
-      console.error(`[${dateStr}] Eccezione:`, err.message);
-    }
+  if (Object.keys(capturedData).length > 0) {
+    freshData[todayStr] = {
+      updatedAt: new Date().toISOString(),
+      productsByAk: capturedData
+    };
   }
 
   await browser.close();
 
-  // Merge e pulizia dati vecchi
   const mergedData = { ...existingData, ...freshData };
   const cleanedData = {};
 
@@ -142,7 +129,7 @@ async function runScraper() {
   });
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(cleanedData, null, 2));
-  console.log(`\nOperazione completata. Dimensione file: ${fs.statSync(OUTPUT_FILE).size} bytes`);
+  console.log(`\nSalvataggio completato! Dimensione file: ${fs.statSync(OUTPUT_FILE).size} bytes`);
 }
 
 runScraper();

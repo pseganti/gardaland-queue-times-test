@@ -1,11 +1,13 @@
 import { writeFile } from 'node:fs/promises';
 import * as cheerio from 'cheerio';
 
-const TARGET_URL = 'https://queue-times.com/parks/12/stats/2026';
-const OUTPUT_FILE = 'gardaland-stats-2026.json';
+// Ricava automaticamente l'anno corrente (es. 2026)
+const currentYear = new Date().getFullYear();
+const TARGET_URL = `https://queue-times.com/parks/12/stats/${currentYear}`;
+const OUTPUT_FILE = 'gardaland-stats-current-year.json';
 
 async function main() {
-  console.log(`📡 Scraping statistiche 2026 da: ${TARGET_URL}`);
+  console.log(`📡 Scraping statistiche ${currentYear} da: ${TARGET_URL}`);
 
   try {
     const res = await fetch(TARGET_URL, {
@@ -23,7 +25,6 @@ async function main() {
     const $ = cheerio.load(html);
     const rides = [];
 
-    // Seleziona le righe della tabella delle statistiche
     $('table tbody tr').each((_, row) => {
       const cols = $(row).find('td');
       if (cols.length >= 3) {
@@ -31,7 +32,6 @@ async function main() {
         const avgText = $(cols[1]).text().trim();
         const maxText = $(cols[2]).text().trim();
 
-        // Converte i testi in minuti (interi)
         const avgWait = parseInt(avgText, 10) || 0;
         const maxWait = parseInt(maxText, 10) || 0;
 
@@ -45,13 +45,12 @@ async function main() {
       }
     });
 
-    // Ordina le attrazioni dalla media di attesa più alta alla più bassa
     rides.sort((a, b) => b.avgWaitMinutes - a.avgWaitMinutes);
 
     const payload = {
       metadata: {
         lastUpdated: new Date().toISOString(),
-        year: 2026,
+        year: currentYear,
         totalRides: rides.length,
         source: TARGET_URL
       },
@@ -59,7 +58,7 @@ async function main() {
     };
 
     await writeFile(OUTPUT_FILE, JSON.stringify(payload, null, 2), 'utf-8');
-    console.log(`✅ Salve con successo ${rides.length} attrazioni in ${OUTPUT_FILE}`);
+    console.log(`✅ Salvate con successo ${rides.length} attrazioni in ${OUTPUT_FILE}`);
 
   } catch (err) {
     console.error('❌ Errore durante lo scraping delle statistiche:', err.message);

@@ -26,99 +26,153 @@ function getTargetDates() {
 async function runScraper() {
   const todayStr = formatDate(new Date());
   const targetDates = getTargetDates();
-  console.log(`Avvio UI-Driven Scraper Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
+  console.log(`Avvio Authenticated Scraper Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
 
-  const browser = await chromium.launch({ 
+  const browser = await chromium.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    locale: 'it-IT',
-    viewport: { width: 1280, height: 800 }
+    locale: 'it-IT'
   });
 
   const page = await context.newPage();
-  const capturedData = {};
 
-  // Intercettazione delle risposte di rete autenticate
-  page.on('response', async (response) => {
-    const url = response.url();
-    if (url.includes('/performanceProducts') && response.status() === 200) {
-      try {
-        const json = await response.json();
-        console.log(`[NET INTERCEPT] Risposta performanceProducts catturata!`);
-        if (Array.isArray(json) && json.length > 0) {
-          const perfAk = json[0].performanceAk || json[0].ak || 'CURRENT';
-          capturedData[perfAk] = json;
-        }
-      } catch (e) {
-        console.error('Errore durante la lettura del JSON intercettato:', e.message);
-      }
+  console.log('Inizializzazione sessione e recupero X-CSRF-Token...');
+  
+  // Variabile per salvare il token intercettato
+  let csrfToken = null;
+
+  // Intercettiamo le intestazioni di qualsiasi richiesta inviata dal sito per catturare l'X-CSRF-Token
+  page.on('request', request => {
+    const headers = request.headers();
+    if (headers['x-csrf-token']) {
+      csrfToken = headers['x-csrf-token'];
     }
   });
 
-  console.log('Caricamento portale biglietti Gardaland Express...');
   try {
     await page.goto('https://tickets.gardaland.it/b2c/expressSale/express', {
       waitUntil: 'networkidle',
       timeout: 60000
     });
 
-    // Gestione del banner dei cookie
-    try {
-      const cookieButton = page.locator('#onetrust-accept-btn-handler, button:has-text("Accetta"), .cookie-accept-btn');
-      if (await cookieButton.isVisible({ timeout: 5000 })) {
-        await cookieButton.click();
-        console.log('Banner cookie gestito.');
-      }
-    } catch (e) {
-      // Prosegui se non visibile
-    }
-
-    // Attesa del caricamento completo dell'interfaccia Angular
-    await page.waitForTimeout(4000);
-
-    // Selezione delle date sul calendario dell'interfaccia per forzare le chiamate API
-    for (const dateStr of targetDates) {
-      const dayNumber = parseInt(dateStr.split('-')[2], 10);
-      console.log(`Navigazione calendario per il giorno ${dateStr} (Giorno ${dayNumber})...`);
-
-      const dayCell = page.locator(`td:not(.disabled) :text-is("${dayNumber}"), .calendar-day:has-text("${dayNumber}")`).first();
-      
-      if (await dayCell.isVisible({ timeout: 3000 })) {
-        await dayCell.click();
-        await page.waitForTimeout(2500);
-      } else {
-        console.log(`Elemento giorno ${dayNumber} non direttamente visibile/selezionabile.`);
+    // Se non intercettato dalle richieste, recuperiamo il token dai cookie
+    if (!csrfToken) {
+      const cookies = await context.cookies();
+      const csrfCookie = cookies.find(c => c.name.toLowerCase().includes('csrf') || c.name.toLowerCase().includes('xsrf'));
+      if (csrfCookie) {
+        csrfToken = csrfCookie.value;
       }
     }
+
+    console.log(`Token CSRF individuato: ${csrfToken ? csrfToken.substring(0, 10) + '...' : 'NON TROVATO (tentativo fallback)'}`);
 
   } catch (err) {
-    console.error('Errore durante la navigazione della SPA:', err.message);
+    console.error('Errore durante l\'inizializzazione della pagina:', err.message);
   }
 
-  // Lettura ed eventuale merge dei dati preesistenti
   let existingData = {};
   if (fs.existsSync(OUTPUT_FILE)) {
     try {
       existingData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
     } catch (e) {
-      console.warn('File JSON preesistente non valido o vuoto.');
+      console.warn('File JSON esistente non valido.');
     }
   }
 
   const freshData = {};
-  if (Object.keys(capturedData).length > 0) {
-    freshData[todayStr] = {
-      updatedAt: new Date().toISOString(),
-      productsByAk: capturedData
-    };
+
+  for (const dateStr of targetDates) {
+    console.log(`\n--- Elaborazione data: ${dateStr} ---`);
+
+    const result = await page.evaluate(async ({ date, token }) => {
+      try {
+        const headers = {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+          'X-API-KEY': '42'
+        };
+
+        if (token) {
+          headers['X-CSRF-Token'] = token;
+        }
+
+        // Step 1: dayPerformance con credentials: include
+        const resDay = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/dayPerformance', {
+          method: 'POST',
+          credentials: 'include',
+          headers: headers,
+          body: JSON.stringify({
+            locale: 'en-GB',
+            sellitemAk: 'FAST30',
+            day: date,
+            eventAk: 'GDL.EVN67',
+            searchAttributes: {},
+            useSumEnvelopeCapacity: false
+          })
+        });
+
+        if (!resDay.ok) {
+          return { error: `dayPerformance HTTP ${resDay.status}` };
+        }
+
+        const dayData = await resDay.json();
+        let performanceAk = null;
+        if (Array.isArray(dayData) && dayData.length > 0) {
+          performanceAk = dayData[0].performanceAk || dayData[0].ak;
+        } else if (dayData && typeof dayData === 'object') {
+          performanceAk = dayData.performanceAk || dayData.ak;
+        }
+
+        if (!performanceAk) {
+          return { error: 'performanceAk non trovato', rawDay: dayData };
+        }
+
+        // Step 2: performanceProducts
+        const resProd = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/performanceProducts', {
+          method: 'POST',
+          credentials: 'include',
+          headers: headers,
+          body: JSON.stringify({
+            locale: 'en-GB',
+            performanceAks: [performanceAk],
+            components: null,
+            offerCode: 'FAST30'
+          })
+        });
+
+        if (!resProd.ok) {
+          return { error: `performanceProducts HTTP ${resProd.status}` };
+        }
+
+        const productsData = await resProd.json();
+        return { success: true, performanceAk, products: productsData };
+
+      } catch (err) {
+        return { error: err.message };
+      }
+    }, { date: dateStr, token: csrfToken });
+
+    if (result.success) {
+      console.log(`SUCCESS [${dateStr}] - PerformanceAk: ${result.performanceAk}`);
+      freshData[dateStr] = {
+        updatedAt: new Date().toISOString(),
+        performanceAk: result.performanceAk,
+        products: result.products
+      };
+    } else {
+      console.warn(`FAIL [${dateStr}]: ${result.error}`);
+    }
+
+    await page.waitForTimeout(1000);
   }
 
   await browser.close();
 
+  // Merge e pulizia dati
   const mergedData = { ...existingData, ...freshData };
   const cleanedData = {};
 

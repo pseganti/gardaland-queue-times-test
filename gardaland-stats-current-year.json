@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdated": "2026-08-16T15:07:21.405Z",
+    "lastUpdated": "2026-08-16T15:55:53.787Z",
     "year": 2026,
     "totalRides": 36,
     "source": "https://queue-times.com/parks/12/queue_times.json"
@@ -10,11 +10,11 @@
       "id": 3740,
       "name": "Dragon Rush",
       "isOpen": true,
-      "waitMinutes": 25
+      "waitMinutes": 20
     },
     {
-      "id": 445,
-      "name": "Colorado Boat",
+      "id": 454,
+      "name": "Mammut",
       "isOpen": true,
       "waitMinutes": 15
     },
@@ -31,14 +31,20 @@
       "waitMinutes": 10
     },
     {
-      "id": 1905,
-      "name": "Oblivion The Black Hole",
+      "id": 10756,
+      "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
       "isOpen": true,
       "waitMinutes": 10
     },
     {
-      "id": 10756,
-      "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
+      "id": 445,
+      "name": "Colorado Boat",
+      "isOpen": true,
+      "waitMinutes": 10
+    },
+    {
+      "id": 444,
+      "name": "Fuga da Atlantide",
       "isOpen": true,
       "waitMinutes": 10
     },
@@ -49,20 +55,14 @@
       "waitMinutes": 5
     },
     {
+      "id": 1905,
+      "name": "Oblivion The Black Hole",
+      "isOpen": true,
+      "waitMinutes": 5
+    },
+    {
       "id": 452,
       "name": "Raptor",
-      "isOpen": true,
-      "waitMinutes": 5
-    },
-    {
-      "id": 444,
-      "name": "Fuga da Atlantide",
-      "isOpen": true,
-      "waitMinutes": 5
-    },
-    {
-      "id": 10557,
-      "name": "Jumanji - The Adventure",
       "isOpen": true,
       "waitMinutes": 5
     },
@@ -157,15 +157,15 @@
       "waitMinutes": 0
     },
     {
-      "id": 11806,
-      "name": "Jumanji The Labyrinth",
+      "id": 10557,
+      "name": "Jumanji - The Adventure",
       "isOpen": true,
       "waitMinutes": 0
     },
     {
-      "id": 454,
-      "name": "Mammut",
-      "isOpen": false,
+      "id": 11806,
+      "name": "Jumanji The Labyrinth",
+      "isOpen": true,
       "waitMinutes": 0
     },
     {

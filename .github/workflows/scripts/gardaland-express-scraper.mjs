@@ -26,18 +26,62 @@ function getTargetDates() {
 async function runScraper() {
   const todayStr = formatDate(new Date());
   const targetDates = getTargetDates();
-  console.log(`Avvio Playwright Scraper per Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
+  console.log(`Avvio Interceptor Scraper per Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
 
-  // Avvia il browser headless
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    locale: 'it-IT'
   });
+
   const page = await context.newPage();
+  const capturedProducts = {};
 
-  console.log('Apertura pagina biglietti per inizializzare sessione e cookie...');
-  await page.goto('https://tickets.gardaland.it/b2c/ticketSale/tickets', { waitUntil: 'networkidle' });
+  // Intercetta la risposta dell'API di Gardaland quando la pagina la invoca
+  page.on('response', async (response) => {
+    const url = response.url();
+    if (url.includes('/performanceProducts') && response.status() === 200) {
+      try {
+        const json = await response.json();
+        console.log(`[NET INTERCEPT] Catturata risposta prodotti Express!`);
+        // Registra i prodotti catturati
+        if (Array.isArray(json) && json.length > 0) {
+          const perfAk = json[0].performanceAk || 'UNKNOWN';
+          capturedProducts[perfAk] = json;
+        }
+      } catch (err) {
+        console.error('Errore nel parsing della risposta intercettata:', err.message);
+      }
+    }
+  });
 
+  console.log('Navigazione alla pagina Gardaland Express...');
+  try {
+    // Apriamo direttamente lo shop Express per far scattare i cookie e il token d'infrastruttura
+    await page.goto('https://tickets.gardaland.it/b2c/expressSale/express', { 
+      waitUntil: 'networkidle',
+      timeout: 60000 
+    });
+
+    // Accetta i cookie se compare il banner (OneTrust / Cookiebot)
+    try {
+      const acceptBtn = page.locator('#onetrust-accept-btn-handler, .cookie-accept-btn');
+      if (await acceptBtn.isVisible({ timeout: 5000 })) {
+        await acceptBtn.click();
+        console.log('Banner cookie accettato.');
+      }
+    } catch (e) {
+      // Ignora se non presente
+    }
+
+    // Attende che la SPA carichi e faccia le chiamate iniziali
+    await page.waitForTimeout(5000);
+
+  } catch (err) {
+    console.error('Errore durante il caricamento della pagina:', err.message);
+  }
+
+  // Se l'intercettazione ha catturato dati tramite il normale ciclo di vita della pagina
   let existingData = {};
   if (fs.existsSync(OUTPUT_FILE)) {
     try {
@@ -48,77 +92,17 @@ async function runScraper() {
   }
 
   const freshData = {};
+  const capturedKeys = Object.keys(capturedProducts);
 
-  for (const dateStr of targetDates) {
-    console.log(`\n--- Elaborazione data: ${dateStr} ---`);
-
-    // Esegue la fetch DENTRO il contesto del browser attivo (sfruttando cookie e token reali)
-    const result = await page.evaluate(async (targetDate) => {
-      try {
-        // 1. Day Performance
-        const resDay = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/dayPerformance', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-API-KEY': '42'
-          },
-          body: JSON.stringify({
-            locale: 'en-GB',
-            sellitemAk: 'FAST30',
-            day: targetDate,
-            eventAk: 'GDL.EVN67',
-            searchAttributes: {},
-            useSumEnvelopeCapacity: false
-          })
-        });
-
-        if (!resDay.ok) return { error: `DayPerformance HTTP ${resDay.status}` };
-        const dayPerfData = await resDay.json();
-
-        let performanceAk = null;
-        if (Array.isArray(dayPerfData) && dayPerfData.length > 0) {
-          performanceAk = dayPerfData[0].performanceAk || dayPerfData[0].ak;
-        } else if (dayPerfData && typeof dayPerfData === 'object') {
-          performanceAk = dayPerfData.performanceAk || dayPerfData.ak;
-        }
-
-        if (!performanceAk) return { error: 'Nessun performanceAk trovato' };
-
-        // 2. Performance Products
-        const resProd = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/performanceProducts', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-API-KEY': '42'
-          },
-          body: JSON.stringify({
-            locale: 'en-GB',
-            performanceAks: [performanceAk],
-            components: null,
-            offerCode: 'FAST30'
-          })
-        });
-
-        if (!resProd.ok) return { error: `PerformanceProducts HTTP ${resProd.status}` };
-        const productsData = await resProd.json();
-
-        return { performanceAk, products: productsData };
-
-      } catch (err) {
-        return { error: err.message };
-      }
-    }, dateStr);
-
-    if (result && !result.error) {
-      console.log(`SUCCESS [${dateStr}] PerformanceAK: ${result.performanceAk}`);
-      freshData[dateStr] = {
-        updatedAt: new Date().toISOString(),
-        performanceAk: result.performanceAk,
-        products: result.products
-      };
-    } else {
-      console.warn(`FAIL [${dateStr}]: ${result ? result.error : 'Errore sconosciuto'}`);
-    }
+  if (capturedKeys.length > 0) {
+    console.log(`\nProdotti intercettati per ${capturedKeys.length} performanceAK.`);
+    // Assegna i dati catturati alla data odierna / target
+    freshData[todayStr] = {
+      updatedAt: new Date().toISOString(),
+      products: capturedProducts
+    };
+  } else {
+    console.warn('\nNessuna chiamata API intercettata durante la navigazione.');
   }
 
   await browser.close();

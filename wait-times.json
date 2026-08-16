@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-16T20:31:48Z",
-  "lastUpdate": "22:31",
+  "timestamp": "2026-08-16T20:40:33Z",
+  "lastUpdate": "22:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -47,7 +47,7 @@
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",

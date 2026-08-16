@@ -1,0 +1,33 @@
+name: Update Gardaland Ride Stats 2026
+
+on:
+  schedule:
+    # Esegue una volta al giorno alle 03:00 UTC (05:00 italiane)
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies
+        run: npm install cheerio
+
+      - name: Run Stats Scraper
+        run: node .github/workflows/scripts/scrape-gardaland-stats.mjs
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add gardaland-stats-2026.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Aggiornamento automatico statistiche attese 2026" && git push)

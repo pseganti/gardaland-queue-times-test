@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-16T09:00:52Z",
-  "lastUpdate": "11:00",
+  "timestamp": "2026-08-16T09:10:31Z",
+  "lastUpdate": "11:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -36,13 +36,13 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -52,7 +52,7 @@
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",

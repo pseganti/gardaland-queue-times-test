@@ -8,6 +8,8 @@ on:
 jobs:
   scrape-stats:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Concede i permessi di scrittura al bot
 
     steps:
       - name: Checkout repository

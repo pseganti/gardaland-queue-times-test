@@ -29,10 +29,11 @@ jobs:
       - name: Run Express Scraper
         run: node .github/workflows/scripts/gardaland-express-scraper.mjs
 
-      - name: Commit & Push JSON
+      - name: Commit and Push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add gardaland-express-export.json
-          git status
-          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: update express tickets export [skip ci]" && git push)
+         git config --global user.name "github-actions[bot]"
+         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+         git add gardaland-express-export.json
+         git commit -m "auto: update express tickets export [skip ci]" || exit 0
+         git pull --rebase origin main
+         git push

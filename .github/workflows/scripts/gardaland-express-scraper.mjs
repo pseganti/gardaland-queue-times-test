@@ -120,21 +120,33 @@ async function runScraper() {
 
         if (!resDay.ok) {
           const errText = await resDay.text();
+          if (resDay.status === 500 && errText.includes('BE003')) {
+            return { error: 'Data non acquistabile online o giornata già avviata (BE003)' };
+          }
           return { error: `dayPerformance HTTP ${resDay.status}: ${errText.substring(0, 100)}` };
         }
 
         const dayData = await resDay.json();
 
-        // Estrazione di performanceAk (sia se la risposta è un Array o un Oggetto)
+        // Estrazione di performanceAK supportando sia oggetti diretti che l'array performances
         let performanceAk = null;
-        if (Array.isArray(dayData) && dayData.length > 0) {
-          performanceAk = dayData[0].performanceAk || dayData[0].ak;
+        let availability = null;
+
+        if (dayData && dayData.performances && dayData.performances.length > 0) {
+          const perf = dayData.performances[0];
+          performanceAk = perf.performanceAK || perf.performanceAk || perf.ak;
+          availability = perf.availability || null;
+        } else if (Array.isArray(dayData) && dayData.length > 0) {
+          const perf = dayData[0];
+          performanceAk = perf.performanceAK || perf.performanceAk || perf.ak;
+          availability = perf.availability || null;
         } else if (dayData && typeof dayData === 'object') {
-          performanceAk = dayData.performanceAk || dayData.ak;
+          performanceAk = dayData.performanceAK || dayData.performanceAk || dayData.ak;
+          availability = dayData.availability || null;
         }
 
         if (!performanceAk) {
-          return { error: 'performanceAk non trovato', rawPayload: JSON.stringify(dayData).substring(0, 150) };
+          return { error: 'performanceAK non trovato', rawPayload: JSON.stringify(dayData).substring(0, 150) };
         }
 
         // Step 2: performanceProducts
@@ -156,7 +168,7 @@ async function runScraper() {
         }
 
         const productsData = await resProd.json();
-        return { success: true, performanceAk, products: productsData };
+        return { success: true, performanceAk, availability, products: productsData };
 
       } catch (err) {
         return { error: err.message };
@@ -164,10 +176,11 @@ async function runScraper() {
     }, { date: dateStr, token: capturedCsrfToken });
 
     if (result.success) {
-      console.log(`SUCCESS [${dateStr}] - PerformanceAk: ${result.performanceAk}`);
+      console.log(`SUCCESS [${dateStr}] - PerformanceAK: ${result.performanceAk}`);
       freshData[dateStr] = {
         updatedAt: new Date().toISOString(),
         performanceAk: result.performanceAk,
+        availability: result.availability,
         products: result.products
       };
     } else {

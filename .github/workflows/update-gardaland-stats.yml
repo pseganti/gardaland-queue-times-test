@@ -1,8 +1,7 @@
-name: Update Gardaland Ride Stats 2026
+name: Update Gardaland Ride Stats
 
 on:
   schedule:
-    # Esegue una volta al giorno alle 03:00 UTC (05:00 italiane)
     - cron: '0 3 * * *'
   workflow_dispatch:
 
@@ -29,5 +28,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add gardaland-stats-2026.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Aggiornamento automatico statistiche attese 2026" && git push)
+          git add gardaland-stats-current-year.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Aggiornamento automatico statistiche attese" && git push)

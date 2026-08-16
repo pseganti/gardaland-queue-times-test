@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-16T10:30:45Z",
-  "lastUpdate": "12:30",
+  "timestamp": "2026-08-16T10:40:34Z",
+  "lastUpdate": "12:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -72,7 +72,7 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",

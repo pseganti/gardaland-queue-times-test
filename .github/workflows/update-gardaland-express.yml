@@ -2,8 +2,8 @@ name: Update Gardaland Express Tickets
 
 on:
   schedule:
-    - cron: '0 3 * * *' # Esegue ogni notte alle 03:00 UTC
-  workflow_dispatch: # Avvio manuale da GitHub
+    - cron: '0 3 * * *'
+  workflow_dispatch:
 
 jobs:
   scrape-express:
@@ -19,6 +19,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install playwright
+
+      - name: Install Playwright Browsers
+        run: npx playwright install chromium --with-deps
 
       - name: Run Express Scraper
         run: node .github/workflows/scripts/gardaland-express-scraper.mjs

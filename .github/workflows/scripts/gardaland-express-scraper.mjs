@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Output salvato nella radice del repository
-const OUTPUT_FILE = path.join(__dirname, '../../../gardaland-express-export.json');
+// Risale di 3 livelli da .github/workflows/scripts fino alla radice della repository
+const OUTPUT_FILE = path.resolve(__dirname, '../../../gardaland-express-export.json');
 
 const HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0',
@@ -31,7 +31,7 @@ function getTargetDates() {
   return dates;
 }
 
-// 1. Ottiene la dayPerformance (con la performanceAk) per una data specifica
+// 1. Chiamata dayPerformance
 async function getDayPerformance(dateStr) {
   try {
     const res = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/dayPerformance', {
@@ -47,15 +47,16 @@ async function getDayPerformance(dateStr) {
       })
     });
 
+    console.log(`[${dateStr}] Response Status (dayPerformance):`, res.status);
     if (!res.ok) return null;
     return await res.json();
   } catch (err) {
-    console.error(`Errore dayPerformance per ${dateStr}:`, err.message);
+    console.error(`[${dateStr}] Errore dayPerformance:`, err.message);
     return null;
   }
 }
 
-// 2. Ottiene i prodotti Express (prezzi e pass) per il performanceAk recuperato
+// 2. Chiamata performanceProducts
 async function fetchExpressProducts(performanceAk) {
   try {
     const res = await fetch('https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/performanceProducts', {
@@ -69,6 +70,7 @@ async function fetchExpressProducts(performanceAk) {
       })
     });
 
+    console.log(`[AK: ${performanceAk}] Response Status (performanceProducts):`, res.status);
     if (!res.ok) return null;
     return await res.json();
   } catch (err) {
@@ -80,33 +82,36 @@ async function fetchExpressProducts(performanceAk) {
 async function runScraper() {
   const todayStr = formatDate(new Date());
   const targetDates = getTargetDates();
+  console.log(`Percorso destinazione JSON: ${OUTPUT_FILE}`);
   console.log(`Avvio scraping Express: ${targetDates[0]} -> ${targetDates[targetDates.length - 1]}`);
 
-  // Carica il file JSON esistente se presente
   let existingData = {};
   if (fs.existsSync(OUTPUT_FILE)) {
     try {
       existingData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
     } catch (e) {
-      console.warn('File JSON vuoto o non valido, inizializzo nuova mappa.');
+      console.warn('File JSON vuoto o non valido.');
     }
   }
 
   const freshData = {};
 
   for (const dateStr of targetDates) {
-    console.log(`Elaborazione data: ${dateStr}...`);
+    console.log(`\n--- Elaborazione data: ${dateStr} ---`);
     const dayPerf = await getDayPerformance(dateStr);
 
-    // Estrae la performanceAk (gestisce sia risposta Array che Oggetto)
+    console.log(`Struttura risposta dayPerformance per ${dateStr}:`, JSON.stringify(dayPerf));
+
+    // Estrazione flessibile dell'AK
     let performanceAk = null;
     if (Array.isArray(dayPerf) && dayPerf.length > 0) {
-      performanceAk = dayPerf[0].performanceAk || dayPerf[0].ak;
+      performanceAk = dayPerf[0].performanceAk || dayPerf[0].ak || dayPerf[0].id;
     } else if (dayPerf && typeof dayPerf === 'object') {
-      performanceAk = dayPerf.performanceAk || dayPerf.ak;
+      performanceAk = dayPerf.performanceAk || dayPerf.ak || dayPerf.id;
     }
 
     if (performanceAk) {
+      console.log(`Trovato performanceAk: ${performanceAk}`);
       const products = await fetchExpressProducts(performanceAk);
       if (products) {
         freshData[dateStr] = {
@@ -116,26 +121,23 @@ async function runScraper() {
         };
       }
     } else {
-      console.warn(`Nessun performanceAk trovato per ${dateStr}`);
+      console.warn(`Nessun performanceAk estratto per ${dateStr}`);
     }
   }
 
-  // Merge dei nuovi dati con l'archivio locale
+  // Merge e pulizia
   const mergedData = { ...existingData, ...freshData };
-
-  // Pulizia: Rimuove le date precedenti a oggi
   const cleanedData = {};
+
   Object.keys(mergedData).sort().forEach(dateKey => {
     if (dateKey >= todayStr) {
       cleanedData[dateKey] = mergedData[dateKey];
-    } else {
-      console.log(`Rimuovo data passata: ${dateKey}`);
     }
   });
 
-  // Salva il file JSON
+  // Forziamo la scrittura del file
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(cleanedData, null, 2));
-  console.log(`Completato! Dati salvati in: ${OUTPUT_FILE}`);
+  console.log(`\nScrittura completata! Dimensione file: ${fs.statSync(OUTPUT_FILE).size} bytes`);
 }
 
 runScraper();

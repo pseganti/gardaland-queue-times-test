@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Salva il JSON finale nella radice della repo
-const OUTPUT_FILE = path.join(__dirname, '../gardaland-express-export.json');
+const OUTPUT_FILE = path.join(__dirname, '../../../gardaland-express-export.json');
 
 function formatDate(date) {
   return date.toISOString().split('T')[0];

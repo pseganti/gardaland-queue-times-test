@@ -21,7 +21,7 @@ jobs:
           node-version: '20'
 
       - name: Run Express Scraper
-        run: node scripts/gardaland-express-scraper.mjs
+        run: node .github/workflows/scripts/gardaland-express-scraper.mjs
 
       - name: Commit & Push JSON
         run: |

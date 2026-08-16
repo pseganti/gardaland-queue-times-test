@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-16T10:40:34Z",
-  "lastUpdate": "12:40",
+  "timestamp": "2026-08-16T10:42:14Z",
+  "lastUpdate": "12:42",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "wolf-legend": {

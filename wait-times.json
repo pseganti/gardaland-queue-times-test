@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-17T12:20:36Z",
-  "lastUpdate": "14:20",
+  "timestamp": "2026-08-17T12:30:47Z",
+  "lastUpdate": "14:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,12 +81,12 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {

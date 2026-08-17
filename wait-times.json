@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-17T08:20:34Z",
-  "lastUpdate": "10:20",
+  "timestamp": "2026-08-17T08:25:22Z",
+  "lastUpdate": "10:25",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -31,12 +31,12 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-17T13:54:36Z",
-  "lastUpdate": "15:54",
+  "timestamp": "2026-08-17T14:00:58Z",
+  "lastUpdate": "16:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "volaplano": {

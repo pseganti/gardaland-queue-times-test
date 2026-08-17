@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-17T15:03:16Z",
-  "lastUpdate": "17:03",
+  "timestamp": "2026-08-17T15:10:33Z",
+  "lastUpdate": "17:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {

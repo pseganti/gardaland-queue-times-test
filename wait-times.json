@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T19:59:21Z",
-  "lastUpdate": "21:59",
+  "timestamp": "2026-08-18T20:00:59Z",
+  "lastUpdate": "22:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "funny-express": {

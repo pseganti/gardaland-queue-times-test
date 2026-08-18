@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T10:40:34Z",
-  "lastUpdate": "12:40",
+  "timestamp": "2026-08-18T10:50:33Z",
+  "lastUpdate": "12:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,17 +16,17 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "magic-house": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 40,
+      "wait_time": 50,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 60,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 50,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-pilota": {

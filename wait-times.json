@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T16:20:34Z",
-  "lastUpdate": "18:20",
+  "timestamp": "2026-08-18T16:30:44Z",
+  "lastUpdate": "18:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "volaplano": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "flying-island": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

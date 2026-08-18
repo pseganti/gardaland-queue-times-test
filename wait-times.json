@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T11:03:58Z",
-  "lastUpdate": "13:03",
+  "timestamp": "2026-08-18T11:10:34Z",
+  "lastUpdate": "13:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 35,
+      "wait_time": 55,
       "is_open": true
     },
     "raptor": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "magic-house": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {

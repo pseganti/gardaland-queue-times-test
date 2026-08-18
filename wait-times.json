@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T15:01:02Z",
-  "lastUpdate": "17:01",
+  "timestamp": "2026-08-18T15:10:36Z",
+  "lastUpdate": "17:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,18 +11,18 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 20,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "space-vertigo": {
       "name": "Space Vertigo",
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peter-pan": {

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-18T20:20:33Z",
-  "lastUpdate": "22:20",
+  "timestamp": "2026-08-18T20:30:46Z",
+  "lastUpdate": "22:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -21,12 +21,12 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -41,13 +41,13 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 20,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

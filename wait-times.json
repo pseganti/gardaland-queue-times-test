@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T15:40:33Z",
-  "lastUpdate": "17:40",
+  "timestamp": "2026-08-18T15:50:34Z",
+  "lastUpdate": "17:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 55,
+      "wait_time": 45,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-tour": {

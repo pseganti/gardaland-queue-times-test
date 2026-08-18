@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T09:40:33Z",
-  "lastUpdate": "11:40",
+  "timestamp": "2026-08-18T09:49:55Z",
+  "lastUpdate": "11:49",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,8 +21,8 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 30,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "peter-pan": {

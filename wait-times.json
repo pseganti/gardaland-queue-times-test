@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-18T14:40:36Z",
-  "lastUpdate": "16:40",
+  "timestamp": "2026-08-18T14:50:33Z",
+  "lastUpdate": "16:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 55,
+      "wait_time": 45,
       "is_open": true
     },
     "colorado-boat": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-19T18:10:34Z",
-  "lastUpdate": "20:10",
+  "timestamp": "2026-08-19T18:20:33Z",
+  "lastUpdate": "20:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {
@@ -31,17 +31,17 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,17 +86,17 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-19T09:40:35Z",
-  "lastUpdate": "11:40",
+  "timestamp": "2026-08-19T09:50:33Z",
+  "lastUpdate": "11:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 80,
+      "wait_time": 70,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 45,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 60,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {
@@ -141,7 +141,7 @@
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-l-isola-dei-pirati": {

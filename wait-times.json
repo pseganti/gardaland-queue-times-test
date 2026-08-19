@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-08-19T08:10:34Z",
-  "lastUpdate": "10:10",
+  "timestamp": "2026-08-19T08:20:34Z",
+  "lastUpdate": "10:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -31,8 +31,8 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
@@ -61,8 +61,8 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -101,38 +101,38 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "baby-tour": {
       "name": "Baby Tour",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "giostra-cavalli": {
       "name": "Giostra Cavalli",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "l-albero-di-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "monorotaia": {
       "name": "Monorotaia",
@@ -141,13 +141,13 @@
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "peppa-pig-land-la-casa-di-peppa-pig": {
       "name": "Peppa Pig Land - La Casa di Peppa Pig",
@@ -156,8 +156,8 @@
     },
     "peppa-pig-land-la-mongolfiera-di-peppa-pig": {
       "name": "Peppa Pig Land - La Mongolfiera di Peppa Pig",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "prezzemolo-land": {
       "name": "Prezzemolo Land",

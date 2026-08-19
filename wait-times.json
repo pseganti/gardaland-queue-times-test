@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-19T11:30:45Z",
-  "lastUpdate": "13:30",
+  "timestamp": "2026-08-19T11:40:34Z",
+  "lastUpdate": "13:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "jungle-rapids": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "superbaby": {

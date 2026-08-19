@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-19T12:03:26Z",
-  "lastUpdate": "14:03",
+  "timestamp": "2026-08-19T12:10:34Z",
+  "lastUpdate": "14:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
@@ -51,17 +51,17 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

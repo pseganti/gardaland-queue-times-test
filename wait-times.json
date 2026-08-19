@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-19T18:00:31Z",
+  "timestamp": "2026-08-19T18:00:58Z",
   "lastUpdate": "20:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "shaman": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "peter-pan": {

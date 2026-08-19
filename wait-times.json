@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-19T14:30:50Z",
-  "lastUpdate": "16:30",
+  "timestamp": "2026-08-19T14:40:37Z",
+  "lastUpdate": "16:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "colorado-boat": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {

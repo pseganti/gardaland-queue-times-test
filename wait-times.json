@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-19T13:00:58Z",
-  "lastUpdate": "15:00",
+  "timestamp": "2026-08-19T13:10:32Z",
+  "lastUpdate": "15:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 30,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
@@ -81,12 +81,12 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 40,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

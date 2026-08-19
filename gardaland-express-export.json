@@ -1,304 +1,4 @@
 {
-  "2026-08-18": {
-    "updatedAt": "2026-08-17T03:43:13.118Z",
-    "performanceAk": "GDL.EVN67.PRF967",
-    "availability": {
-      "level": "HIGH",
-      "available": 710,
-      "total": 1000,
-      "generalAdmission": false
-    },
-    "products": {
-      "products": [
-        {
-          "productAk": "GDL.EVN1.MCC9154",
-          "sortOrder": 1002,
-          "hasCalendar": true,
-          "fields": {
-            "fullTitle": "TIME SAVER (Fast Track) \"NOLIMITS\"",
-            "title": "TIME SAVER (Fast Track) \"NOLIMITS\"",
-            "sectionTitle": null,
-            "specificTitle": null,
-            "description": null,
-            "info": null,
-            "infoExtended": "<B>With this Timesaver Ticket (fast track), on the day of your visit, you can enjoy unlimited rides on these attractions, saving your waiting time:</B> \nFuga da Atlantide, Jungle Rapids, Blue Tornado, Mammut, Space Vertigo, Oblivion, Raptor, Jumanji The Adventure, Jumanji The Labyrinth, Animal \nTreasure Island, Colorado Boat, Shaman, Ortobruco Tour, Volaplano, Magic House, Cinema 4D, Rocket Factory.<br>\n<br>\n<B>Plus, you get 20% off at Shops in the Park<SUP>1</SUP></B>\n<br><br>\n<B>IMPORTANT INFORMATION:</B><br><br>\n<UL><LI>Valid only on the day of the visit, to be made by 01.11.2026.</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Time Saver.</LI>\n<LI>To use the Time Saver, download the 'Gardaland Express' App, go to the 'Express' section and scan the QR Code of this voucher to import it into \nthe App and manage your Time Saver.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the fast track service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office 'Gardaland \nExpress' from the opening until 1 PM and at the Gardaland Express point of sale 'Mammut' from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not valid on snacks, drinks, cigarettes, photos, \nhelium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at Legoland® and at the Jumanji Shop.",
-            "iframeUrl": null,
-            "onePurchasePerDay": null,
-            "purchasableDaysFromNow": null,
-            "isGift": null,
-            "isReservation": null,
-            "multipleCalendarsLabels": null,
-            "forceLoginAtCheckout": false,
-            "competitionName": null,
-            "imageSmall": null,
-            "subtitle": null
-          },
-          "gtm": {
-            "variant": null,
-            "category": null,
-            "brand": null
-          },
-          "price": {
-            "currency": "EUR",
-            "value": 92,
-            "tax": null
-          },
-          "priceIvaFatt": null,
-          "components": null,
-          "warning": {
-            "account": null,
-            "additionalInfo": null,
-            "dateFrom": {
-              "required": false
-            },
-            "dateTo": {
-              "required": false
-            },
-            "giftAid": {
-              "required": false
-            },
-            "mediaLink": {
-              "required": false
-            },
-            "peopleCount": null,
-            "eventList": [
-              {
-                "eventAk": "GDL.EVN67",
-                "quantity": 1,
-                "required": "REQUIRED"
-              }
-            ],
-            "saleRestriction": {
-              "min": null,
-              "max": 10
-            },
-            "saleValidity": {
-              "calendarAk": null,
-              "fromDate": null,
-              "fromTime": null,
-              "toDate": null,
-              "toTime": null
-            },
-            "variablePrice": null
-          },
-          "upsellAks": [],
-          "eventAks": [
-            "GDL.EVN67",
-            "GDL.EVN102"
-          ],
-          "productType": "TICKET",
-          "offers": [
-            "FST",
-            "GDL",
-            "EXP",
-            "ECM",
-            "PRB",
-            "WEXP",
-            "FAST30",
-            "FASTEX30",
-            "CROSS1"
-          ],
-          "timeSpan": null,
-          "extraType": null,
-          "redeem": null,
-          "capacityCode": null,
-          "subProducts": null,
-          "campaignCode": null
-        },
-        {
-          "productAk": "GDL.EVN1.MCC9156",
-          "sortOrder": 1003,
-          "hasCalendar": true,
-          "fields": {
-            "fullTitle": "TIME SAVER (Fast Track) \"EPIC 17\"",
-            "title": "TIME SAVER (Fast Track) \"EPIC 17\"",
-            "sectionTitle": null,
-            "specificTitle": null,
-            "description": null,
-            "info": null,
-            "infoExtended": "<B>With this Timesaver Ticket (fast track), on the day of your visit, you can enjoy 1 ride on each of the following 17 attractions, saving your waiting \ntime:</B> Fuga da Atlantide, Jungle Rapids, Blue Tornado, Mammut, Space Vertigo, Oblivion, Raptor, Jumanji The Adventure, Jumanji The Labyrinth, \nAnimal Treasure Island, Colorado Boat, Shaman, Ortobruco Tour, Volaplano, Magic House, Cinema 4D, Rocket Factory.<br>\n<br>\n<B>Plus, you get 20% off at Shops in the Park<SUP>1</SUP></B>\n<br><br>\n<B>IMPORTANT INFORMATION:</B><br><br>\n<UL><LI>Valid only on the day of the visit, to be made by 01.11.2026.</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Time Saver.</LI>\n<LI>To use the Time Saver, download the 'Gardaland Express' App, go to the 'Express' section and scan the QR Code of this voucher to import it into \nthe App and manage your Time Saver.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the fast track service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office 'Gardaland \nExpress' from the opening until 1 PM and at the Gardaland Express point of sale 'Mammut' from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not valid on snacks, drinks, cigarettes, photos, \nhelium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at Legoland® and at the Jumanji Shop.",
-            "iframeUrl": null,
-            "onePurchasePerDay": null,
-            "purchasableDaysFromNow": null,
-            "isGift": null,
-            "isReservation": null,
-            "multipleCalendarsLabels": null,
-            "forceLoginAtCheckout": false,
-            "competitionName": null,
-            "imageSmall": null,
-            "subtitle": null
-          },
-          "gtm": {
-            "variant": null,
-            "category": null,
-            "brand": null
-          },
-          "price": {
-            "currency": "EUR",
-            "value": 62,
-            "tax": null
-          },
-          "priceIvaFatt": null,
-          "components": null,
-          "warning": {
-            "account": null,
-            "additionalInfo": null,
-            "dateFrom": {
-              "required": false
-            },
-            "dateTo": {
-              "required": false
-            },
-            "giftAid": {
-              "required": false
-            },
-            "mediaLink": {
-              "required": false
-            },
-            "peopleCount": null,
-            "eventList": [
-              {
-                "eventAk": "GDL.EVN67",
-                "quantity": 1,
-                "required": "REQUIRED"
-              }
-            ],
-            "saleRestriction": {
-              "min": null,
-              "max": 10
-            },
-            "saleValidity": {
-              "calendarAk": null,
-              "fromDate": null,
-              "fromTime": null,
-              "toDate": null,
-              "toTime": null
-            },
-            "variablePrice": null
-          },
-          "upsellAks": [],
-          "eventAks": [
-            "GDL.EVN67",
-            "GDL.EVN102"
-          ],
-          "productType": "TICKET",
-          "offers": [
-            "FST",
-            "GDL",
-            "EXP",
-            "ECM",
-            "PRB",
-            "WEXP",
-            "FAST30",
-            "FASTEX30",
-            "CROSS1"
-          ],
-          "timeSpan": null,
-          "extraType": null,
-          "redeem": null,
-          "capacityCode": null,
-          "subProducts": null,
-          "campaignCode": null
-        },
-        {
-          "productAk": "GDL.EVN1.MCC9158",
-          "sortOrder": 1004,
-          "hasCalendar": true,
-          "fields": {
-            "fullTitle": "TIME SAVER (Fast Track) \"GIVE ME 5\"",
-            "title": "TIME SAVER (Fast Track) \"GIVE ME 5\"",
-            "sectionTitle": null,
-            "specificTitle": null,
-            "description": null,
-            "info": null,
-            "infoExtended": "<B>With this Timesaver Ticket (fast track), on the day of your visit, you can enjoy 1 ride on 5 attractions selected from this list, saving your waiting \ntime:</B> Fuga da Atlantide, Jungle Rapids, Blue Tornado, Mammut, Space Vertigo, Oblivion, Jumanji The Adventure, Jumanji The Labyrinth, Animal \nTreasure Island, Shaman, Ortobruco Tour, Volaplano, Magic House, Cinema 4D, Rocket Factory.<br>\n<br>\n<B>Plus, you get 20% off at Shops in the Park<SUP>1</SUP></B>\n<br><br>\n<B>IMPORTANT INFORMATION:</B><br><br>\n<UL><LI>Valid only on the day of the visit, to be made by 01.11.2026.</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Time Saver.</LI>\n<LI>To use the Time Saver, download the 'Gardaland Express' App, go to the 'Express' section and scan the QR Code of this voucher to import it into \nthe App and manage your Time Saver.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the fast track service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office 'Gardaland \nExpress' from the opening until 1 PM and at the Gardaland Express point of sale 'Mammut' from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not \nvalid on snacks, drinks, cigarettes, photos, helium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at \nLegoland® and at the Jumanji Shop.",
-            "iframeUrl": null,
-            "onePurchasePerDay": null,
-            "purchasableDaysFromNow": null,
-            "isGift": null,
-            "isReservation": null,
-            "multipleCalendarsLabels": null,
-            "forceLoginAtCheckout": false,
-            "competitionName": null,
-            "imageSmall": null,
-            "subtitle": null
-          },
-          "gtm": {
-            "variant": null,
-            "category": null,
-            "brand": null
-          },
-          "price": {
-            "currency": "EUR",
-            "value": 32,
-            "tax": null
-          },
-          "priceIvaFatt": null,
-          "components": null,
-          "warning": {
-            "account": null,
-            "additionalInfo": null,
-            "dateFrom": {
-              "required": false
-            },
-            "dateTo": {
-              "required": false
-            },
-            "giftAid": {
-              "required": false
-            },
-            "mediaLink": {
-              "required": false
-            },
-            "peopleCount": null,
-            "eventList": [
-              {
-                "eventAk": "GDL.EVN67",
-                "quantity": 1,
-                "required": "REQUIRED"
-              }
-            ],
-            "saleRestriction": {
-              "min": null,
-              "max": 10
-            },
-            "saleValidity": {
-              "calendarAk": null,
-              "fromDate": null,
-              "fromTime": null,
-              "toDate": null,
-              "toTime": null
-            },
-            "variablePrice": null
-          },
-          "upsellAks": [],
-          "eventAks": [
-            "GDL.EVN67",
-            "GDL.EVN102"
-          ],
-          "productType": "TICKET",
-          "offers": [
-            "FST",
-            "GDL",
-            "EXP",
-            "ECM",
-            "PRB",
-            "WEXP",
-            "FAST30",
-            "FASTEX30",
-            "CROSS1"
-          ],
-          "timeSpan": null,
-          "extraType": null,
-          "redeem": null,
-          "capacityCode": null,
-          "subProducts": null,
-          "campaignCode": null
-        }
-      ],
-      "redeemableGroups": null
-    }
-  },
   "2026-08-19": {
     "updatedAt": "2026-08-18T03:38:36.785Z",
     "performanceAk": "GDL.EVN67.PRF968",
@@ -600,11 +300,11 @@
     }
   },
   "2026-08-20": {
-    "updatedAt": "2026-08-18T03:38:39.338Z",
+    "updatedAt": "2026-08-19T03:40:29.431Z",
     "performanceAk": "GDL.EVN67.PRF969",
     "availability": {
       "level": "HIGH",
-      "available": 782,
+      "available": 753,
       "total": 1000,
       "generalAdmission": false
     },
@@ -900,11 +600,11 @@
     }
   },
   "2026-08-21": {
-    "updatedAt": "2026-08-18T03:38:43.726Z",
+    "updatedAt": "2026-08-19T03:40:32.505Z",
     "performanceAk": "GDL.EVN67.PRF970",
     "availability": {
       "level": "HIGH",
-      "available": 881,
+      "available": 878,
       "total": 1000,
       "generalAdmission": false
     },
@@ -1200,11 +900,11 @@
     }
   },
   "2026-08-22": {
-    "updatedAt": "2026-08-18T03:38:48.441Z",
+    "updatedAt": "2026-08-19T03:40:35.217Z",
     "performanceAk": "GDL.EVN67.PRF971",
     "availability": {
       "level": "HIGH",
-      "available": 863,
+      "available": 852,
       "total": 1000,
       "generalAdmission": false
     },
@@ -1500,11 +1200,11 @@
     }
   },
   "2026-08-23": {
-    "updatedAt": "2026-08-18T03:38:51.120Z",
+    "updatedAt": "2026-08-19T03:40:37.759Z",
     "performanceAk": "GDL.EVN67.PRF972",
     "availability": {
       "level": "HIGH",
-      "available": 920,
+      "available": 905,
       "total": 1000,
       "generalAdmission": false
     },
@@ -1800,11 +1500,11 @@
     }
   },
   "2026-08-24": {
-    "updatedAt": "2026-08-18T03:38:54.389Z",
+    "updatedAt": "2026-08-19T03:40:39.873Z",
     "performanceAk": "GDL.EVN67.PRF973",
     "availability": {
       "level": "HIGH",
-      "available": 855,
+      "available": 845,
       "total": 1000,
       "generalAdmission": false
     },
@@ -2100,11 +1800,311 @@
     }
   },
   "2026-08-25": {
-    "updatedAt": "2026-08-18T03:38:56.936Z",
+    "updatedAt": "2026-08-19T03:40:42.524Z",
     "performanceAk": "GDL.EVN67.PRF974",
     "availability": {
       "level": "HIGH",
-      "available": 921,
+      "available": 918,
+      "total": 1000,
+      "generalAdmission": false
+    },
+    "products": {
+      "products": [
+        {
+          "productAk": "GDL.EVN1.MCC9154",
+          "sortOrder": 1002,
+          "hasCalendar": true,
+          "fields": {
+            "fullTitle": "TIME SAVER (Fast Track) \"NOLIMITS\"",
+            "title": "TIME SAVER (Fast Track) \"NOLIMITS\"",
+            "sectionTitle": null,
+            "specificTitle": null,
+            "description": null,
+            "info": null,
+            "infoExtended": "<B>With this Timesaver Ticket (fast track), on the day of your visit, you can enjoy unlimited rides on these attractions, saving your waiting time:</B> \nFuga da Atlantide, Jungle Rapids, Blue Tornado, Mammut, Space Vertigo, Oblivion, Raptor, Jumanji The Adventure, Jumanji The Labyrinth, Animal \nTreasure Island, Colorado Boat, Shaman, Ortobruco Tour, Volaplano, Magic House, Cinema 4D, Rocket Factory.<br>\n<br>\n<B>Plus, you get 20% off at Shops in the Park<SUP>1</SUP></B>\n<br><br>\n<B>IMPORTANT INFORMATION:</B><br><br>\n<UL><LI>Valid only on the day of the visit, to be made by 01.11.2026.</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Time Saver.</LI>\n<LI>To use the Time Saver, download the 'Gardaland Express' App, go to the 'Express' section and scan the QR Code of this voucher to import it into \nthe App and manage your Time Saver.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the fast track service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office 'Gardaland \nExpress' from the opening until 1 PM and at the Gardaland Express point of sale 'Mammut' from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not valid on snacks, drinks, cigarettes, photos, \nhelium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at Legoland® and at the Jumanji Shop.",
+            "iframeUrl": null,
+            "onePurchasePerDay": null,
+            "purchasableDaysFromNow": null,
+            "isGift": null,
+            "isReservation": null,
+            "multipleCalendarsLabels": null,
+            "forceLoginAtCheckout": false,
+            "competitionName": null,
+            "imageSmall": null,
+            "subtitle": null
+          },
+          "gtm": {
+            "variant": null,
+            "category": null,
+            "brand": null
+          },
+          "price": {
+            "currency": "EUR",
+            "value": 92,
+            "tax": null
+          },
+          "priceIvaFatt": null,
+          "components": null,
+          "warning": {
+            "account": null,
+            "additionalInfo": null,
+            "dateFrom": {
+              "required": false
+            },
+            "dateTo": {
+              "required": false
+            },
+            "giftAid": {
+              "required": false
+            },
+            "mediaLink": {
+              "required": false
+            },
+            "peopleCount": null,
+            "eventList": [
+              {
+                "eventAk": "GDL.EVN67",
+                "quantity": 1,
+                "required": "REQUIRED"
+              }
+            ],
+            "saleRestriction": {
+              "min": null,
+              "max": 10
+            },
+            "saleValidity": {
+              "calendarAk": null,
+              "fromDate": null,
+              "fromTime": null,
+              "toDate": null,
+              "toTime": null
+            },
+            "variablePrice": null
+          },
+          "upsellAks": [],
+          "eventAks": [
+            "GDL.EVN67",
+            "GDL.EVN102"
+          ],
+          "productType": "TICKET",
+          "offers": [
+            "FST",
+            "GDL",
+            "EXP",
+            "ECM",
+            "PRB",
+            "WEXP",
+            "FAST30",
+            "FASTEX30",
+            "CROSS1"
+          ],
+          "timeSpan": null,
+          "extraType": null,
+          "redeem": null,
+          "capacityCode": null,
+          "subProducts": null,
+          "campaignCode": null
+        },
+        {
+          "productAk": "GDL.EVN1.MCC9156",
+          "sortOrder": 1003,
+          "hasCalendar": true,
+          "fields": {
+            "fullTitle": "TIME SAVER (Fast Track) \"EPIC 17\"",
+            "title": "TIME SAVER (Fast Track) \"EPIC 17\"",
+            "sectionTitle": null,
+            "specificTitle": null,
+            "description": null,
+            "info": null,
+            "infoExtended": "<B>With this Timesaver Ticket (fast track), on the day of your visit, you can enjoy 1 ride on each of the following 17 attractions, saving your waiting \ntime:</B> Fuga da Atlantide, Jungle Rapids, Blue Tornado, Mammut, Space Vertigo, Oblivion, Raptor, Jumanji The Adventure, Jumanji The Labyrinth, \nAnimal Treasure Island, Colorado Boat, Shaman, Ortobruco Tour, Volaplano, Magic House, Cinema 4D, Rocket Factory.<br>\n<br>\n<B>Plus, you get 20% off at Shops in the Park<SUP>1</SUP></B>\n<br><br>\n<B>IMPORTANT INFORMATION:</B><br><br>\n<UL><LI>Valid only on the day of the visit, to be made by 01.11.2026.</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Time Saver.</LI>\n<LI>To use the Time Saver, download the 'Gardaland Express' App, go to the 'Express' section and scan the QR Code of this voucher to import it into \nthe App and manage your Time Saver.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the fast track service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office 'Gardaland \nExpress' from the opening until 1 PM and at the Gardaland Express point of sale 'Mammut' from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not valid on snacks, drinks, cigarettes, photos, \nhelium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at Legoland® and at the Jumanji Shop.",
+            "iframeUrl": null,
+            "onePurchasePerDay": null,
+            "purchasableDaysFromNow": null,
+            "isGift": null,
+            "isReservation": null,
+            "multipleCalendarsLabels": null,
+            "forceLoginAtCheckout": false,
+            "competitionName": null,
+            "imageSmall": null,
+            "subtitle": null
+          },
+          "gtm": {
+            "variant": null,
+            "category": null,
+            "brand": null
+          },
+          "price": {
+            "currency": "EUR",
+            "value": 62,
+            "tax": null
+          },
+          "priceIvaFatt": null,
+          "components": null,
+          "warning": {
+            "account": null,
+            "additionalInfo": null,
+            "dateFrom": {
+              "required": false
+            },
+            "dateTo": {
+              "required": false
+            },
+            "giftAid": {
+              "required": false
+            },
+            "mediaLink": {
+              "required": false
+            },
+            "peopleCount": null,
+            "eventList": [
+              {
+                "eventAk": "GDL.EVN67",
+                "quantity": 1,
+                "required": "REQUIRED"
+              }
+            ],
+            "saleRestriction": {
+              "min": null,
+              "max": 10
+            },
+            "saleValidity": {
+              "calendarAk": null,
+              "fromDate": null,
+              "fromTime": null,
+              "toDate": null,
+              "toTime": null
+            },
+            "variablePrice": null
+          },
+          "upsellAks": [],
+          "eventAks": [
+            "GDL.EVN67",
+            "GDL.EVN102"
+          ],
+          "productType": "TICKET",
+          "offers": [
+            "FST",
+            "GDL",
+            "EXP",
+            "ECM",
+            "PRB",
+            "WEXP",
+            "FAST30",
+            "FASTEX30",
+            "CROSS1"
+          ],
+          "timeSpan": null,
+          "extraType": null,
+          "redeem": null,
+          "capacityCode": null,
+          "subProducts": null,
+          "campaignCode": null
+        },
+        {
+          "productAk": "GDL.EVN1.MCC9158",
+          "sortOrder": 1004,
+          "hasCalendar": true,
+          "fields": {
+            "fullTitle": "TIME SAVER (Fast Track) \"GIVE ME 5\"",
+            "title": "TIME SAVER (Fast Track) \"GIVE ME 5\"",
+            "sectionTitle": null,
+            "specificTitle": null,
+            "description": null,
+            "info": null,
+            "infoExtended": "<B>With this Timesaver Ticket (fast track), on the day of your visit, you can enjoy 1 ride on 5 attractions selected from this list, saving your waiting \ntime:</B> Fuga da Atlantide, Jungle Rapids, Blue Tornado, Mammut, Space Vertigo, Oblivion, Jumanji The Adventure, Jumanji The Labyrinth, Animal \nTreasure Island, Shaman, Ortobruco Tour, Volaplano, Magic House, Cinema 4D, Rocket Factory.<br>\n<br>\n<B>Plus, you get 20% off at Shops in the Park<SUP>1</SUP></B>\n<br><br>\n<B>IMPORTANT INFORMATION:</B><br><br>\n<UL><LI>Valid only on the day of the visit, to be made by 01.11.2026.</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Time Saver.</LI>\n<LI>To use the Time Saver, download the 'Gardaland Express' App, go to the 'Express' section and scan the QR Code of this voucher to import it into \nthe App and manage your Time Saver.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the fast track service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office 'Gardaland \nExpress' from the opening until 1 PM and at the Gardaland Express point of sale 'Mammut' from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not \nvalid on snacks, drinks, cigarettes, photos, helium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at \nLegoland® and at the Jumanji Shop.",
+            "iframeUrl": null,
+            "onePurchasePerDay": null,
+            "purchasableDaysFromNow": null,
+            "isGift": null,
+            "isReservation": null,
+            "multipleCalendarsLabels": null,
+            "forceLoginAtCheckout": false,
+            "competitionName": null,
+            "imageSmall": null,
+            "subtitle": null
+          },
+          "gtm": {
+            "variant": null,
+            "category": null,
+            "brand": null
+          },
+          "price": {
+            "currency": "EUR",
+            "value": 32,
+            "tax": null
+          },
+          "priceIvaFatt": null,
+          "components": null,
+          "warning": {
+            "account": null,
+            "additionalInfo": null,
+            "dateFrom": {
+              "required": false
+            },
+            "dateTo": {
+              "required": false
+            },
+            "giftAid": {
+              "required": false
+            },
+            "mediaLink": {
+              "required": false
+            },
+            "peopleCount": null,
+            "eventList": [
+              {
+                "eventAk": "GDL.EVN67",
+                "quantity": 1,
+                "required": "REQUIRED"
+              }
+            ],
+            "saleRestriction": {
+              "min": null,
+              "max": 10
+            },
+            "saleValidity": {
+              "calendarAk": null,
+              "fromDate": null,
+              "fromTime": null,
+              "toDate": null,
+              "toTime": null
+            },
+            "variablePrice": null
+          },
+          "upsellAks": [],
+          "eventAks": [
+            "GDL.EVN67",
+            "GDL.EVN102"
+          ],
+          "productType": "TICKET",
+          "offers": [
+            "FST",
+            "GDL",
+            "EXP",
+            "ECM",
+            "PRB",
+            "WEXP",
+            "FAST30",
+            "FASTEX30",
+            "CROSS1"
+          ],
+          "timeSpan": null,
+          "extraType": null,
+          "redeem": null,
+          "capacityCode": null,
+          "subProducts": null,
+          "campaignCode": null
+        }
+      ],
+      "redeemableGroups": null
+    }
+  },
+  "2026-08-26": {
+    "updatedAt": "2026-08-19T03:40:45.617Z",
+    "performanceAk": "GDL.EVN67.PRF975",
+    "availability": {
+      "level": "HIGH",
+      "available": 936,
       "total": 1000,
       "generalAdmission": false
     },

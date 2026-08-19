@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-19T12:30:47Z",
-  "lastUpdate": "14:30",
+  "timestamp": "2026-08-19T12:40:34Z",
+  "lastUpdate": "14:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 45,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "jungle-rapids": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 35,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
@@ -156,7 +156,7 @@
     },
     "peppa-pig-land-la-mongolfiera-di-peppa-pig": {
       "name": "Peppa Pig Land - La Mongolfiera di Peppa Pig",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "prezzemolo-land": {

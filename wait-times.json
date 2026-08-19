@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-19T13:59:28Z",
-  "lastUpdate": "15:59",
+  "timestamp": "2026-08-19T14:00:57Z",
+  "lastUpdate": "16:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "shaman": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 35,
+      "wait_time": 45,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

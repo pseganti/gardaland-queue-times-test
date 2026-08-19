@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-08-19T10:30:43Z",
-  "lastUpdate": "12:30",
+  "timestamp": "2026-08-19T10:39:27Z",
+  "lastUpdate": "12:39",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 85,
+      "wait_time": 90,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 45,
       "is_open": true
     },
     "shaman": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 45,
+      "wait_time": 50,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -81,12 +81,12 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "superbaby": {

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-19T19:30:22Z",
+  "timestamp": "2026-08-19T19:30:43Z",
   "lastUpdate": "21:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {

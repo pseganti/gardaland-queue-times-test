@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-20T08:20:32Z",
-  "lastUpdate": "10:20",
+  "timestamp": "2026-08-20T08:30:48Z",
+  "lastUpdate": "10:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -31,12 +31,12 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-land-la-casa-di-peppa-pig": {

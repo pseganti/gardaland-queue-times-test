@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-20T17:20:33Z",
-  "lastUpdate": "19:20",
+  "timestamp": "2026-08-20T17:30:46Z",
+  "lastUpdate": "19:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "shaman": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {

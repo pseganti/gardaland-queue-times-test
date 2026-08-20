@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-20T08:10:31Z",
-  "lastUpdate": "10:10",
+  "timestamp": "2026-08-20T08:20:32Z",
+  "lastUpdate": "10:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -12,12 +12,12 @@
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -36,8 +36,8 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
@@ -57,11 +57,11 @@
     "jungle-rapids": {
       "name": "Jungle Rapids",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -106,8 +106,8 @@
     },
     "baby-tour": {
       "name": "Baby Tour",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "doremifarm": {
       "name": "Doremifarm",
@@ -121,8 +121,8 @@
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "giostra-cavalli": {
       "name": "Giostra Cavalli",

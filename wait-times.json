@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-20T20:40:34Z",
-  "lastUpdate": "22:40",
+  "timestamp": "2026-08-20T20:50:33Z",
+  "lastUpdate": "22:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -47,7 +47,7 @@
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "wolf-legend": {
@@ -131,7 +131,7 @@
     },
     "l-albero-di-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "monorotaia": {

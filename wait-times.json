@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-21T08:30:45Z",
-  "lastUpdate": "10:30",
+  "timestamp": "2026-08-21T08:40:33Z",
+  "lastUpdate": "10:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -27,7 +27,7 @@
     "space-vertigo": {
       "name": "Space Vertigo",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
@@ -146,7 +146,7 @@
     },
     "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-la-casa-di-peppa-pig": {

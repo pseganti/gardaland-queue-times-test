@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-21T20:40:34Z",
-  "lastUpdate": "22:40",
+  "timestamp": "2026-08-21T20:50:32Z",
+  "lastUpdate": "22:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "wolf-legend": {

@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-21T16:40:34Z",
-  "lastUpdate": "18:40",
+  "timestamp": "2026-08-21T16:50:33Z",
+  "lastUpdate": "18:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "raptor": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {

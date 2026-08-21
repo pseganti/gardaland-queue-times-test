@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-21T15:50:33Z",
-  "lastUpdate": "17:50",
+  "timestamp": "2026-08-21T16:01:00Z",
+  "lastUpdate": "18:01",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "volaplano": {

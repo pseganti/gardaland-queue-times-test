@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-21T14:30:47Z",
-  "lastUpdate": "16:30",
+  "timestamp": "2026-08-21T14:40:34Z",
+  "lastUpdate": "16:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -87,7 +87,7 @@
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "volaplano": {
       "name": "Volaplano",
@@ -131,12 +131,12 @@
     },
     "l-albero-di-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

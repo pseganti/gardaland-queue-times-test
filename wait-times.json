@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-21T12:15:23Z",
-  "lastUpdate": "14:15",
+  "timestamp": "2026-08-21T12:20:34Z",
+  "lastUpdate": "14:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-21T14:20:34Z",
-  "lastUpdate": "16:20",
+  "timestamp": "2026-08-21T14:30:47Z",
+  "lastUpdate": "16:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

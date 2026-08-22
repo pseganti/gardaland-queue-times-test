@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-22T13:59:40Z",
-  "lastUpdate": "15:59",
+  "timestamp": "2026-08-22T14:00:55Z",
+  "lastUpdate": "16:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

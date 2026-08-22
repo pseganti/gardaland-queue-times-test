@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-22T15:00:02Z",
+  "timestamp": "2026-08-22T15:00:55Z",
   "lastUpdate": "17:00",
   "source": "queue-times.com",
   "status": "active",
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
@@ -71,7 +71,7 @@
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "dragon-rush": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

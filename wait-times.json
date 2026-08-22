@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-22T14:50:32Z",
-  "lastUpdate": "16:50",
+  "timestamp": "2026-08-22T15:00:02Z",
+  "lastUpdate": "17:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 50,
+      "wait_time": 55,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "jungle-rapids": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 35,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

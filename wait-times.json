@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-22T09:30:45Z",
-  "lastUpdate": "11:30",
+  "timestamp": "2026-08-22T09:40:32Z",
+  "lastUpdate": "11:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 80,
+      "wait_time": 85,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -121,7 +121,7 @@
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "giostra-cavalli": {

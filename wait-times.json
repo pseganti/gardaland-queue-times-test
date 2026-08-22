@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-22T10:02:49Z",
-  "lastUpdate": "12:02",
+  "timestamp": "2026-08-22T10:10:31Z",
+  "lastUpdate": "12:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 35,
       "is_open": true
     },
     "raptor": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 55,
+      "wait_time": 60,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 30,
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,13 +91,13 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "baby-pilota": {
       "name": "Baby Pilota",
@@ -137,7 +137,7 @@
     "monorotaia": {
       "name": "Monorotaia",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
@@ -177,7 +177,7 @@
     "superbaby": {
       "name": "Superbaby",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",

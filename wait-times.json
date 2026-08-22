@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-22T13:10:36Z",
-  "lastUpdate": "15:10",
+  "timestamp": "2026-08-22T13:20:33Z",
+  "lastUpdate": "15:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 50,
+      "wait_time": 35,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,17 +16,17 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "jungle-rapids": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

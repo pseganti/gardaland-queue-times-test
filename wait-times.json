@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-22T19:30:42Z",
-  "lastUpdate": "21:30",
+  "timestamp": "2026-08-22T19:37:47Z",
+  "lastUpdate": "21:37",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {

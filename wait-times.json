@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-22T08:50:38Z",
-  "lastUpdate": "10:50",
+  "timestamp": "2026-08-22T09:00:54Z",
+  "lastUpdate": "11:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peter-pan": {

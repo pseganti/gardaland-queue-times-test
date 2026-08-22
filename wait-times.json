@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-22T13:20:33Z",
-  "lastUpdate": "15:20",
+  "timestamp": "2026-08-22T13:30:45Z",
+  "lastUpdate": "15:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,8 +76,8 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 20,
+      "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",

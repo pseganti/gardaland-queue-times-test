@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-22T12:55:42Z",
-  "lastUpdate": "14:55",
+  "timestamp": "2026-08-22T13:00:56Z",
+  "lastUpdate": "15:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
@@ -51,12 +51,12 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "mammut": {
@@ -81,12 +81,12 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "volaplano": {
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

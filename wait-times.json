@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-23T12:10:31Z",
-  "lastUpdate": "14:10",
+  "timestamp": "2026-08-23T12:20:32Z",
+  "lastUpdate": "14:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {

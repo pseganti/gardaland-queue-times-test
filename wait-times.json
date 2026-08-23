@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-23T14:42:17Z",
-  "lastUpdate": "16:42",
+  "timestamp": "2026-08-23T14:50:32Z",
+  "lastUpdate": "16:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

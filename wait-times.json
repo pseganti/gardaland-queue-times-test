@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-23T12:20:32Z",
-  "lastUpdate": "14:20",
+  "timestamp": "2026-08-23T12:30:41Z",
+  "lastUpdate": "14:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 10,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 40,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {

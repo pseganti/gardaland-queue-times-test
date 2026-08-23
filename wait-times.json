@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-23T13:30:43Z",
-  "lastUpdate": "15:30",
+  "timestamp": "2026-08-23T13:38:56Z",
+  "lastUpdate": "15:38",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {

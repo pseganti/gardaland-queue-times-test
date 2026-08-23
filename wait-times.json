@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-23T12:30:41Z",
-  "lastUpdate": "14:30",
+  "timestamp": "2026-08-23T12:40:32Z",
+  "lastUpdate": "14:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "colorado-boat": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {

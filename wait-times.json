@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-23T17:30:45Z",
-  "lastUpdate": "19:30",
+  "timestamp": "2026-08-23T17:36:22Z",
+  "lastUpdate": "19:36",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

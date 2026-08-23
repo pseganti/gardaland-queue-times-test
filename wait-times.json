@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-23T19:40:34Z",
-  "lastUpdate": "21:40",
+  "timestamp": "2026-08-23T19:50:32Z",
+  "lastUpdate": "21:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "raptor": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

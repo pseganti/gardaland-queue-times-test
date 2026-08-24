@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T20:20:34Z",
-  "lastUpdate": "22:20",
+  "timestamp": "2026-08-24T20:30:46Z",
+  "lastUpdate": "22:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "shaman": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

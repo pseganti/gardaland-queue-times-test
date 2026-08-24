@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T09:50:32Z",
-  "lastUpdate": "11:50",
+  "timestamp": "2026-08-24T10:00:54Z",
+  "lastUpdate": "12:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "peter-pan": {

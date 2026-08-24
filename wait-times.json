@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-24T09:20:37Z",
-  "lastUpdate": "11:20",
+  "timestamp": "2026-08-24T09:30:46Z",
+  "lastUpdate": "11:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

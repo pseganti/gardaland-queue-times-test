@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T14:10:36Z",
-  "lastUpdate": "16:10",
+  "timestamp": "2026-08-24T14:20:34Z",
+  "lastUpdate": "16:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "superbaby": {

@@ -1,0 +1,45 @@
+name: Scrape Tikez Ticket Sales
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # Esegue ogni notte alle 03:00 UTC (05:00 ora italiana)
+  workflow_dispatch: {}    # Ti permette di avviarlo anche manualmente da GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install cheerio
+
+      - name: Run Tikez scraper script
+        run: node .github/workflows/scripts/scrape-tikez.mjs
+
+      - name: Commit and push stock history
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          git add tikez-stock-history.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ Nessun aggiornamento sulle disponibilità di oggi."
+          else
+            git commit -m "chore: aggiorna storico disponibilità e vendite Tikez"
+            git pull --rebase origin main
+            git push
+            echo "✅ tikez-stock-history.json aggiornato con successo."
+          fi

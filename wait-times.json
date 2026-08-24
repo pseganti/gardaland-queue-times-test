@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T20:30:46Z",
-  "lastUpdate": "22:30",
+  "timestamp": "2026-08-24T20:36:04Z",
+  "lastUpdate": "22:36",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {

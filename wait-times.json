@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T19:20:36Z",
-  "lastUpdate": "21:20",
+  "timestamp": "2026-08-24T19:30:46Z",
+  "lastUpdate": "21:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

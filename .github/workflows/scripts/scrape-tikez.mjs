@@ -1,13 +1,18 @@
 import fs from 'fs';
 import * as cheerio from 'cheerio';
 
-const TARGET_URL = 'https://www.tikez.it/categoria/scheda/gardaland'; // Sostituisci/estendi con le tue pagine
+// Inserisci l'URL esatto della scheda prodotto di Tikez
+const TARGET_URL = 'https://www.tikez.it/categoria/scheda/gardaland'; 
 const HISTORY_FILE = 'tikez-stock-history.json';
 
 async function scrapeAndCalculate() {
   try {
-    // 1. Scarica l'HTML della pagina
-    const response = await fetch(TARGET_URL);
+    const response = await fetch(TARGET_URL, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+    
     const html = await response.text();
     const $ = cheerio.load(html);
 
@@ -17,40 +22,51 @@ async function scrapeAndCalculate() {
       tickets: {}
     };
 
-    // 2. Estrazione dei dati dai blocchi biglietto
-    $('.list-group-item').each((_, element) => {
-      const container = $(element).closest('.row');
+    // Seleziona direttamente ciascun blocco di riga dei biglietti nella colonna di acquisto
+    $('.card.border-mute .row').each((_, element) => {
+      const row = $(element);
       
-      // Nome e prezzo del biglietto
-      const name = container.find('p.font-semi-bold').text().trim();
-      const rawText = container.find('.col-6').first().text();
-      const priceMatch = rawText.match(/(\d+[\.,]\d{2})\s*€/);
+      // Nome del biglietto
+      const name = row.find('p.font-semi-bold').text().trim();
+      if (!name) return; // Salta righe vuote o form di invio
+
+      // Prezzo (estrae i numeri decimali prima del simbolo €)
+      const rawPriceText = row.find('.col-6').first().text();
+      const priceMatch = rawPriceText.match(/(\d+[\.,]\d{2})/);
       const price = priceMatch ? priceMatch[1] : 'N/D';
 
-      // Quantità massima dal tag img#plus
-      const maxAttr = container.find('img#plus').attr('max');
+      // Quantità massima dal tag img con id="plus"
+      const maxAttr = row.find('img#plus').attr('max');
       const maxAvailable = maxAttr ? parseInt(maxAttr, 10) : 0;
 
-      if (name) {
-        currentData.tickets[name] = {
-          price: price,
-          available: maxAvailable,
-          soldToday: 0
-        };
-      }
+      currentData.tickets[name] = {
+        price: price,
+        available: maxAvailable,
+        soldToday: 0
+      };
     });
 
-    // 3. Carica lo storico dei giorni precedenti se esiste
-    let history = {};
-    if (fs.existsSync(HISTORY_FILE)) {
-      history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+    // Controlla se sono stati estratti biglietti
+    if (Object.keys(currentData.tickets).length === 0) {
+      console.error('❌ Nessun biglietto trovato! Verificare l\'URL o la struttura HTML.');
+      process.exit(1);
     }
 
-    // Identifica la data dell'ultimo scraping effettuato
-    const dates = Object.keys(history).sort();
+    // Carica lo storico precedente
+    let history = {};
+    if (fs.existsSync(HISTORY_FILE)) {
+      try {
+        history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+      } catch (e) {
+        history = {};
+      }
+    }
+
+    // Identifica la data dell'ultimo scraping
+    const dates = Object.keys(history).filter(d => d !== todayStr).sort();
     const lastDate = dates[dates.length - 1];
 
-    // 4. Confronto con ieri e calcolo delle vendite
+    // Calcolo delle vendite rispetto al precedente scraping
     if (lastDate && history[lastDate]?.tickets) {
       const yesterdayTickets = history[lastDate].tickets;
 
@@ -59,21 +75,19 @@ async function scrapeAndCalculate() {
 
         if (prevAvailable !== undefined) {
           if (data.available < prevAvailable) {
-            // Caso 1: Quantità diminuita = biglietti venduti
             data.soldToday = prevAvailable - data.available;
           } else {
-            // Caso 2: Quantità pari o aumentata = restock/ricarica
-            data.soldToday = 0;
+            data.soldToday = 0; // Restock o invariato
           }
         }
       }
     }
 
-    // 5. Salva i nuovi dati nello storico
+    // Salvataggio
     history[todayStr] = currentData;
     fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
 
-    console.log(`✅ Scraping e calcolo completati per il ${todayStr}:`);
+    console.log(`✅ Scraping completato per il ${todayStr}:`);
     console.dir(currentData.tickets, { depth: null });
 
   } catch (error) {

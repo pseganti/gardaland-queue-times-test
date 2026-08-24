@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T18:13:48Z",
-  "lastUpdate": "20:13",
+  "timestamp": "2026-08-24T18:20:35Z",
+  "lastUpdate": "20:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {

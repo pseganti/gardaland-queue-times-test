@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-24T20:01:00Z",
-  "lastUpdate": "22:01",
+  "timestamp": "2026-08-24T20:10:35Z",
+  "lastUpdate": "22:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {

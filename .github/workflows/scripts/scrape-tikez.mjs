@@ -1,7 +1,7 @@
 import fs from 'fs';
 import * as cheerio from 'cheerio';
 
-// Inserisci l'URL esatto della scheda prodotto di Tikez
+// Modifica con l'URL corretto se diverso
 const TARGET_URL = 'https://www.tikez.it/categoria/scheda/gardaland'; 
 const HISTORY_FILE = 'tikez-stock-history.json';
 
@@ -22,33 +22,35 @@ async function scrapeAndCalculate() {
       tickets: {}
     };
 
-    // Seleziona direttamente ciascun blocco di riga dei biglietti nella colonna di acquisto
-    $('.card.border-mute .row').each((_, element) => {
-      const row = $(element);
-      
-      // Nome del biglietto
-      const name = row.find('p.font-semi-bold').text().trim();
-      if (!name) return; // Salta righe vuote o form di invio
-
-      // Prezzo (estrae i numeri decimali prima del simbolo €)
-      const rawPriceText = row.find('.col-6').first().text();
-      const priceMatch = rawPriceText.match(/(\d+[\.,]\d{2})/);
-      const price = priceMatch ? priceMatch[1] : 'N/D';
-
-      // Quantità massima dal tag img con id="plus"
-      const maxAttr = row.find('img#plus').attr('max');
+    // Cerchiamo direttamente gli elementi img con id="plus" che contengono l'attributo max
+    $('img#plus').each((_, element) => {
+      const imgPlus = $(element);
+      const maxAttr = imgPlus.attr('max');
       const maxAvailable = maxAttr ? parseInt(maxAttr, 10) : 0;
 
-      currentData.tickets[name] = {
-        price: price,
-        available: maxAvailable,
-        soldToday: 0
-      };
+      // Risaliamo al contenitore di riga del biglietto
+      const row = imgPlus.closest('.row');
+
+      // Nome del biglietto (contenuto nel tag p con classe font-semi-bold)
+      const name = row.find('p.font-semi-bold').text().trim();
+
+      // Prezzo (estraiamo il valore numerico con decimali)
+      const rawText = row.text();
+      const priceMatch = rawText.match(/(\d+[\.,]\d{2})\s*€/);
+      const price = priceMatch ? priceMatch[1] : 'N/D';
+
+      if (name) {
+        currentData.tickets[name] = {
+          price: price,
+          available: maxAvailable,
+          soldToday: 0
+        };
+      }
     });
 
-    // Controlla se sono stati estratti biglietti
+    // Controllo se sono stati estratti biglietti
     if (Object.keys(currentData.tickets).length === 0) {
-      console.error('❌ Nessun biglietto trovato! Verificare l\'URL o la struttura HTML.');
+      console.error('❌ Nessun biglietto trovato! Verificare che TARGET_URL sia la pagina corretta con la scheda del biglietto.');
       process.exit(1);
     }
 
@@ -77,13 +79,13 @@ async function scrapeAndCalculate() {
           if (data.available < prevAvailable) {
             data.soldToday = prevAvailable - data.available;
           } else {
-            data.soldToday = 0; // Restock o invariato
+            data.soldToday = 0;
           }
         }
       }
     }
 
-    // Salvataggio
+    // Salvataggio nello storico
     history[todayStr] = currentData;
     fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
 

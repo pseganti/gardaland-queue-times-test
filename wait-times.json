@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T15:01:01Z",
-  "lastUpdate": "17:01",
+  "timestamp": "2026-08-25T15:07:46Z",
+  "lastUpdate": "17:07",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

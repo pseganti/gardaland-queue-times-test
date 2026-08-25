@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T18:14:11Z",
-  "lastUpdate": "20:14",
+  "timestamp": "2026-08-25T18:20:36Z",
+  "lastUpdate": "20:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

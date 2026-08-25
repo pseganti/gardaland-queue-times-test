@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T13:50:34Z",
-  "lastUpdate": "15:50",
+  "timestamp": "2026-08-25T14:00:59Z",
+  "lastUpdate": "16:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 45,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {

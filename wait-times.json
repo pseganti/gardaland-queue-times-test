@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-25T09:30:43Z",
-  "lastUpdate": "11:30",
+  "timestamp": "2026-08-25T09:40:34Z",
+  "lastUpdate": "11:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 40,
+      "wait_time": 30,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -41,13 +41,13 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 60,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 30,
+      "wait_time": 40,
       "is_open": true
     },
     "peter-pan": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-tour": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "funny-express": {

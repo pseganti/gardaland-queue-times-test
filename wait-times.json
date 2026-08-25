@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T20:34:27Z",
-  "lastUpdate": "22:34",
+  "timestamp": "2026-08-25T20:40:35Z",
+  "lastUpdate": "22:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "peter-pan": {
       "name": "Peter Pan",

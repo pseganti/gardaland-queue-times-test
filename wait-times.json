@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T12:00:57Z",
-  "lastUpdate": "14:00",
+  "timestamp": "2026-08-25T12:04:56Z",
+  "lastUpdate": "14:04",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "colorado-boat": {

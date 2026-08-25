@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T10:00:56Z",
-  "lastUpdate": "12:00",
+  "timestamp": "2026-08-25T10:10:33Z",
+  "lastUpdate": "12:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-tour": {

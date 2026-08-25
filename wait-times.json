@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-25T13:10:35Z",
-  "lastUpdate": "15:10",
+  "timestamp": "2026-08-25T13:12:53Z",
+  "lastUpdate": "15:12",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-pilota": {

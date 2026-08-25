@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-25T19:40:44Z",
-  "lastUpdate": "21:40",
+  "timestamp": "2026-08-25T19:46:58Z",
+  "lastUpdate": "21:46",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

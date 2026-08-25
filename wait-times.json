@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-25T11:33:16Z",
-  "lastUpdate": "13:33",
+  "timestamp": "2026-08-25T11:40:32Z",
+  "lastUpdate": "13:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {

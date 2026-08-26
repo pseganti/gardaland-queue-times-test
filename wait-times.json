@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-26T12:50:33Z",
-  "lastUpdate": "14:50",
+  "timestamp": "2026-08-26T13:00:59Z",
+  "lastUpdate": "15:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "volaplano": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

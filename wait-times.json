@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-26T10:45:32Z",
-  "lastUpdate": "12:45",
+  "timestamp": "2026-08-26T10:50:37Z",
+  "lastUpdate": "12:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "mammut": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-26T18:50:33Z",
-  "lastUpdate": "20:50",
+  "timestamp": "2026-08-26T19:00:58Z",
+  "lastUpdate": "21:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {
@@ -126,7 +126,7 @@
     },
     "giostra-cavalli": {
       "name": "Giostra Cavalli",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "l-albero-di-prezzemolo": {

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdated": "2026-08-25T03:39:26.864Z",
+    "lastUpdated": "2026-08-26T03:43:43.302Z",
     "source": "https://queue-times.com/parks/12/stats",
     "totalRides": 43
   },
@@ -132,18 +132,18 @@
       "avgMaxWaitMinutes": 17
     },
     {
-      "id": 6647,
-      "name": "Animal Treasure Island",
-      "isArchived": false,
-      "avgWaitMinutes": 9,
-      "avgMaxWaitMinutes": 17
-    },
-    {
       "id": 447,
       "name": "Ortobruco Tour",
       "isArchived": false,
       "avgWaitMinutes": 9,
       "avgMaxWaitMinutes": 16
+    },
+    {
+      "id": 6647,
+      "name": "Animal Treasure Island",
+      "isArchived": false,
+      "avgWaitMinutes": 8,
+      "avgMaxWaitMinutes": 17
     },
     {
       "id": 10756,

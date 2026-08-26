@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-26T10:40:37Z",
-  "lastUpdate": "12:40",
+  "timestamp": "2026-08-26T10:45:32Z",
+  "lastUpdate": "12:45",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {

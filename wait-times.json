@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-26T14:01:00Z",
-  "lastUpdate": "16:01",
+  "timestamp": "2026-08-26T14:10:40Z",
+  "lastUpdate": "16:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

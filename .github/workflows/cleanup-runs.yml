@@ -11,11 +11,50 @@ permissions:
 jobs:
   cleanup:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Delete workflow runs older than 7 days
-        uses: Mattraks/delete-workflow-runs@v2
+      - name: Delete 50 old workflow runs
+        uses: actions/github-script@v8
         with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 7
-          keep_minimum_runs: 3
+          script: |
+            const cutoff = new Date();
+            cutoff.setDate(cutoff.getDate() - 7);
+            const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+            console.log(`Eliminazione run antecedenti a: ${cutoff.toISOString()}`);
+
+            // Chiede a GitHub solo le ultime 50 esecuzioni
+            const response = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              status: 'completed',
+              per_page: 50
+            });
+
+            const runs = response.data.workflow_runs;
+            console.log(`Trovate ${runs.length} run da analizzare`);
+
+            let deleted = 0;
+
+            for (const run of runs) {
+              const createdAt = new Date(run.created_at);
+
+              if (createdAt < cutoff) {
+                try {
+                  await github.rest.actions.deleteWorkflowRun({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    run_id: run.id
+                  });
+                  console.log(`Cancellata run ${run.id} (${run.created_at})`);
+                  deleted++;
+                } catch (err) {
+                  console.error(`Errore sulla run ${run.id}: ${err.message}`);
+                }
+
+                // Pausa prudenziale di mezzo secondo tra ogni cancellazione
+                await sleep(500);
+              }
+            }
+
+            console.log(`Completato! Eliminati ${deleted} run in questa sessione.`);

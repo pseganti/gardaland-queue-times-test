@@ -2,8 +2,7 @@ name: Cleanup old workflow runs
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-      timezone: "Europe/Rome"
+    - cron: "0 */4 * * *" # Gira ogni 4 ore per smaltire il pregresso
   workflow_dispatch:
 
 permissions:
@@ -14,42 +13,54 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Delete workflow runs older than 7 days
+      - name: Delete batch of old workflow runs
         uses: actions/github-script@v8
         with:
           script: |
             const cutoff = new Date();
             cutoff.setDate(cutoff.getDate() - 7);
+            const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-            console.log(`Deleting runs older than: ${cutoff.toISOString()}`);
+            console.log(`Eliminazione run antecedenti a: ${cutoff.toISOString()}`);
 
-            const runs = await github.paginate(
-              github.rest.actions.listWorkflowRunsForRepo,
-              {
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                per_page: 100
-              }
-            );
+            // Recupera solo la prima pagina da 100 per evitare di caricare 2500 oggetti in memoria
+            const response = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              status: 'completed',
+              per_page: 100
+            });
 
-            console.log(`Found ${runs.length} workflow runs`);
+            const runs = response.data.workflow_runs;
+            console.log(`Trovate ${runs.length} run nella pagina corrente`);
 
             let deleted = 0;
+            const MAX_DELETE_PER_RUN = 150; // Limite di sicurezza per singola esecuzione
 
             for (const run of runs) {
+              if (deleted >= MAX_DELETE_PER_RUN) {
+                console.log(`Raggiunto il limite di ${MAX_DELETE_PER_RUN} eliminazioni per questo job. Si fermerà qui.`);
+                break;
+              }
+
               const createdAt = new Date(run.created_at);
 
               if (createdAt < cutoff) {
-                console.log(`Deleting run ${run.id} - ${run.name} - ${run.created_at}`);
+                try {
+                  await github.rest.actions.deleteWorkflowRun({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    run_id: run.id
+                  });
+                  console.log(`Cancellata run ${run.id} (${run.created_at})`);
+                  deleted++;
+                } catch (err) {
+                  console.error(`Errore sulla run ${run.id}: ${err.message}`);
+                }
 
-                await github.rest.actions.deleteWorkflowRun({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  run_id: run.id
-                });
-
-                deleted++;
+                // Pausa di 400ms per non attivare i filtri anti-abuse di GitHub
+                await sleep(400);
               }
             }
 
-            console.log(`Deleted ${deleted} old workflow runs`);
+            console.log(`Completato! Eliminati ${deleted} run in questa sessione.`);

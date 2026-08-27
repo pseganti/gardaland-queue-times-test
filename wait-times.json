@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T14:00:57Z",
-  "lastUpdate": "16:00",
+  "timestamp": "2026-08-27T14:10:35Z",
+  "lastUpdate": "16:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 55,
       "is_open": true
     },
     "wolf-legend": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "superbaby": {

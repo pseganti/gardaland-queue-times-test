@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-27T14:20:34Z",
-  "lastUpdate": "16:20",
+  "timestamp": "2026-08-27T14:30:49Z",
+  "lastUpdate": "16:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 50,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T17:20:37Z",
-  "lastUpdate": "19:20",
+  "timestamp": "2026-08-27T17:30:45Z",
+  "lastUpdate": "19:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

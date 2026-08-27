@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T17:00:59Z",
-  "lastUpdate": "19:00",
+  "timestamp": "2026-08-27T17:10:32Z",
+  "lastUpdate": "19:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "colorado-boat": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {

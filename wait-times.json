@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T10:20:35Z",
-  "lastUpdate": "12:20",
+  "timestamp": "2026-08-27T10:30:45Z",
+  "lastUpdate": "12:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 45,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 55,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-tour": {

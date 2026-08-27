@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T16:00:59Z",
-  "lastUpdate": "18:00",
+  "timestamp": "2026-08-27T16:10:34Z",
+  "lastUpdate": "18:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,8 +46,8 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -72,11 +72,11 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "peter-pan": {

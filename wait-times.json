@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-28T18:01:00Z",
-  "lastUpdate": "20:01",
+  "timestamp": "2026-08-28T18:10:33Z",
+  "lastUpdate": "20:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -21,12 +21,12 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "magic-house": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

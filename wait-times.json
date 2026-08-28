@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-28T16:30:47Z",
-  "lastUpdate": "18:30",
+  "timestamp": "2026-08-28T16:40:34Z",
+  "lastUpdate": "18:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 30,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
@@ -17,7 +17,7 @@
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "shaman": {
       "name": "Shaman",
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 25,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -91,8 +91,8 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 30,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "peter-pan": {
       "name": "Peter Pan",

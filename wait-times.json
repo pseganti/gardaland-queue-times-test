@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-28T16:50:32Z",
-  "lastUpdate": "18:50",
+  "timestamp": "2026-08-28T17:00:56Z",
+  "lastUpdate": "19:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -22,16 +22,16 @@
     "shaman": {
       "name": "Shaman",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -57,7 +57,7 @@
     "jungle-rapids": {
       "name": "Jungle Rapids",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "mammut": {
       "name": "Mammut",
@@ -71,7 +71,7 @@
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "dragon-rush": {
@@ -81,8 +81,8 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 15,
+      "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",

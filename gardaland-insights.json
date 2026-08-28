@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-08-27T14:52:35.068Z",
+  "generatedAt": "2026-08-28T15:47:59.384Z",
   "crowdForecast": [
-    {
-      "date": "2026-08-27",
-      "label": "giovedì 27 agosto",
-      "hours": "10:00-23:00",
-      "crowdLevel": "83%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-08-28",
       "label": "venerdì 28 agosto",
@@ -35,6 +28,13 @@
       "hours": "10:00-23:00",
       "crowdLevel": "85%*",
       "advice": "express_recommended"
+    },
+    {
+      "date": "2026-09-01",
+      "label": "martedì 1 settembre",
+      "hours": "10:00-23:00",
+      "crowdLevel": "81%*",
+      "advice": "express_recommended"
     }
   ],
   "bestDays": [
@@ -44,9 +44,9 @@
       "hours": "10:00-23:00",
       "crowdLevel": "78%*",
       "weather": {
-        "tempMax": 29.3,
-        "precipProb": 2,
-        "weatherCode": 3
+        "tempMax": 30.3,
+        "precipProb": 5,
+        "weatherCode": 2
       }
     },
     {
@@ -55,20 +55,20 @@
       "hours": "10:00-23:00",
       "crowdLevel": "81%*",
       "weather": {
-        "tempMax": 28.5,
-        "precipProb": 22,
-        "weatherCode": 2
+        "tempMax": 31.2,
+        "precipProb": 21,
+        "weatherCode": 3
       }
     },
     {
-      "date": "2026-08-28",
-      "label": "venerdì 28 agosto",
+      "date": "2026-08-31",
+      "label": "lunedì 31 agosto",
       "hours": "10:00-23:00",
-      "crowdLevel": "82%*",
+      "crowdLevel": "85%*",
       "weather": {
-        "tempMax": 33.7,
-        "precipProb": 10,
-        "weatherCode": 80
+        "tempMax": 32,
+        "precipProb": 3,
+        "weatherCode": 3
       }
     }
   ]

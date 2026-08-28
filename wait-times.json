@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-28T08:00:55Z",
-  "lastUpdate": "10:00",
+  "timestamp": "2026-08-28T08:10:33Z",
+  "lastUpdate": "10:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",

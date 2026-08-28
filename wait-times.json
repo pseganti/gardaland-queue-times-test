@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-28T19:02:07Z",
-  "lastUpdate": "21:02",
+  "timestamp": "2026-08-28T19:10:33Z",
+  "lastUpdate": "21:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "space-vertigo": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

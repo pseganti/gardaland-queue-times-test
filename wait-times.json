@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-29T10:30:43Z",
-  "lastUpdate": "12:30",
+  "timestamp": "2026-08-29T10:40:34Z",
+  "lastUpdate": "12:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,12 +16,12 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,12 +36,12 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "mammut": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {

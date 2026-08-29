@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-29T17:10:32Z",
-  "lastUpdate": "19:10",
+  "timestamp": "2026-08-29T17:20:32Z",
+  "lastUpdate": "19:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {

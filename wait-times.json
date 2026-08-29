@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-29T18:00:53Z",
-  "lastUpdate": "20:00",
+  "timestamp": "2026-08-29T18:10:33Z",
+  "lastUpdate": "20:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -86,12 +86,12 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "peter-pan": {

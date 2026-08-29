@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-29T13:30:43Z",
-  "lastUpdate": "15:30",
+  "timestamp": "2026-08-29T13:40:35Z",
+  "lastUpdate": "15:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

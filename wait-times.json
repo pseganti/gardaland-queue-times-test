@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-30T20:05:11Z",
-  "lastUpdate": "22:05",
+  "timestamp": "2026-08-30T20:10:32Z",
+  "lastUpdate": "22:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "shaman": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

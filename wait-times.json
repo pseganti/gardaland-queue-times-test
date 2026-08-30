@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-30T08:20:33Z",
-  "lastUpdate": "10:20",
+  "timestamp": "2026-08-30T08:30:44Z",
+  "lastUpdate": "10:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
+      "wait_time": 20,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

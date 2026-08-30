@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-30T16:10:36Z",
-  "lastUpdate": "18:10",
+  "timestamp": "2026-08-30T16:20:34Z",
+  "lastUpdate": "18:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {

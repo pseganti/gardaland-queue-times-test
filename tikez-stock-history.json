@@ -460,5 +460,82 @@
         }
       }
     }
+  },
+  "2026-08-30": {
+    "date": "2026-08-30",
+    "categories": {
+      "gardaland": {
+        "Adulto": {
+          "price": "49.00",
+          "available": 4,
+          "soldToday": 0
+        },
+        "Biglietto famiglia": {
+          "price": "49.00",
+          "available": 19,
+          "soldToday": 0
+        },
+        "PROMO LUGLIO": {
+          "price": "44.00",
+          "available": 111,
+          "soldToday": 0
+        },
+        "SUPER PROMO": {
+          "price": "39.90",
+          "available": 44,
+          "soldToday": 1
+        },
+        "Biglietto serale": {
+          "price": "29.00",
+          "available": 28,
+          "soldToday": 0
+        }
+      },
+      "caneva_movieland_2parchi": {
+        "Adulto": {
+          "price": "46.00",
+          "available": 5,
+          "soldToday": 0
+        }
+      },
+      "gardaland_legoland_sealife": {
+        "Biglietto famiglia": {
+          "price": "69.00",
+          "available": 11,
+          "soldToday": 0
+        }
+      },
+      "movieland": {
+        "Adulto": {
+          "price": "36.00",
+          "available": 13,
+          "soldToday": 2
+        },
+        "Ragazzo": {
+          "price": "29.00",
+          "available": 11,
+          "soldToday": 2
+        }
+      },
+      "caneva_aquapark": {
+        "Adulto": {
+          "price": "34.00",
+          "available": 14,
+          "soldToday": 0
+        },
+        "Ragazzo": {
+          "price": "28.00",
+          "available": 13,
+          "soldToday": 0
+        }
+      },
+      "gardaland_legoland": {
+        "Adulto": {
+          "price": "59.00",
+          "available": 1,
+          "soldToday": 0
+        }
+      }
+    }
   }
 }

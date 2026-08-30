@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-30T09:00:52Z",
-  "lastUpdate": "11:00",
+  "timestamp": "2026-08-30T09:10:32Z",
+  "lastUpdate": "11:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -22,11 +22,11 @@
     "shaman": {
       "name": "Shaman",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
@@ -42,7 +42,7 @@
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -52,22 +52,22 @@
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

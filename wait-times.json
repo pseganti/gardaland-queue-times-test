@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-30T17:42:29Z",
-  "lastUpdate": "19:42",
+  "timestamp": "2026-08-30T17:50:33Z",
+  "lastUpdate": "19:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-adventure": {

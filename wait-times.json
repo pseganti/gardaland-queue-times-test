@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-31T19:30:46Z",
-  "lastUpdate": "21:30",
+  "timestamp": "2026-08-31T19:40:34Z",
+  "lastUpdate": "21:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 35,
+      "wait_time": 25,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -131,7 +131,7 @@
     },
     "l-albero-di-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "monorotaia": {

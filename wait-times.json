@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-31T15:40:35Z",
-  "lastUpdate": "17:40",
+  "timestamp": "2026-08-31T15:50:37Z",
+  "lastUpdate": "17:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

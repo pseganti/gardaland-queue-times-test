@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-31T13:40:34Z",
-  "lastUpdate": "15:40",
+  "timestamp": "2026-08-31T13:50:35Z",
+  "lastUpdate": "15:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "colorado-boat": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "volaplano": {

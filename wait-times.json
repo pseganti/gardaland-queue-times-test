@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-31T11:40:33Z",
-  "lastUpdate": "13:40",
+  "timestamp": "2026-08-31T11:50:32Z",
+  "lastUpdate": "13:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -41,12 +41,12 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

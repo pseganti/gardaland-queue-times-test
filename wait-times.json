@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-31T08:00:58Z",
-  "lastUpdate": "10:00",
+  "timestamp": "2026-08-31T08:10:34Z",
+  "lastUpdate": "10:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -12,7 +12,7 @@
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",

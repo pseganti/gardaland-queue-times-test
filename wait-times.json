@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-01T09:10:36Z",
-  "lastUpdate": "11:10",
+  "timestamp": "2026-09-01T09:20:33Z",
+  "lastUpdate": "11:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 45,
+      "wait_time": 50,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
@@ -22,7 +22,7 @@
     "shaman": {
       "name": "Shaman",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -42,21 +42,21 @@
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
@@ -67,7 +67,7 @@
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
@@ -82,7 +82,7 @@
     "wolf-legend": {
       "name": "Wolf Legend",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",

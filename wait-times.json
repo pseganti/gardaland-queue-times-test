@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-01T09:00:57Z",
-  "lastUpdate": "11:00",
+  "timestamp": "2026-09-01T09:10:36Z",
+  "lastUpdate": "11:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 25,
+      "wait_time": 45,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 15,
+      "wait_time": 30,
       "is_open": true
     },
     "peter-pan": {

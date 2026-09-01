@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-01T18:30:47Z",
-  "lastUpdate": "20:30",
+  "timestamp": "2026-09-01T18:36:09Z",
+  "lastUpdate": "20:36",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {

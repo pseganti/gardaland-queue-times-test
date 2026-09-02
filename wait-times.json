@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-02T13:50:33Z",
-  "lastUpdate": "15:50",
+  "timestamp": "2026-09-02T14:01:02Z",
+  "lastUpdate": "16:01",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -72,7 +72,7 @@
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",

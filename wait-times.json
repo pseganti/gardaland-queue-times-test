@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-02T17:40:33Z",
-  "lastUpdate": "19:40",
+  "timestamp": "2026-09-02T17:50:33Z",
+  "lastUpdate": "19:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,13 +36,13 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 10,
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "volaplano": {

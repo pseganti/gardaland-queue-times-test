@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-02T09:00:56Z",
-  "lastUpdate": "11:00",
+  "timestamp": "2026-09-02T09:10:31Z",
+  "lastUpdate": "11:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -42,7 +42,7 @@
     "colorado-boat": {
       "name": "Colorado Boat",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -52,7 +52,7 @@
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",

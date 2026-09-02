@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-02T10:30:44Z",
-  "lastUpdate": "12:30",
+  "timestamp": "2026-09-02T10:40:31Z",
+  "lastUpdate": "12:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
+      "wait_time": 15,
       "is_open": true
     },
     "volaplano": {

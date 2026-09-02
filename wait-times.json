@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-02T08:40:31Z",
-  "lastUpdate": "10:40",
+  "timestamp": "2026-09-02T08:50:35Z",
+  "lastUpdate": "10:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

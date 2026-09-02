@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-02T15:10:36Z",
-  "lastUpdate": "17:10",
+  "timestamp": "2026-09-02T15:19:03Z",
+  "lastUpdate": "17:19",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "shaman": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,8 +76,8 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "wolf-legend": {
       "name": "Wolf Legend",
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

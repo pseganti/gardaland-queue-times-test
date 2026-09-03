@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-03T10:10:39Z",
-  "lastUpdate": "12:10",
+  "timestamp": "2026-09-03T10:20:38Z",
+  "lastUpdate": "12:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "magic-house": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {

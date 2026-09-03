@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-03T11:00:56Z",
-  "lastUpdate": "13:00",
+  "timestamp": "2026-09-03T11:10:38Z",
+  "lastUpdate": "13:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -21,22 +21,22 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "wolf-legend": {

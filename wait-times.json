@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-03T14:40:31Z",
-  "lastUpdate": "16:40",
+  "timestamp": "2026-09-03T14:50:33Z",
+  "lastUpdate": "16:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 0,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {

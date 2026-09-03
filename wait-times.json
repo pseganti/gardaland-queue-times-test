@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-03T13:00:58Z",
-  "lastUpdate": "15:00",
+  "timestamp": "2026-09-03T13:10:41Z",
+  "lastUpdate": "15:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {

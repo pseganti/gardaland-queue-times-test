@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-04T20:30:44Z",
-  "lastUpdate": "22:30",
+  "timestamp": "2026-09-04T20:58:22Z",
+  "lastUpdate": "22:58",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,13 +11,13 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "shaman": {
       "name": "Shaman",
@@ -31,13 +31,13 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "colorado-boat": {
       "name": "Colorado Boat",
@@ -46,8 +46,8 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
@@ -66,23 +66,23 @@
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "peter-pan": {

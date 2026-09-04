@@ -18,7 +18,7 @@ jobs:
         with:
           script: |
             const cutoff = new Date();
-            cutoff.setDate(cutoff.getDate() - 7);
+            cutoff.setDate(cutoff.getDate() - 2);
             const dateFilter = cutoff.toISOString().split('T')[0]; // Formato YYYY-MM-DD
             const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 

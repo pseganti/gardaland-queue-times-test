@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-05T13:30:41Z",
-  "lastUpdate": "15:30",
+  "timestamp": "2026-09-05T14:00:50Z",
+  "lastUpdate": "16:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

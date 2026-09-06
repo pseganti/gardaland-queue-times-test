@@ -3,10 +3,9 @@ import os
 import sys
 import requests
 
-def get_weather(lat=45.19, lon=11.31):
+def get_weather(lat=45.44, lon=10.71):
     """
-    Recupera il meteo da Open-Meteo per le coordinate specificate.
-    Coordinate predefinite: Legnago / Verona (45.19, 11.31).
+    Recupera il meteo da Open-Meteo per Castelnuovo del Garda (45.44, 10.71).
     """
     url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Europe%2FRome"
     try:
@@ -20,17 +19,22 @@ def get_weather(lat=45.19, lon=11.31):
         print(f"Attenzione: Impossibile recuperare i dati meteo: {e}")
         return ""
 
-def get_custom_message():
-    """Legge il messaggio dal file data.json."""
-    json_path = "data.json"
-    if os.path.exists(json_path):
-        try:
-            with open(json_path, "r", encoding="utf-8") as f:
-                content = json.load(f)
-                return content.get("frase_del_giorno", "Buona giornata!")
-        except Exception as e:
-            print(f"Errore nella lettura di data.json: {e}")
-    return "Buona giornata!"
+def get_opening_hours():
+    """Recupera gli orari dei parchi direttamente da Netlify."""
+    url = "https://paolotickets.netlify.app/opening-hours.json"
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        
+        gardaland_oggi = data.get("gardaland", {}).get("orari", {}).get("oggi", "N/D")
+        sealife_oggi = data.get("sealife", {}).get("orari", {}).get("oggi", "N/D")
+        legoland_oggi = data.get("legoland", {}).get("orari", {}).get("oggi", "N/D")
+        
+        return f"🎡 Orari Oggi:\n• Gardaland: {gardaland_oggi}\n• Sea Life: {sealife_oggi}\n• Legoland: {legoland_oggi}"
+    except Exception as e:
+        print(f"Attenzione: Impossibile recuperare gli orari da Netlify: {e}")
+        return ""
 
 def publish_to_facebook():
     """Pubblica il post sulla Pagina Facebook tramite Graph API."""
@@ -41,16 +45,20 @@ def publish_to_facebook():
         sys.exit(1)
 
     weather_info = get_weather()
-    custom_phrase = get_custom_message()
+    hours_info = get_opening_hours()
 
-    message_parts = [f"☀️ {custom_phrase}"]
+    message_parts = ["☀️ Buongiorno! Ecco gli aggiornamenti per oggi:"]
+    
     if weather_info:
         message_parts.append(weather_info)
-    message_parts.append("\n#buongiorno #meteo")
+        
+    if hours_info:
+        message_parts.append(hours_info)
+        
+    message_parts.append("\n#gardaland #meteo #orari #castelnuovodelgarda")
 
     full_message = "\n\n".join(message_parts)
 
-    # Usiamo /me/feed: con il Page Access Token pubblicherà direttamente sulla pagina proprietaria del token
     url = "https://graph.facebook.com/v19.0/me/feed"
     payload = {
         "message": full_message,

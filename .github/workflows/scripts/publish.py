@@ -34,7 +34,6 @@ def get_custom_message():
 
 def publish_to_facebook():
     """Pubblica il post sulla Pagina Facebook tramite Graph API."""
-    page_id = os.environ.get("FB_PAGE_ID", "me")
     access_token = os.environ.get("FB_PAGE_TOKEN")
 
     if not access_token:
@@ -51,7 +50,8 @@ def publish_to_facebook():
 
     full_message = "\n\n".join(message_parts)
 
-    url = f"https://graph.facebook.com/v19.0/{page_id}/feed"
+    # Usiamo /me/feed: con il Page Access Token pubblicherà direttamente sulla pagina proprietaria del token
+    url = "https://graph.facebook.com/v19.0/me/feed"
     payload = {
         "message": full_message,
         "access_token": access_token

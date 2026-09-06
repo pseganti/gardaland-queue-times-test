@@ -1,35 +1,28 @@
 import json
 import requests
-from datetime import datetime
 
-# Se usi un file JSON locale:
-def carica_dati_locali(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return json.load(f)
+URL_OPENING_HOURS = "https://paolotickets.netlify.app/opening-hours.json"
 
-# Se i dati si trovano su un endpoint remoto:
-def carica_dati_url(url):
-    response = requests.get(url)
-    response.raise_for_status()
+def scarica_orari_da_netlify(url):
+    response = requests.get(url, timeout=10)
+    response.raise_for_status()  # Solleva un errore se la chiamata HTTP fallisce (es. 404, 500)
     return response.json()
 
-def genera_post_meteo_orari(data):
-    # Esempio di estrazione dai dati del parco/meteo
-    # Adatta i campi in base alla struttura esatta del tuo JSON
-    
-    # Dati di oggi
+def genera_post_meteo_orari(opening_hours_data):
+    # Dati meteo di esempio per Castelnuovo del Garda
     oggi_meteo = "Soleggiato, temperatura fino a 33°C (minima 22°C)"
+    domani_meteo = "Prevalenza di sole, temperatura massima 32°C (minima 21°C)"
     
-    # Orari Gardaland
-    gardaland_oggi = data.get("gardaland", {}).get("orari", {}).get("oggi", "10:00 - 23:00")
-    sealife_oggi = data.get("sealife", {}).get("orari", {}).get("oggi", "10:00 - 18:00")
-    legoland_oggi = data.get("legoland", {}).get("orari", {}).get("oggi", "10:00 - 19:00")
+    # Estrazione orari dal JSON di Netlify
+    gardaland_oggi = opening_hours_data.get("gardaland", {}).get("orari", {}).get("oggi", "N/D")
+    sealife_oggi = opening_hours_data.get("sealife", {}).get("orari", {}).get("oggi", "N/D")
+    legoland_oggi = opening_hours_data.get("legoland", {}).get("orari", {}).get("oggi", "N/D")
     
-    gardaland_domani = data.get("gardaland", {}).get("orari", {}).get("domani", "10:00 - 18:00")
-    sealife_domani = data.get("sealife", {}).get("orari", {}).get("domani", "10:00 - 18:00")
-    legoland_domani = data.get("legoland", {}).get("orari", {}).get("domani", "10:00 - 18:00")
+    gardaland_domani = opening_hours_data.get("gardaland", {}).get("orari", {}).get("domani", "N/D")
+    sealife_domani = opening_hours_data.get("sealife", {}).get("orari", {}).get("domani", "N/D")
+    legoland_domani = opening_hours_data.get("legoland", {}).get("orari", {}).get("domani", "N/D")
 
-    post = f"""☀️ **Meteo e Orari dei Parchi a Castelnuovo del Garda** 🎡
+    return f"""☀️ **Meteo e Orari dei Parchi a Castelnuovo del Garda** 🎡
 
 📍 **Oggi**
 * **Meteo:** {oggi_meteo}
@@ -40,15 +33,16 @@ def genera_post_meteo_orari(data):
 ***
 
 🌤️ **Domani**
-* **Meteo:** Prevalenza di sole, temperatura massima 32°C (minima 21°C).
+* **Meteo:** {domani_meteo}
 * **Gardaland:** {gardaland_domani}
 * **Sea Life:** {sealife_domani}
 * **Legoland Water Park:** {legoland_domani}
 """
-    return post
 
 if __name__ == "__main__":
-    # Sostituisci con il percorso del tuo file .json o chiama carica_dati_url(...)
-    data = carica_dati_locali("attrazioni.json")
+    # Scarica il JSON aggiornato direttamente da Netlify
+    data = scarica_orari_da_netlify(URL_OPENING_HOURS)
+    
+    # Genera e stampa il testo del post
     testo_post = genera_post_meteo_orari(data)
     print(testo_post)

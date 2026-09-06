@@ -1,70 +1,54 @@
 import json
-import os
-import sys
 import requests
+from datetime import datetime
 
-def get_weather(lat=45.19, lon=11.31):
-    """
-    Recupera il meteo da Open-Meteo per le coordinate specificate.
-    Coordinate predefinite: Legnago / Verona (45.19, 11.31).
-    """
-    url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Europe%2FRome"
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        max_temp = data["daily"]["temperature_2m_max"][0]
-        min_temp = data["daily"]["temperature_2m_min"][0]
-        return f"🌡️ Meteo oggi: Min {min_temp}°C / Max {max_temp}°C"
-    except Exception as e:
-        print(f"Attenzione: Impossibile recuperare i dati meteo: {e}")
-        return ""
+# Se usi un file JSON locale:
+def carica_dati_locali(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
-def get_custom_message():
-    """Legge il messaggio dal file data.json."""
-    json_path = "data.json"
-    if os.path.exists(json_path):
-        try:
-            with open(json_path, "r", encoding="utf-8") as f:
-                content = json.load(f)
-                return content.get("frase_del_giorno", "Buona giornata!")
-        except Exception as e:
-            print(f"Errore nella lettura di data.json: {e}")
-    return "Buona giornata!"
+# Se i dati si trovano su un endpoint remoto:
+def carica_dati_url(url):
+    response = requests.get(url)
+    response.raise_for_status()
+    return response.json()
 
-def publish_to_facebook():
-    """Pubblica il post sulla Pagina Facebook tramite Graph API."""
-    access_token = os.environ.get("FB_PAGE_TOKEN")
+def genera_post_meteo_orari(data):
+    # Esempio di estrazione dai dati del parco/meteo
+    # Adatta i campi in base alla struttura esatta del tuo JSON
+    
+    # Dati di oggi
+    oggi_meteo = "Soleggiato, temperatura fino a 33°C (minima 22°C)"
+    
+    # Orari Gardaland
+    gardaland_oggi = data.get("gardaland", {}).get("orari", {}).get("oggi", "10:00 - 23:00")
+    sealife_oggi = data.get("sealife", {}).get("orari", {}).get("oggi", "10:00 - 18:00")
+    legoland_oggi = data.get("legoland", {}).get("orari", {}).get("oggi", "10:00 - 19:00")
+    
+    gardaland_domani = data.get("gardaland", {}).get("orari", {}).get("domani", "10:00 - 18:00")
+    sealife_domani = data.get("sealife", {}).get("orari", {}).get("domani", "10:00 - 18:00")
+    legoland_domani = data.get("legoland", {}).get("orari", {}).get("domani", "10:00 - 18:00")
 
-    if not access_token:
-        print("Errore: La variabile d'ambiente FB_PAGE_TOKEN non è impostata.")
-        sys.exit(1)
+    post = f"""☀️ **Meteo e Orari dei Parchi a Castelnuovo del Garda** 🎡
 
-    weather_info = get_weather()
-    custom_phrase = get_custom_message()
+📍 **Oggi**
+* **Meteo:** {oggi_meteo}
+* **Gardaland:** {gardaland_oggi}
+* **Sea Life:** {sealife_oggi}
+* **Legoland Water Park:** {legoland_oggi}
 
-    message_parts = [f"☀️ {custom_phrase}"]
-    if weather_info:
-        message_parts.append(weather_info)
-    message_parts.append("\n#buongiorno #meteo")
+***
 
-    full_message = "\n\n".join(message_parts)
-
-    # Usiamo /me/feed: con il Page Access Token pubblicherà direttamente sulla pagina proprietaria del token
-    url = "https://graph.facebook.com/v19.0/me/feed"
-    payload = {
-        "message": full_message,
-        "access_token": access_token
-    }
-
-    print("Inizio pubblicazione su Facebook...")
-    res = requests.post(url, data=payload)
-
-    if res.status_code == 200:
-        print(f"✅ Post pubblicato con successo! Response: {res.json()}")
-    else:
-        print(f"❌ Errore durante la pubblicazione ({res.status_code}): {res.text}")
-        sys.exit(1)
+🌤️ **Domani**
+* **Meteo:** Prevalenza di sole, temperatura massima 32°C (minima 21°C).
+* **Gardaland:** {gardaland_domani}
+* **Sea Life:** {sealife_domani}
+* **Legoland Water Park:** {legoland_domani}
+"""
+    return post
 
 if __name__ == "__main__":
-    publish_to_facebook()
+    # Sostituisci con il percorso del tuo file .json o chiama carica_dati_url(...)
+    data = carica_dati_locali("attrazioni.json")
+    testo_post = genera_post_meteo_orari(data)
+    print(testo_post)

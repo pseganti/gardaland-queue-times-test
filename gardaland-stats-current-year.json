@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdated": "2026-09-08T07:31:52.361Z",
+    "lastUpdated": "2026-09-09T07:40:01.201Z",
     "source": "https://queue-times.com/parks/12/stats",
     "totalRides": 43
   },
@@ -143,7 +143,7 @@
       "name": "Animal Treasure Island",
       "isArchived": false,
       "avgWaitMinutes": 8,
-      "avgMaxWaitMinutes": 17
+      "avgMaxWaitMinutes": 16
     },
     {
       "id": 10756,

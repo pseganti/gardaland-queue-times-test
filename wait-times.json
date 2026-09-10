@@ -1,33 +1,33 @@
 {
-  "timestamp": "2026-09-10T11:00:59Z",
-  "lastUpdate": "13:00",
+  "timestamp": "2026-09-10T11:30:48Z",
+  "lastUpdate": "13:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 40,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 15,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "magic-house": {
       "name": "Magic House",
@@ -37,12 +37,12 @@
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
@@ -57,12 +57,12 @@
     "jungle-rapids": {
       "name": "Jungle Rapids",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 5,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
@@ -76,23 +76,23 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 25,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
-      "is_open": true
+      "wait_time": 0,
+      "is_open": false
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": true
+      "is_open": false
     },
     "peter-pan": {
       "name": "Peter Pan",

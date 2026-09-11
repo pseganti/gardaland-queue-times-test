@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-11T12:01:00Z",
-  "lastUpdate": "14:01",
+  "timestamp": "2026-09-11T12:30:54Z",
+  "lastUpdate": "14:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -31,22 +31,22 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 15,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {

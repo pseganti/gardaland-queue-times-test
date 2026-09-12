@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-12T17:01:00Z",
-  "lastUpdate": "19:01",
+  "timestamp": "2026-09-12T17:30:45Z",
+  "lastUpdate": "19:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "raptor": {
@@ -21,12 +21,12 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -36,12 +36,12 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 35,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "baby-pilota": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

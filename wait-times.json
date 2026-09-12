@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-12T13:41:56Z",
-  "lastUpdate": "15:41",
+  "timestamp": "2026-09-12T14:00:58Z",
+  "lastUpdate": "16:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 65,
+      "wait_time": 95,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 50,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,12 +61,12 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 55,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 55,
+      "wait_time": 60,
       "is_open": true
     },
     "wolf-legend": {

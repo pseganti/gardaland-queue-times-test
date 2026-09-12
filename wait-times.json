@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-12T15:30:46Z",
-  "lastUpdate": "17:30",
+  "timestamp": "2026-09-12T16:00:59Z",
+  "lastUpdate": "18:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 30,
+      "wait_time": 45,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "shaman": {
@@ -26,12 +26,12 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -41,7 +41,7 @@
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 40,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-adventure": {
@@ -51,12 +51,12 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 25,
+      "wait_time": 15,
       "is_open": true
     },
     "mammut": {
@@ -81,17 +81,17 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "peter-pan": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "flying-island": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "superbaby": {

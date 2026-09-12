@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-12T16:30:47Z",
-  "lastUpdate": "18:30",
+  "timestamp": "2026-09-12T16:31:39Z",
+  "lastUpdate": "18:31",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "shaman": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {

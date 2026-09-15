@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdated": "2026-09-14T08:16:05.717Z",
+    "lastUpdated": "2026-09-15T08:08:23.850Z",
     "source": "https://queue-times.com/parks/12/stats",
     "totalRides": 43
   },
@@ -251,6 +251,13 @@
       "avgMaxWaitMinutes": 6
     },
     {
+      "id": 6684,
+      "name": "Giostra Cavalli",
+      "isArchived": false,
+      "avgWaitMinutes": 4,
+      "avgMaxWaitMinutes": 4
+    },
+    {
       "id": 6693,
       "name": "Peppa Pig Land - L'isola dei Pirati",
       "isArchived": false,
@@ -263,13 +270,6 @@
       "isArchived": false,
       "avgWaitMinutes": 4,
       "avgMaxWaitMinutes": 5
-    },
-    {
-      "id": 6684,
-      "name": "Giostra Cavalli",
-      "isArchived": false,
-      "avgWaitMinutes": 3,
-      "avgMaxWaitMinutes": 4
     },
     {
       "id": 6695,

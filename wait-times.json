@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-15T11:30:45Z",
-  "lastUpdate": "13:30",
+  "timestamp": "2026-09-15T11:47:00Z",
+  "lastUpdate": "13:47",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "wolf-legend": {

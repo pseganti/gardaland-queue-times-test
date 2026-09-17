@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-17T12:30:48Z",
-  "lastUpdate": "14:30",
+  "timestamp": "2026-09-17T13:01:01Z",
+  "lastUpdate": "15:01",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "volaplano": {

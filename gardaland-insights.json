@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-09-18T08:37:01.694Z",
+  "generatedAt": "2026-09-19T08:24:02.541Z",
   "crowdForecast": [
-    {
-      "date": "2026-09-18",
-      "label": "venerdì 18 settembre",
-      "hours": "10:00-17:00",
-      "crowdLevel": "57%*",
-      "advice": "express_probably_unnecessary"
-    },
     {
       "date": "2026-09-19",
       "label": "sabato 19 settembre",
@@ -35,6 +28,13 @@
       "hours": "10:00-17:00",
       "crowdLevel": "53%*",
       "advice": "express_probably_unnecessary"
+    },
+    {
+      "date": "2026-09-23",
+      "label": "mercoledì 23 settembre",
+      "hours": "10:00-17:00",
+      "crowdLevel": "51%*",
+      "advice": "express_probably_unnecessary"
     }
   ],
   "bestDays": [
@@ -44,9 +44,9 @@
       "hours": "10:00-17:00",
       "crowdLevel": "49%*",
       "weather": {
-        "tempMax": 25.4,
+        "tempMax": 24.3,
         "precipProb": 9,
-        "weatherCode": 3
+        "weatherCode": 2
       }
     },
     {
@@ -55,8 +55,8 @@
       "hours": "10:00-17:00",
       "crowdLevel": "51%*",
       "weather": {
-        "tempMax": 22.7,
-        "precipProb": 2,
+        "tempMax": 24,
+        "precipProb": 0,
         "weatherCode": 3
       }
     },
@@ -66,7 +66,7 @@
       "hours": "10:00-17:00",
       "crowdLevel": "53%*",
       "weather": {
-        "tempMax": 26.3,
+        "tempMax": 25.1,
         "precipProb": 0,
         "weatherCode": 3
       }

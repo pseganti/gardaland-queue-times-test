@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-22T12:01:01Z",
-  "lastUpdate": "14:01",
+  "timestamp": "2026-09-22T12:30:51Z",
+  "lastUpdate": "14:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {
@@ -141,7 +141,7 @@
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-l-isola-dei-pirati": {

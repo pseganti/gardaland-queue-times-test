@@ -31,7 +31,7 @@ jobs:
         echo "📅 Current date (Italy): $CURRENT_DATE"
         echo "🕐 Current time (Italy): $CURRENT_TIME"
         
-        HOURS_URL="https://paolotickets.netlify.app/opening-hours.json"
+        HOURS_URL="https://gardaparks.it/opening-hours.json"
         echo "📡 Fetching opening hours from $HOURS_URL"
         
         if ! curl -s "$HOURS_URL" -o opening-hours.json; then

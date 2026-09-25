@@ -1,0 +1,43 @@
+name: Update Opening Hours
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'   # Ogni lunedì alle 04:00 UTC (06:00 ora italiana d'estate)
+  workflow_dispatch: {}    # Avvio manuale dal tab Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-opening-hours:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run opening hours scraper
+        run: node .github/workflows/scripts/scrape-opening-hours.mjs
+
+      - name: Commit and push if changed
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          git add opening-hours.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ Nessuna modifica agli orari di apertura"
+          else
+            git commit -m "chore: aggiorna orari di apertura (settimanale)"
+            git pull --rebase origin main
+            git push
+            echo "✅ opening-hours.json aggiornato e pubblicato"
+          fi

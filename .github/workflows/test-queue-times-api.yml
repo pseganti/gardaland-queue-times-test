@@ -31,11 +31,13 @@ jobs:
         echo "📅 Current date (Italy): $CURRENT_DATE"
         echo "🕐 Current time (Italy): $CURRENT_TIME"
         
-        HOURS_URL="https://gardaparks.it/opening-hours.json"
-        echo "📡 Fetching opening hours from $HOURS_URL"
+        # opening-hours.json è ora nel repo (aggiornato ogni lunedì da "Update Opening Hours"):
+        # si usa il file locale del checkout invece di riscaricarlo. Riscaricarlo sopra il
+        # file versionato lo lasciava "modificato" e faceva fallire il git pull --rebase.
+        echo "📖 Using opening-hours.json from the repository"
         
-        if ! curl -s "$HOURS_URL" -o opening-hours.json; then
-          echo "❌ Failed to fetch opening hours from Netlify - STOPPING"
+        if [ ! -f opening-hours.json ]; then
+          echo "❌ opening-hours.json not found in repository - STOPPING"
           echo "is_open=false" >> $GITHUB_OUTPUT
           exit 0
         fi

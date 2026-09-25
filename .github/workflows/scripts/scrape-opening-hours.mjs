@@ -36,7 +36,8 @@ const CANEVA_STATES = {
   '1737': { open: '10:00', close: '19:00' }, '901': { open: '10:00', close: '18:00' },
   '902': { open: '10:00', close: '23:00' }, '3222': { open: '10:00', close: '19:00' },
   '1775': null, '908': { show: '19:30' }, '4959': { show: '19:00' },
-  '909': { show: '19:00' }, '1778': null, '5401': null
+  '909': { show: '19:00' }, '1778': null, '5401': { show: 'SAME' }, // 5401 = SOLD OUT
+  '6311': { show: '19:20' }
 };
 
 const pad = n => String(n).padStart(2, '0');
@@ -98,86 +99,39 @@ async function openCanevaBrowser() {
     locale: 'it-IT'
   });
   const page = await context.newPage();
-  await page.goto('https://www.canevaworld.it/', { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForTimeout(3000); // lascia completare eventuali controlli anti-bot/cookie
+  // Pagina dei calendari: da qui partono le chiamate e qui c'è la LEGENDA con il testo
+  // di ogni stato (es. data-cid="6311" → "19.20", data-cid="909" → "19.00 / 21.30")
+  await page.goto('https://www.canevaworld.it/calendari-e-prezzi.html', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForTimeout(4000); // lascia completare eventuali controlli anti-bot/cookie
+  const legend = await page.evaluate(() => {
+    const res = {};
+    document.querySelectorAll('.elem[data-cid]').forEach(el => {
+      const txt = el.querySelector('.fieldvalue.f6')?.textContent || el.querySelector('.fieldvalue.f3')?.textContent || '';
+      res[el.getAttribute('data-cid')] = txt.replace(/\s+/g, ' ').trim();
+    });
+    return res;
+  });
   const getJsonInPage = url => page.evaluate(async u => {
     const r = await fetch(u, { headers: { 'Accept': 'application/json, text/plain, */*', 'X-Requested-With': 'XMLHttpRequest' } });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   }, url);
-  return { browser, page, getJsonInPage };
+  return { browser, page, getJsonInPage, legend };
 }
 
 const TIME_RE = /\b([01]?\d|2[0-4])[.:]([0-5]\d)\b/g;
 const toHHMM = (h, m) => `${String(h).padStart(2, '0')}:${m}`;
 
-// Cerca in un oggetto JSON qualunque i nodi legati allo stato `id` e ne estrae gli orari
-function timesFromJson(node, id, out = new Set(), inside = false) {
-  if (node == null) return out;
-  if (typeof node === 'string') {
-    if (inside) for (const m of node.matchAll(TIME_RE)) out.add(toHHMM(m[1], m[2]));
-    return out;
-  }
-  if (typeof node !== 'object') return out;
-  const isState = String(node.id ?? node.ID ?? node.state_id ?? '') === id;
-  for (const [k, v] of Object.entries(node)) timesFromJson(v, id, out, inside || isState || k === id);
-  return out;
-}
-
-// Stato → orario: 1 orario = spettacolo (Medieval) oppure apertura; 2 orari = apertura-chiusura
-function stateFromTimes(park, times) {
-  const t = [...times].sort();
+// Legenda testo → orario. Medieval: primo orario = spettacolo (es. "19.00 / 21.30" → 19:00).
+// Parchi: primo e ultimo orario = apertura/chiusura. "Chiuso", "SOLD OUT" o nessun orario → null.
+function stateFromLegend(park, text) {
+  const t = [...String(text).matchAll(TIME_RE)].map(m => toHHMM(m[1], m[2]));
+  // SOLD OUT: lo spettacolo c'è (va esaurito a ridosso della data e lo scraping è
+  // settimanale) → giorno di spettacolo, orario preso dagli altri giorni del mese
+  if (park === 'medieval' && !t.length && /sold\s*out/i.test(text)) return { show: 'SAME' };
   if (!t.length) return null;
   if (park === 'medieval') return { show: t[0] };
   return t.length >= 2 ? { open: t[0], close: t[t.length - 1] } : null;
-}
-
-const PARK_PAGE_HINT = { caneva: 'aquapark', movieland: 'movieland', medieval: 'medieval' };
-
-async function resolveUnknownStates(session, park, ids, jsons, log) {
-  const resolved = {};
-  // 1) nei dati JSON del calendario
-  for (const id of ids) {
-    const times = new Set();
-    for (const j of jsons) timesFromJson(j, id, times);
-    const st = stateFromTimes(park, times);
-    if (st) resolved[id] = st;
-  }
-  const missing = ids.filter(id => !resolved[id]);
-  if (!missing.length) return resolved;
-
-  // 2) nella legenda del calendario sulla pagina del parco:
-  //    <div class="tc-cc ... tc-c-6311"></div><div class="fieldvalue ...">19.20</div>
-  try {
-    const { page } = session;
-    const hint = PARK_PAGE_HINT[park];
-    const links = await page.$$eval('a[href]', (as, h) => [...new Set(as.map(a => a.href).filter(u => u.includes('canevaworld.it') && u.toLowerCase().includes(h)))], hint);
-    for (const url of links.slice(0, 5)) {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-      await page.waitForTimeout(4000);
-      const found = await page.evaluate(ids => {
-        const res = {};
-        for (const id of ids) {
-          const el = document.querySelector(`.tc-c-${id}`);
-          if (!el) continue;
-          // l'orario sta nell'elemento subito dopo il quadratino colorato
-          const sib = (el.nextElementSibling?.textContent || '').trim();
-          res[id] = /\d[.:]\d\d/.test(sib) ? sib : (el.parentElement?.textContent || '');
-        }
-        return res;
-      }, missing);
-      for (const [id, text] of Object.entries(found)) {
-        const times = new Set([...text.matchAll(TIME_RE)].map(m => toHHMM(m[1], m[2])));
-        const st = stateFromTimes(park, times);
-        if (st) resolved[id] = st;
-      }
-      if (missing.every(id => resolved[id])) break;
-    }
-    await page.goto('https://www.canevaworld.it/', { waitUntil: 'domcontentloaded', timeout: 60000 });
-  } catch (e) {
-    log.push(`⚠️ ${park}: lettura legenda non riuscita (${e.message})`);
-  }
-  return resolved;
 }
 
 async function scrapeCaneva(data, log) {
@@ -221,19 +175,31 @@ async function scrapeCaneva(data, log) {
       }
     }
 
-    // Stati nuovi (es. Medieval con lo show spostato alle 19.20): si cerca l'orario
-    // nei dati del calendario e, se non c'è, nella legenda della pagina del parco.
-    const resolved = unknown.size ? await resolveUnknownStates(session, park, [...unknown], monthsRaw.map(x => x.json), log) : {};
+    // La legenda del sito ha la precedenza sulla tabella fissa (orari aggiornati dal parco)
+    const resolved = {};
+    for (const s of Object.keys(stateCount)) {
+      if (!(s in session.legend)) continue;
+      const st = stateFromLegend(park, session.legend[s]);
+      // un orario letto vince sempre; "nessun orario" vince solo se la legenda dice chiuso/sold out
+      if (st || /chius|sold\s*out|closed/i.test(session.legend[s]) || !(s in CANEVA_STATES)) resolved[s] = st;
+      if (park === 'medieval' && /sold\s*out/i.test(session.legend[s])) resolved[s] = { show: 'SAME' };
+    }
     const stateMap = { ...CANEVA_STATES, ...resolved };
 
     let days = 0;
     for (const { y, m, days: rawDays } of monthsRaw) {
       const fresh = {};
+      // Orario "tipico" del mese (il più frequente) per i giorni SOLD OUT
+      const freq = {};
+      for (const states of Object.values(rawDays)) for (const s of states) {
+        const h = stateMap[s]; if (h?.show && h.show !== 'SAME') freq[h.show] = (freq[h.show] || 0) + 1;
+      }
+      const typicalShow = Object.entries(freq).sort((a, b) => b[1] - a[1])[0]?.[0] || '19:30';
       for (const [dateStr, states] of Object.entries(rawDays)) {
         const mapped = states.map(s => stateMap[s]).filter(Boolean);
         if (park === 'medieval') {
           // Si salva il PRIMO spettacolo del giorno (il più presto)
-          const shows = [...new Set(mapped.map(h => h.show || h.open).filter(Boolean))].sort();
+          const shows = [...new Set(mapped.map(h => h.show === 'SAME' ? typicalShow : (h.show || h.open)).filter(Boolean))].sort();
           if (shows.length) fresh[dateStr] = { show: shows[0] };
         } else {
           const h = mapped.find(x => x.open && x.close);
@@ -246,7 +212,8 @@ async function scrapeCaneva(data, log) {
 
     log.push(monthsRaw.length ? `✅ ${park}: ${days} giorni in ${monthsRaw.length} mesi` : `❌ ${park}: nessun mese scaricato — dati lasciati invariati`);
     const stillUnknown = [...unknown].filter(s => !(s in resolved));
-    if (Object.keys(resolved).length) log.push(`🔎 ${park}: stati nuovi riconosciuti ${Object.entries(resolved).map(([s, h]) => `${s}=${h.show || (h.open + '-' + h.close)}`).join(', ')}`);
+    const legendInfo = Object.entries(resolved).map(([s, h]) => `${s}=${h ? (h.show || h.open + '-' + h.close) : 'chiuso'}`);
+    if (legendInfo.length) log.push(`🔎 ${park}: da legenda ${legendInfo.join(', ')}`);
     if (stillUnknown.length) log.push(`⚠️ ${park}: stati sconosciuti ${stillUnknown.join(', ')} — giorni con solo questi stati risultano chiusi`);
     log.push(`   ${park} stati visti: ${Object.entries(stateCount).map(([s, n]) => `${s}×${n}`).join(' ') || 'nessuno'}`);
   }

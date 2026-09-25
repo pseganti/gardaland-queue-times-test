@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 # ============ CONFIGURAZIONE ============
-BASE_URL = "https://paolotickets.netlify.app"
+BASE_URL = "https://gardaparks.it"
 OPENING_URL = f"{BASE_URL}/opening-hours.json"
 CALENDAR_URL = f"{BASE_URL}/gardaland-calendar-export.json"
 

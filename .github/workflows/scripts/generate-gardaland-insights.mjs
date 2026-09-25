@@ -20,7 +20,7 @@ const GARDALAND_LON = 10.7203;
 const DAYS_AHEAD = 10;
 const CROWD_USELESS_THRESHOLD = 60;
 
-const MAIN_SITE_BASE = 'https://paolotickets.netlify.app';
+const MAIN_SITE_BASE = 'https://gardaparks.it';
 
 function toDateStr(d) {
   return d.toISOString().split('T')[0];

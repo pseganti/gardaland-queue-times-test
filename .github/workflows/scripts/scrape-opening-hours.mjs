@@ -124,6 +124,7 @@ async function scrapeCaneva(data, log) {
   for (const [park, id] of Object.entries(CANEVA_IDS)) {
     let days = 0, months = 0;
     const unknown = new Set();
+    const stateCount = {};
     for (let i = 0; i <= MONTHS_AHEAD; i++) {
       const d = new Date(start.getFullYear(), start.getMonth() + i, 1);
       const y = d.getFullYear(), m = d.getMonth() + 1;
@@ -133,12 +134,23 @@ async function scrapeCaneva(data, log) {
         const fresh = {};
         for (const cal of Object.values(json.contents_calendars)) {
           for (const [dateStr, dayData] of Object.entries(cal)) {
-            const state = Object.keys(dayData || {})[0];
-            if (!(state in CANEVA_STATES)) { unknown.add(state); continue; }
-            const h = CANEVA_STATES[state];
-            if (!h) continue;
-            if (park === 'medieval' && h.show) fresh[dateStr] = { show: h.show };
-            else if (h.open && h.close) fresh[dateStr] = { open: h.open, close: h.close };
+            // Un giorno può avere PIÙ stati (es. Medieval con 2 spettacoli):
+            // si guardano tutti, non solo il primo.
+            const states = Object.keys(dayData || {});
+            const mapped = [];
+            for (const s of states) {
+              stateCount[s] = (stateCount[s] || 0) + 1;
+              if (!(s in CANEVA_STATES)) { unknown.add(s); continue; }
+              if (CANEVA_STATES[s]) mapped.push(CANEVA_STATES[s]);
+            }
+            if (park === 'medieval') {
+              // 1 spettacolo → 19:30; 2 spettacoli → si salva quello delle 19:00
+              const shows = [...new Set(mapped.filter(h => h.show).map(h => h.show))].sort();
+              if (shows.length) fresh[dateStr] = { show: shows[0] };
+            } else {
+              const h = mapped.find(x => x.open && x.close);
+              if (h) fresh[dateStr] = { open: h.open, close: h.close };
+            }
           }
         }
         replaceRange(data, park, `${y}-${pad(m)}-01`, `${y}-${pad(m)}-31`, fresh);
@@ -149,6 +161,7 @@ async function scrapeCaneva(data, log) {
     }
     log.push(months ? `✅ ${park}: ${days} giorni in ${months} mesi` : `❌ ${park}: nessun mese scaricato — dati lasciati invariati`);
     if (unknown.size) log.push(`⚠️ ${park}: stati calendario sconosciuti ${[...unknown].join(', ')} — aggiungerli a CANEVA_STATES`);
+    log.push(`   ${park} stati visti: ${Object.entries(stateCount).map(([s, n]) => `${s}×${n}`).join(' ') || 'nessuno'}`);
   }
   await session.browser.close();
 }
@@ -178,6 +191,7 @@ log.push(`🧹 Rimossi ${removePastDays(data, from)} giorni prima di ${from}`);
 
 await scrapeGardaland(data, log);
 await scrapeCaneva(data, log);
+removePastDays(data, from); // Caneva scarica il mese intero: via di nuovo i giorni già passati
 
 await writeFile(OUTPUT, JSON.stringify(sortData(data), null, 2) + '\n');
 console.log(log.join('\n'));

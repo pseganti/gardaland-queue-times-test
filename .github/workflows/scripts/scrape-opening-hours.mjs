@@ -68,7 +68,7 @@ async function scrapeGardaland(data, log) {
     try {
       const json = await getJson(`https://www.gardaland.it/api/openinghours/getcalendar?lang=it-IT&locationIds=${id}`);
       const days = json?.locations?.[0]?.days || [];
-      if (!days.length) { log.push(`⚠️ ${park}: nessun giorno restituito, dati lasciati invariati`); continue; }
+      if (!days.length) { log.push(`ℹ️ ${park}: nessun giorno restituito (fuori stagione?), dati lasciati invariati`); continue; }
       const fresh = {};
       let min = null, max = null;
       for (const day of days) {
@@ -87,7 +87,39 @@ async function scrapeGardaland(data, log) {
   }
 }
 
+// canevaworld.it blocca (403) le richieste dirette dai server di GitHub.
+// Come faceva l'estensione Firefox, le chiamate partono da DENTRO la pagina del
+// sito, aperta in un browser headless (Playwright, già usato dallo scraper Express).
+async function openCanevaBrowser() {
+  const { chromium } = await import('playwright');
+  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0',
+    locale: 'it-IT'
+  });
+  const page = await context.newPage();
+  await page.goto('https://www.canevaworld.it/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForTimeout(3000); // lascia completare eventuali controlli anti-bot/cookie
+  const getJsonInPage = url => page.evaluate(async u => {
+    const r = await fetch(u, { headers: { 'Accept': 'application/json, text/plain, */*', 'X-Requested-With': 'XMLHttpRequest' } });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  }, url);
+  return { browser, getJsonInPage };
+}
+
 async function scrapeCaneva(data, log) {
+  let session;
+  try {
+    session = await openCanevaBrowser();
+  } catch (e) {
+    log.push(`❌ Caneva: impossibile aprire canevaworld.it nel browser (${e.message}) — dati lasciati invariati`);
+    return;
+  }
+  const getJson = async url => {
+    try { return await session.getJsonInPage(url); }
+    catch (e) { throw new Error(`${e.message.replace(/^.*Error: /, '')} su ${url}`); }
+  };
   const start = new Date();
   for (const [park, id] of Object.entries(CANEVA_IDS)) {
     let days = 0, months = 0;
@@ -118,6 +150,7 @@ async function scrapeCaneva(data, log) {
     log.push(months ? `✅ ${park}: ${days} giorni in ${months} mesi` : `❌ ${park}: nessun mese scaricato — dati lasciati invariati`);
     if (unknown.size) log.push(`⚠️ ${park}: stati calendario sconosciuti ${[...unknown].join(', ')} — aggiungerli a CANEVA_STATES`);
   }
+  await session.browser.close();
 }
 
 function removePastDays(data, from) {

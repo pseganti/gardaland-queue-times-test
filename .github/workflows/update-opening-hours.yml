@@ -22,6 +22,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Playwright (per canevaworld.it)
+        run: npm install playwright
+
+      - name: Install Chromium
+        run: npx playwright install chromium --with-deps
+
       - name: Run opening hours scraper
         run: node .github/workflows/scripts/scrape-opening-hours.mjs
 

@@ -105,7 +105,79 @@ async function openCanevaBrowser() {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   }, url);
-  return { browser, getJsonInPage };
+  return { browser, page, getJsonInPage };
+}
+
+const TIME_RE = /\b([01]?\d|2[0-4])[.:]([0-5]\d)\b/g;
+const toHHMM = (h, m) => `${String(h).padStart(2, '0')}:${m}`;
+
+// Cerca in un oggetto JSON qualunque i nodi legati allo stato `id` e ne estrae gli orari
+function timesFromJson(node, id, out = new Set(), inside = false) {
+  if (node == null) return out;
+  if (typeof node === 'string') {
+    if (inside) for (const m of node.matchAll(TIME_RE)) out.add(toHHMM(m[1], m[2]));
+    return out;
+  }
+  if (typeof node !== 'object') return out;
+  const isState = String(node.id ?? node.ID ?? node.state_id ?? '') === id;
+  for (const [k, v] of Object.entries(node)) timesFromJson(v, id, out, inside || isState || k === id);
+  return out;
+}
+
+// Stato → orario: 1 orario = spettacolo (Medieval) oppure apertura; 2 orari = apertura-chiusura
+function stateFromTimes(park, times) {
+  const t = [...times].sort();
+  if (!t.length) return null;
+  if (park === 'medieval') return { show: t[0] };
+  return t.length >= 2 ? { open: t[0], close: t[t.length - 1] } : null;
+}
+
+const PARK_PAGE_HINT = { caneva: 'aquapark', movieland: 'movieland', medieval: 'medieval' };
+
+async function resolveUnknownStates(session, park, ids, jsons, log) {
+  const resolved = {};
+  // 1) nei dati JSON del calendario
+  for (const id of ids) {
+    const times = new Set();
+    for (const j of jsons) timesFromJson(j, id, times);
+    const st = stateFromTimes(park, times);
+    if (st) resolved[id] = st;
+  }
+  const missing = ids.filter(id => !resolved[id]);
+  if (!missing.length) return resolved;
+
+  // 2) nella legenda del calendario sulla pagina del parco:
+  //    <div class="tc-cc ... tc-c-6311"></div><div class="fieldvalue ...">19.20</div>
+  try {
+    const { page } = session;
+    const hint = PARK_PAGE_HINT[park];
+    const links = await page.$$eval('a[href]', (as, h) => [...new Set(as.map(a => a.href).filter(u => u.includes('canevaworld.it') && u.toLowerCase().includes(h)))], hint);
+    for (const url of links.slice(0, 5)) {
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await page.waitForTimeout(4000);
+      const found = await page.evaluate(ids => {
+        const res = {};
+        for (const id of ids) {
+          const el = document.querySelector(`.tc-c-${id}`);
+          if (!el) continue;
+          // l'orario sta nell'elemento subito dopo il quadratino colorato
+          const sib = (el.nextElementSibling?.textContent || '').trim();
+          res[id] = /\d[.:]\d\d/.test(sib) ? sib : (el.parentElement?.textContent || '');
+        }
+        return res;
+      }, missing);
+      for (const [id, text] of Object.entries(found)) {
+        const times = new Set([...text.matchAll(TIME_RE)].map(m => toHHMM(m[1], m[2])));
+        const st = stateFromTimes(park, times);
+        if (st) resolved[id] = st;
+      }
+      if (missing.every(id => resolved[id])) break;
+    }
+    await page.goto('https://www.canevaworld.it/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  } catch (e) {
+    log.push(`⚠️ ${park}: lettura legenda non riuscita (${e.message})`);
+  }
+  return resolved;
 }
 
 async function scrapeCaneva(data, log) {
@@ -122,7 +194,7 @@ async function scrapeCaneva(data, log) {
   };
   const start = new Date();
   for (const [park, id] of Object.entries(CANEVA_IDS)) {
-    let days = 0, months = 0;
+    const monthsRaw = [];           // [{ y, m, days: { 'YYYY-MM-DD': [stateId, ...] }, json }]
     const unknown = new Set();
     const stateCount = {};
     for (let i = 0; i <= MONTHS_AHEAD; i++) {
@@ -131,36 +203,51 @@ async function scrapeCaneva(data, log) {
       try {
         const json = await getJson(`https://www.canevaworld.it/bootstrap/template_calendar_data/894/${id}/${y}/${m}`);
         if (!json?.contents_calendars) continue;
-        const fresh = {};
+        const days = {};
         for (const cal of Object.values(json.contents_calendars)) {
           for (const [dateStr, dayData] of Object.entries(cal)) {
-            // Un giorno può avere PIÙ stati (es. Medieval con 2 spettacoli):
-            // si guardano tutti, non solo il primo.
+            // Un giorno può avere PIÙ stati (es. 2 spettacoli): si tengono tutti
             const states = Object.keys(dayData || {});
-            const mapped = [];
+            days[dateStr] = (days[dateStr] || []).concat(states);
             for (const s of states) {
               stateCount[s] = (stateCount[s] || 0) + 1;
-              if (!(s in CANEVA_STATES)) { unknown.add(s); continue; }
-              if (CANEVA_STATES[s]) mapped.push(CANEVA_STATES[s]);
-            }
-            if (park === 'medieval') {
-              // 1 spettacolo → 19:30; 2 spettacoli → si salva quello delle 19:00
-              const shows = [...new Set(mapped.filter(h => h.show).map(h => h.show))].sort();
-              if (shows.length) fresh[dateStr] = { show: shows[0] };
-            } else {
-              const h = mapped.find(x => x.open && x.close);
-              if (h) fresh[dateStr] = { open: h.open, close: h.close };
+              if (!(s in CANEVA_STATES)) unknown.add(s);
             }
           }
         }
-        replaceRange(data, park, `${y}-${pad(m)}-01`, `${y}-${pad(m)}-31`, fresh);
-        days += Object.keys(fresh).length; months++;
+        monthsRaw.push({ y, m, days, json });
       } catch (e) {
         log.push(`❌ ${park} ${pad(m)}/${y}: ${e.message} — mese lasciato invariato`);
       }
     }
-    log.push(months ? `✅ ${park}: ${days} giorni in ${months} mesi` : `❌ ${park}: nessun mese scaricato — dati lasciati invariati`);
-    if (unknown.size) log.push(`⚠️ ${park}: stati calendario sconosciuti ${[...unknown].join(', ')} — aggiungerli a CANEVA_STATES`);
+
+    // Stati nuovi (es. Medieval con lo show spostato alle 19.20): si cerca l'orario
+    // nei dati del calendario e, se non c'è, nella legenda della pagina del parco.
+    const resolved = unknown.size ? await resolveUnknownStates(session, park, [...unknown], monthsRaw.map(x => x.json), log) : {};
+    const stateMap = { ...CANEVA_STATES, ...resolved };
+
+    let days = 0;
+    for (const { y, m, days: rawDays } of monthsRaw) {
+      const fresh = {};
+      for (const [dateStr, states] of Object.entries(rawDays)) {
+        const mapped = states.map(s => stateMap[s]).filter(Boolean);
+        if (park === 'medieval') {
+          // Si salva il PRIMO spettacolo del giorno (il più presto)
+          const shows = [...new Set(mapped.map(h => h.show || h.open).filter(Boolean))].sort();
+          if (shows.length) fresh[dateStr] = { show: shows[0] };
+        } else {
+          const h = mapped.find(x => x.open && x.close);
+          if (h) fresh[dateStr] = { open: h.open, close: h.close };
+        }
+      }
+      replaceRange(data, park, `${y}-${pad(m)}-01`, `${y}-${pad(m)}-31`, fresh);
+      days += Object.keys(fresh).length;
+    }
+
+    log.push(monthsRaw.length ? `✅ ${park}: ${days} giorni in ${monthsRaw.length} mesi` : `❌ ${park}: nessun mese scaricato — dati lasciati invariati`);
+    const stillUnknown = [...unknown].filter(s => !(s in resolved));
+    if (Object.keys(resolved).length) log.push(`🔎 ${park}: stati nuovi riconosciuti ${Object.entries(resolved).map(([s, h]) => `${s}=${h.show || (h.open + '-' + h.close)}`).join(', ')}`);
+    if (stillUnknown.length) log.push(`⚠️ ${park}: stati sconosciuti ${stillUnknown.join(', ')} — giorni con solo questi stati risultano chiusi`);
     log.push(`   ${park} stati visti: ${Object.entries(stateCount).map(([s, n]) => `${s}×${n}`).join(' ') || 'nessuno'}`);
   }
   await session.browser.close();

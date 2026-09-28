@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-09-27T09:40:19.820Z",
+  "generatedAt": "2026-09-28T10:19:52.460Z",
   "crowdForecast": [
-    {
-      "date": "2026-09-27",
-      "label": "domenica 27 settembre",
-      "hours": "10:00-20:00",
-      "crowdLevel": "68%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-09-28",
       "label": "lunedì 28 settembre",
@@ -35,6 +28,13 @@
       "hours": "10:00-17:00",
       "crowdLevel": "57%*",
       "advice": "express_probably_unnecessary"
+    },
+    {
+      "date": "2026-10-02",
+      "label": "venerdì 2 ottobre",
+      "hours": "17:00-22:00",
+      "crowdLevel": "55%*",
+      "advice": "express_probably_unnecessary"
     }
   ],
   "bestDays": [
@@ -44,9 +44,9 @@
       "hours": "10:00-17:00",
       "crowdLevel": "53%*",
       "weather": {
-        "tempMax": 26.1,
+        "tempMax": 25.5,
         "precipProb": 0,
-        "weatherCode": 1
+        "weatherCode": 3
       }
     },
     {
@@ -55,9 +55,9 @@
       "hours": "10:00-17:00",
       "crowdLevel": "53%*",
       "weather": {
-        "tempMax": 24.5,
+        "tempMax": 25.6,
         "precipProb": 3,
-        "weatherCode": 2
+        "weatherCode": 3
       }
     },
     {
@@ -66,8 +66,8 @@
       "hours": "17:00-22:00",
       "crowdLevel": "55%*",
       "weather": {
-        "tempMax": 24.9,
-        "precipProb": 3,
+        "tempMax": 26,
+        "precipProb": 5,
         "weatherCode": 3
       }
     }

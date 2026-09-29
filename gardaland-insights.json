@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-09-28T10:19:52.460Z",
+  "generatedAt": "2026-09-29T10:15:41.878Z",
   "crowdForecast": [
-    {
-      "date": "2026-09-28",
-      "label": "lunedì 28 settembre",
-      "hours": "10:00-17:00",
-      "crowdLevel": "62%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-09-29",
       "label": "martedì 29 settembre",
@@ -35,27 +28,23 @@
       "hours": "17:00-22:00",
       "crowdLevel": "55%*",
       "advice": "express_probably_unnecessary"
+    },
+    {
+      "date": "2026-10-03",
+      "label": "sabato 3 ottobre",
+      "hours": "10:00-20:00",
+      "crowdLevel": "82%*",
+      "advice": "express_recommended"
     }
   ],
   "bestDays": [
-    {
-      "date": "2026-09-29",
-      "label": "martedì 29 settembre",
-      "hours": "10:00-17:00",
-      "crowdLevel": "53%*",
-      "weather": {
-        "tempMax": 25.5,
-        "precipProb": 0,
-        "weatherCode": 3
-      }
-    },
     {
       "date": "2026-09-30",
       "label": "mercoledì 30 settembre",
       "hours": "10:00-17:00",
       "crowdLevel": "53%*",
       "weather": {
-        "tempMax": 25.6,
+        "tempMax": 25.3,
         "precipProb": 3,
         "weatherCode": 3
       }
@@ -66,8 +55,19 @@
       "hours": "17:00-22:00",
       "crowdLevel": "55%*",
       "weather": {
-        "tempMax": 26,
-        "precipProb": 5,
+        "tempMax": 25.1,
+        "precipProb": 0,
+        "weatherCode": 3
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "label": "giovedì 1 ottobre",
+      "hours": "10:00-17:00",
+      "crowdLevel": "57%*",
+      "weather": {
+        "tempMax": 25.1,
+        "precipProb": 0,
         "weatherCode": 3
       }
     }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdated": "2026-09-29T09:14:52.878Z",
+    "lastUpdated": "2026-09-30T09:07:49.596Z",
     "source": "https://queue-times.com/parks/12/stats",
     "totalRides": 43
   },
@@ -38,7 +38,7 @@
       "name": "Fuga da Atlantide",
       "isArchived": false,
       "avgWaitMinutes": 19,
-      "avgMaxWaitMinutes": 34
+      "avgMaxWaitMinutes": 33
     },
     {
       "id": 445,

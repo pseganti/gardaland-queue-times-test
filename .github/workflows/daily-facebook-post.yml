@@ -1,10 +1,10 @@
 name: Daily Facebook Post Workflow
 
 on:
-  schedule:
-    # Esegue ogni mattina alle 06:00 UTC (ore 07:00 / 08:00 italiane)
-    - cron: '0 6 * * *'
-  # Consente l'esecuzione manuale del workflow dalla scheda Actions
+  # Avvio ogni mattina alle 09:00 ora italiana da cron-job.org
+  # (chiama l'API GitHub "workflow_dispatch"). Niente "schedule" di GitHub:
+  # lavora in UTC (con l'ora legale sballa di un'ora) e parte spesso in ritardo.
+  # Si può sempre avviare anche a mano dalla scheda Actions.
   workflow_dispatch:
 
 jobs:

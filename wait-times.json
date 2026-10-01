@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-01T10:30:42Z",
-  "lastUpdate": "12:30",
+  "timestamp": "2026-10-01T11:00:55Z",
+  "lastUpdate": "13:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 45,
+      "wait_time": 30,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

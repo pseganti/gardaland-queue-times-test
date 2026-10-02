@@ -12,6 +12,7 @@ Variabili d'ambiente:
   FORCE          "true" = pubblica anche se oggi non è una serata (solo per prove)
 """
 import os
+import random
 import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -23,7 +24,14 @@ OPENING_URL = f"{BASE_URL}/opening-hours.json"
 PAGE_URL = f"{BASE_URL}/halloween-gardaland.html"
 WHATSAPP_URL = "https://wa.me/393667166568"
 OFFICIAL_URL = "https://www.gardaland.it/esplora-gardaland/eventi-aperture-speciali/magic-halloween/"
-EVENING_FROM_HOUR = 16          # apertura da quest'ora in poi = serata
+# Immagini del post: ne viene scelta una a caso (devono essere già online sul sito)
+IMAGES = [
+    f"{BASE_URL}/images/halloween/halloween-1.jpg",
+    f"{BASE_URL}/images/halloween/halloween-2.jpg",
+    f"{BASE_URL}/images/halloween/halloween-3.jpg",
+    f"{BASE_URL}/images/halloween/halloween-4.jpg",
+]
+EVENING_FROM_HOUR = 16         # apertura da quest'ora in poi = serata
 GARDALAND_LAT, GARDALAND_LON = 45.4545, 10.7140
 
 GIORNI = ["lunedì", "martedì", "mercoledì", "giovedì",
@@ -161,22 +169,35 @@ def main():
     )[:4]
 
     message = build_message(now, entry, next_dates)
+    image = random.choice(IMAGES)
     print("----- MESSAGGIO -----")
     print(message)
     print("---------------------")
+    print(f"🖼️ Immagine scelta: {image}")
 
     if dry_run:
         print("🧪 DRY_RUN: messaggio NON pubblicato.")
         return
 
-    # "link" → Facebook mostra l'anteprima della pagina Halloween (immagine + titolo)
+    # 1) Post con foto (immagine a caso fra le 4) e testo come didascalia
+    res = requests.post(
+        "https://graph.facebook.com/v19.0/me/photos",
+        data={"url": image, "caption": message, "access_token": token},
+        timeout=60,
+    )
+    if res.status_code == 200:
+        print(f"✅ Post con foto pubblicato: {res.json()}")
+        return
+    print(f"⚠️ Foto non pubblicata ({res.status_code}): {res.text}")
+
+    # 2) Riserva: post con anteprima della pagina Halloween
     res = requests.post(
         "https://graph.facebook.com/v19.0/me/feed",
         data={"message": message, "link": PAGE_URL, "access_token": token},
         timeout=30,
     )
     if res.status_code == 200:
-        print(f"✅ Post pubblicato: {res.json()}")
+        print(f"✅ Post pubblicato senza foto (anteprima pagina): {res.json()}")
     else:
         print(f"❌ Errore ({res.status_code}): {res.text}")
         sys.exit(1)

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-02T18:30:42Z",
-  "lastUpdate": "20:30",
+  "timestamp": "2026-10-02T19:00:52Z",
+  "lastUpdate": "21:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jungle-rapids": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "ortobruco-tour": {

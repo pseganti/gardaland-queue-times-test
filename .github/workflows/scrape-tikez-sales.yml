@@ -1,9 +1,9 @@
 name: Scrape Tikez Ticket Sales
 
 on:
-  schedule:
-    - cron: '0 3 * * *'   # Esegue ogni notte alle 03:00 UTC (05:00 ora italiana)
-  workflow_dispatch: {}    # Ti permette di avviarlo anche manualmente da GitHub
+  # Avvio da cron-job.org (API GitHub "workflow_dispatch"), nessun orario qui.
+  # Si può avviare anche a mano dalla scheda Actions.
+  workflow_dispatch: {}
 
 permissions:
   contents: write

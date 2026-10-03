@@ -1,27 +1,27 @@
 {
-  "timestamp": "2026-10-03T12:30:43Z",
-  "lastUpdate": "14:30",
+  "timestamp": "2026-10-03T13:00:49Z",
+  "lastUpdate": "15:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 45,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "space-vertigo": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jungle-rapids": {
@@ -81,17 +81,17 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 20,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

@@ -2442,5 +2442,48 @@
       "caneva_aquapark": {},
       "gardaland_legoland": {}
     }
+  },
+  "2026-10-06": {
+    "date": "2026-10-06",
+    "categories": {
+      "gardaland": {
+        "Adulto": {
+          "price": "49.00",
+          "available": 4,
+          "soldToday": 0
+        },
+        "Biglietto famiglia": {
+          "price": "49.00",
+          "available": 19,
+          "soldToday": 0
+        },
+        "PROMO LUGLIO": {
+          "price": "44.00",
+          "available": 111,
+          "soldToday": 0
+        },
+        "SUPER PROMO": {
+          "price": "39.90",
+          "available": 51,
+          "soldToday": 6
+        }
+      },
+      "caneva_movieland_2parchi": {},
+      "gardaland_legoland_sealife": {},
+      "movieland": {
+        "Adulto": {
+          "price": "36.00",
+          "available": 15,
+          "soldToday": 0
+        },
+        "Ragazzo": {
+          "price": "29.00",
+          "available": 8,
+          "soldToday": 0
+        }
+      },
+      "caneva_aquapark": {},
+      "gardaland_legoland": {}
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-07T09:00:52Z",
-  "lastUpdate": "11:00",
+  "timestamp": "2026-10-07T09:08:19Z",
+  "lastUpdate": "11:08",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "magic-house": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-14T11:00:56Z",
-  "lastUpdate": "13:00",
+  "timestamp": "2026-10-14T11:30:45Z",
+  "lastUpdate": "13:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 15,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

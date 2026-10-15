@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-15T12:01:00Z",
-  "lastUpdate": "14:01",
+  "timestamp": "2026-10-15T12:30:50Z",
+  "lastUpdate": "14:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 20,
+      "wait_time": 5,
       "is_open": true
     },
     "oblivion-the-black-hole": {

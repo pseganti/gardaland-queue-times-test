@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-10-15T08:42:35.626Z",
+  "generatedAt": "2026-10-16T08:37:01.587Z",
   "crowdForecast": [
-    {
-      "date": "2026-10-15",
-      "label": "giovedì 15 ottobre",
-      "hours": "10:00-17:00",
-      "crowdLevel": "79%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-10-16",
       "label": "venerdì 16 ottobre",
@@ -35,40 +28,47 @@
       "hours": "10:00-17:00",
       "crowdLevel": "85%*",
       "advice": "express_recommended"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "martedì 20 ottobre",
+      "hours": "10:00-17:00",
+      "crowdLevel": "81%*",
+      "advice": "express_recommended"
     }
   ],
   "bestDays": [
-    {
-      "date": "2026-10-16",
-      "label": "venerdì 16 ottobre",
-      "hours": "17:00-22:00",
-      "crowdLevel": "78%*",
-      "weather": {
-        "tempMax": 22.5,
-        "precipProb": 0,
-        "weatherCode": 45
-      }
-    },
     {
       "date": "2026-10-23",
       "label": "venerdì 23 ottobre",
       "hours": "17:00-22:00",
       "crowdLevel": "81%*",
       "weather": {
-        "tempMax": 16.8,
-        "precipProb": 27,
-        "weatherCode": 53
+        "tempMax": 19.4,
+        "precipProb": 20,
+        "weatherCode": 3
       }
     },
     {
-      "date": "2026-10-19",
-      "label": "lunedì 19 ottobre",
-      "hours": "10:00-17:00",
-      "crowdLevel": "85%*",
+      "date": "2026-10-25",
+      "label": "domenica 25 ottobre",
+      "hours": "10:00-20:00",
+      "crowdLevel": "87%*",
       "weather": {
-        "tempMax": 21.3,
-        "precipProb": 29,
-        "weatherCode": 61
+        "tempMax": 18.9,
+        "precipProb": 12,
+        "weatherCode": 3
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "label": "sabato 17 ottobre",
+      "hours": "10:00-20:00",
+      "crowdLevel": "91%*",
+      "weather": {
+        "tempMax": 20.9,
+        "precipProb": 0,
+        "weatherCode": 3
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-17T16:10:29Z",
-  "lastUpdate": "18:10",
+  "timestamp": "2026-10-17T16:14:26Z",
+  "lastUpdate": "18:14",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 45,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

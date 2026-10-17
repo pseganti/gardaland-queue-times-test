@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-17T15:40:30Z",
-  "lastUpdate": "17:40",
+  "timestamp": "2026-10-17T15:50:31Z",
+  "lastUpdate": "17:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 60,
+      "wait_time": 55,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

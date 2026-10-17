@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-17T15:00:56Z",
-  "lastUpdate": "17:00",
+  "timestamp": "2026-10-17T15:10:32Z",
+  "lastUpdate": "17:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 70,
+      "wait_time": 75,
       "is_open": true
     },
     "raptor": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "colorado-boat": {

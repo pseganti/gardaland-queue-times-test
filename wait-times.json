@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-17T13:30:45Z",
-  "lastUpdate": "15:30",
+  "timestamp": "2026-10-17T13:40:31Z",
+  "lastUpdate": "15:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 85,
+      "wait_time": 90,
       "is_open": true
     },
     "raptor": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "mammut": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 55,
+      "wait_time": 60,
       "is_open": true
     },
     "wolf-legend": {

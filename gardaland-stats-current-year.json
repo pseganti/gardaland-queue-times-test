@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "lastUpdated": "2026-10-17T07:17:41.118Z",
+    "lastUpdated": "2026-10-18T07:31:28.625Z",
     "source": "https://queue-times.com/parks/12/stats",
-    "totalRides": 43
+    "totalRides": 33
   },
   "rides": [
     {
@@ -18,13 +18,6 @@
       "isArchived": false,
       "avgWaitMinutes": 31,
       "avgMaxWaitMinutes": 43
-    },
-    {
-      "id": 6646,
-      "name": "Foresta Incantata",
-      "isArchived": true,
-      "avgWaitMinutes": 28,
-      "avgMaxWaitMinutes": 34
     },
     {
       "id": 454,
@@ -76,13 +69,6 @@
       "avgMaxWaitMinutes": 34
     },
     {
-      "id": 451,
-      "name": "Sequoia Magic Loop",
-      "isArchived": true,
-      "avgWaitMinutes": 16,
-      "avgMaxWaitMinutes": 27
-    },
-    {
       "id": 449,
       "name": "Volaplano",
       "isArchived": false,
@@ -97,25 +83,11 @@
       "avgMaxWaitMinutes": 22
     },
     {
-      "id": 7327,
-      "name": "Wonder Woman",
-      "isArchived": true,
-      "avgWaitMinutes": 13,
-      "avgMaxWaitMinutes": 23
-    },
-    {
       "id": 453,
       "name": "Jungle Rapids",
       "isArchived": false,
       "avgWaitMinutes": 12,
       "avgMaxWaitMinutes": 26
-    },
-    {
-      "id": 11807,
-      "name": "Il Bosco degli Gnomi",
-      "isArchived": true,
-      "avgWaitMinutes": 11,
-      "avgMaxWaitMinutes": 14
     },
     {
       "id": 11806,
@@ -172,27 +144,6 @@
       "isArchived": false,
       "avgWaitMinutes": 6,
       "avgMaxWaitMinutes": 8
-    },
-    {
-      "id": 446,
-      "name": "Ramses",
-      "isArchived": true,
-      "avgWaitMinutes": 6,
-      "avgMaxWaitMinutes": 13
-    },
-    {
-      "id": 11779,
-      "name": "Baby Cavalli",
-      "isArchived": true,
-      "avgWaitMinutes": 5,
-      "avgMaxWaitMinutes": 5
-    },
-    {
-      "id": 11777,
-      "name": "Baby Corsaro",
-      "isArchived": true,
-      "avgWaitMinutes": 5,
-      "avgMaxWaitMinutes": 5
     },
     {
       "id": 8842,
@@ -276,27 +227,6 @@
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
       "isArchived": false,
       "avgWaitMinutes": 3,
-      "avgMaxWaitMinutes": 4
-    },
-    {
-      "id": 6694,
-      "name": "La casa di Peppa Pig",
-      "isArchived": true,
-      "avgWaitMinutes": 2,
-      "avgMaxWaitMinutes": 4
-    },
-    {
-      "id": 6698,
-      "name": "Mongolfiera di Peppa Pig",
-      "isArchived": true,
-      "avgWaitMinutes": 2,
-      "avgMaxWaitMinutes": 4
-    },
-    {
-      "id": 6697,
-      "name": "San Andreas 4-D",
-      "isArchived": true,
-      "avgWaitMinutes": 2,
       "avgMaxWaitMinutes": 4
     },
     {

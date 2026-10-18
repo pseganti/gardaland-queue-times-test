@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-18T14:23:47Z",
-  "lastUpdate": "16:23",
+  "timestamp": "2026-10-18T14:30:43Z",
+  "lastUpdate": "16:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,12 +61,12 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {

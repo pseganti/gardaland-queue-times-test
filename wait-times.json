@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-18T08:00:54Z",
-  "lastUpdate": "10:00",
+  "timestamp": "2026-10-18T08:10:31Z",
+  "lastUpdate": "10:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -12,12 +12,12 @@
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -32,7 +32,7 @@
     "magic-house": {
       "name": "Magic House",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
@@ -57,7 +57,7 @@
     "jungle-rapids": {
       "name": "Jungle Rapids",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "mammut": {
       "name": "Mammut",
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
@@ -106,23 +106,23 @@
     },
     "baby-tour": {
       "name": "Baby Tour",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "flying-island": {
       "name": "Flying Island",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "giostra-cavalli": {
       "name": "Giostra Cavalli",
@@ -131,8 +131,8 @@
     },
     "l-albero-di-prezzemolo": {
       "name": "L'Albero di Prezzemolo",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "monorotaia": {
       "name": "Monorotaia",
@@ -146,8 +146,8 @@
     },
     "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "peppa-pig-land-la-casa-di-peppa-pig": {
       "name": "Peppa Pig Land - La Casa di Peppa Pig",
@@ -181,8 +181,8 @@
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     }
   }
 }

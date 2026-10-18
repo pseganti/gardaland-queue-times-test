@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-18T16:10:28Z",
-  "lastUpdate": "18:10",
+  "timestamp": "2026-10-18T16:20:31Z",
+  "lastUpdate": "18:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "shaman": {
@@ -36,17 +36,17 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
       "name": "Colorado Boat",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 20,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "mammut": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peter-pan": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "superbaby": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-18T17:20:28Z",
-  "lastUpdate": "19:20",
+  "timestamp": "2026-10-18T17:28:49Z",
+  "lastUpdate": "19:28",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "shaman": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "volaplano": {

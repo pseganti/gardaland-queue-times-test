@@ -150,6 +150,42 @@ def get_page_info(access_token: str):
         return None, None
 
 
+# ============ TELEGRAM ============
+def send_telegram(post_id: str, message: str):
+    """Manda su Telegram il link del post e il testo pronto da incollare.
+    Non blocca mai il workflow: il post su Facebook è già stato pubblicato."""
+    token = os.environ.get("TG_BOT_TOKEN")
+    chat_id = os.environ.get("TG_CHAT_ID")
+    if not token or not chat_id:
+        print("ℹ️ TG_BOT_TOKEN / TG_CHAT_ID non impostati: salto Telegram.")
+        return
+
+    post_link = f"https://www.facebook.com/{post_id}"
+    api = f"https://api.telegram.org/bot{token}/sendMessage"
+
+    messaggi = [
+        f"✅ Post pubblicato sulla Pagina.\n\n"
+        f"🔗 Apri e condividi nei gruppi:\n{post_link}",
+        message,  # testo pronto da copiare/incollare
+    ]
+    for testo in messaggi:
+        try:
+            r = requests.post(
+                api,
+                data={
+                    "chat_id": chat_id,
+                    "text": testo,
+                    "disable_web_page_preview": "true",
+                },
+                timeout=10,
+            )
+            r.raise_for_status()
+        except Exception as e:
+            print(f"⚠️ Invio Telegram fallito: {e}")
+            return
+    print("✅ Notifica Telegram inviata.")
+
+
 # ============ PUBBLICAZIONE ============
 def publish_to_facebook():
     access_token = os.environ.get("FB_PAGE_TOKEN")
@@ -206,7 +242,11 @@ def publish_to_facebook():
         data={"message": full_message, "access_token": access_token},
     )
     if res.status_code == 200:
-        print(f"✅ Post pubblicato: {res.json()}")
+        result = res.json()
+        print(f"✅ Post pubblicato: {result}")
+        post_id = result.get("id")
+        if post_id:
+            send_telegram(post_id, full_message)
     else:
         print(f"❌ Errore ({res.status_code}): {res.text}")
         sys.exit(1)

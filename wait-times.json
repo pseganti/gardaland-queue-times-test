@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-19T13:10:30Z",
-  "lastUpdate": "15:10",
+  "timestamp": "2026-10-19T13:20:32Z",
+  "lastUpdate": "15:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

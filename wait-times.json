@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-20T11:20:30Z",
-  "lastUpdate": "13:20",
+  "timestamp": "2026-10-20T11:30:42Z",
+  "lastUpdate": "13:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,12 +21,12 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 5,
+      "wait_time": 0,
       "is_open": true
     },
     "magic-house": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "ortobruco-tour": {

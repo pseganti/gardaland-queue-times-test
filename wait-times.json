@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-21T08:00:54Z",
-  "lastUpdate": "10:00",
+  "timestamp": "2026-10-21T08:10:32Z",
+  "lastUpdate": "10:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
@@ -181,8 +181,8 @@
     },
     "transgardaland-express": {
       "name": "Transgardaland Express",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     }
   }
 }

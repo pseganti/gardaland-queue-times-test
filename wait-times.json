@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-21T09:40:29Z",
-  "lastUpdate": "11:40",
+  "timestamp": "2026-10-21T09:50:31Z",
+  "lastUpdate": "11:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {

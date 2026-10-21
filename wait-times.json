@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-21T10:50:31Z",
-  "lastUpdate": "12:50",
+  "timestamp": "2026-10-21T11:00:56Z",
+  "lastUpdate": "13:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -81,13 +81,13 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 10,
+      "wait_time": 0,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 0,
-      "is_open": false
+      "wait_time": 5,
+      "is_open": true
     },
     "volaplano": {
       "name": "Volaplano",

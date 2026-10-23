@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-23T17:20:33Z",
-  "lastUpdate": "19:20",
+  "timestamp": "2026-10-23T17:30:46Z",
+  "lastUpdate": "19:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -17,7 +17,7 @@
     "raptor": {
       "name": "Raptor",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "shaman": {
       "name": "Shaman",
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "ortobruco-tour": {

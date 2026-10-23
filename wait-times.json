@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-23T17:10:33Z",
-  "lastUpdate": "19:10",
+  "timestamp": "2026-10-23T17:20:33Z",
+  "lastUpdate": "19:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {

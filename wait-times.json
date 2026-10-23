@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-23T17:30:46Z",
-  "lastUpdate": "19:30",
+  "timestamp": "2026-10-23T17:40:32Z",
+  "lastUpdate": "19:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "jumanji-the-labyrinth": {

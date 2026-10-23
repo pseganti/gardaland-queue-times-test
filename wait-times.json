@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-23T16:40:34Z",
-  "lastUpdate": "18:40",
+  "timestamp": "2026-10-23T16:50:34Z",
+  "lastUpdate": "18:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 15,
+      "wait_time": 10,
       "is_open": true
     },
     "raptor": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "wolf-legend": {

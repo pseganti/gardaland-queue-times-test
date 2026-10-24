@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-24T15:10:33Z",
-  "lastUpdate": "17:10",
+  "timestamp": "2026-10-24T15:20:34Z",
+  "lastUpdate": "17:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,12 +11,12 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 80,
+      "wait_time": 85,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 70,
+      "wait_time": 80,
       "is_open": true
     },
     "shaman": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 70,
+      "wait_time": 75,
       "is_open": true
     },
     "wolf-legend": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "flying-island": {

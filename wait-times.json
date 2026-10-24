@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-24T09:50:32Z",
-  "lastUpdate": "11:50",
+  "timestamp": "2026-10-24T10:00:58Z",
+  "lastUpdate": "12:00",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 65,
+      "wait_time": 60,
       "is_open": true
     },
     "shaman": {
@@ -26,7 +26,7 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "magic-house": {
@@ -56,17 +56,17 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 80,
+      "wait_time": 75,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 10,
+      "wait_time": 20,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "peter-pan": {
@@ -121,7 +121,7 @@
     },
     "funny-express": {
       "name": "Funny Express",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "giostra-cavalli": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-la-casa-di-peppa-pig": {

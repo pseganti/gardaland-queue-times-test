@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-24T17:00:59Z",
-  "lastUpdate": "19:00",
+  "timestamp": "2026-10-24T17:10:32Z",
+  "lastUpdate": "19:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 20,
+      "wait_time": 0,
       "is_open": true
     },
     "baby-pilota": {

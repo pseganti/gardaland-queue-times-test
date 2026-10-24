@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-24T15:40:34Z",
-  "lastUpdate": "17:40",
+  "timestamp": "2026-10-24T15:50:32Z",
+  "lastUpdate": "17:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 80,
+      "wait_time": 85,
       "is_open": true
     },
     "raptor": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 70,
+      "wait_time": 75,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "volaplano": {

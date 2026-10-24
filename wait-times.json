@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-10-24T10:00:58Z",
-  "lastUpdate": "12:00",
+  "timestamp": "2026-10-24T10:10:32Z",
+  "lastUpdate": "12:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 70,
+      "wait_time": 65,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 50,
+      "wait_time": 55,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "space-vertigo": {
@@ -51,7 +51,7 @@
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "jungle-rapids": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 50,
+      "wait_time": 45,
       "is_open": true
     },
     "ortobruco-tour": {

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-24T10:20:31Z",
-  "lastUpdate": "12:20",
+  "timestamp": "2026-10-24T10:30:46Z",
+  "lastUpdate": "12:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 70,
+      "wait_time": 65,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "space-vertigo": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 30,
+      "wait_time": 25,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 45,
+      "wait_time": 60,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -91,12 +91,12 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-pilota": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 5,
+      "wait_time": 10,
       "is_open": true
     },
     "funny-express": {

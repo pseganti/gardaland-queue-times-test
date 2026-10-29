@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-29T10:30:59Z",
-  "lastUpdate": "11:30",
+  "timestamp": "2026-10-29T10:40:36Z",
+  "lastUpdate": "11:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "space-vertigo": {

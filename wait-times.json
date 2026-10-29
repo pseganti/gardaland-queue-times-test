@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-29T13:01:03Z",
-  "lastUpdate": "14:01",
+  "timestamp": "2026-10-29T13:10:37Z",
+  "lastUpdate": "14:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 40,
+      "wait_time": 25,
       "is_open": true
     },
     "space-vertigo": {
@@ -141,7 +141,7 @@
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
       "name": "Peppa Pig Land - Il Trenino di Nonno Pig",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-l-isola-dei-pirati": {

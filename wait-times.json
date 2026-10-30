@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-30T17:40:39Z",
-  "lastUpdate": "18:40",
+  "timestamp": "2026-10-30T17:50:37Z",
+  "lastUpdate": "18:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -11,7 +11,7 @@
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 40,
+      "wait_time": 50,
       "is_open": true
     },
     "raptor": {
@@ -26,17 +26,17 @@
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 25,
+      "wait_time": 20,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,12 +46,12 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 45,
+      "wait_time": 50,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "jungle-rapids": {
@@ -91,7 +91,7 @@
     },
     "volaplano": {
       "name": "Volaplano",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "peter-pan": {
@@ -111,7 +111,7 @@
     },
     "doremifarm": {
       "name": "Doremifarm",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "flying-island": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 5,
+      "wait_time": 15,
       "is_open": true
     },
     "superbaby": {

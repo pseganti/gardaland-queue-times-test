@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-30T20:00:59Z",
-  "lastUpdate": "21:00",
+  "timestamp": "2026-10-30T20:10:37Z",
+  "lastUpdate": "21:10",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -21,12 +21,12 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "magic-house": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "wolf-legend": {

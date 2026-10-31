@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-10-31T12:30:52Z",
-  "lastUpdate": "13:30",
+  "timestamp": "2026-10-31T12:40:36Z",
+  "lastUpdate": "13:40",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 85,
+      "wait_time": 100,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 95,
+      "wait_time": 115,
       "is_open": true
     },
     "raptor": {
@@ -21,7 +21,7 @@
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 50,
+      "wait_time": 60,
       "is_open": true
     },
     "space-vertigo": {
@@ -36,7 +36,7 @@
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 55,
+      "wait_time": 70,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,7 +46,7 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 65,
+      "wait_time": 130,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
@@ -61,17 +61,17 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 95,
+      "wait_time": 115,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 20,
+      "wait_time": 30,
       "is_open": true
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "dragon-rush": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "volaplano": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 15,
+      "wait_time": 20,
       "is_open": true
     },
     "funny-express": {

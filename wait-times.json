@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-31T15:20:36Z",
-  "lastUpdate": "16:20",
+  "timestamp": "2026-10-31T15:30:53Z",
+  "lastUpdate": "16:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,27 +16,27 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 155,
+      "wait_time": 175,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 90,
+      "wait_time": 95,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 70,
+      "wait_time": 75,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 50,
+      "wait_time": 55,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 80,
+      "wait_time": 75,
       "is_open": true
     },
     "colorado-boat": {
@@ -56,12 +56,12 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 50,
+      "wait_time": 60,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 140,
+      "wait_time": 150,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 105,
+      "wait_time": 130,
       "is_open": true
     },
     "wolf-legend": {
@@ -86,7 +86,7 @@
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "volaplano": {
@@ -101,7 +101,7 @@
     },
     "baby-pilota": {
       "name": "Baby Pilota",
-      "wait_time": 10,
+      "wait_time": 15,
       "is_open": true
     },
     "baby-tour": {

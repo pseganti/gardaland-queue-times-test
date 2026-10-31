@@ -1,42 +1,42 @@
 {
-  "timestamp": "2026-10-31T19:10:35Z",
-  "lastUpdate": "20:10",
+  "timestamp": "2026-10-31T19:20:37Z",
+  "lastUpdate": "20:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 95,
+      "wait_time": 90,
       "is_open": true
     },
     "oblivion-the-black-hole": {
       "name": "Oblivion The Black Hole",
-      "wait_time": 135,
+      "wait_time": 115,
       "is_open": true
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 145,
+      "wait_time": 135,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 65,
+      "wait_time": 55,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 45,
+      "wait_time": 40,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 85,
+      "wait_time": 45,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 35,
+      "wait_time": 30,
       "is_open": true
     },
     "colorado-boat": {
@@ -56,7 +56,7 @@
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 20,
+      "wait_time": 10,
       "is_open": true
     },
     "mammut": {
@@ -66,7 +66,7 @@
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 40,
+      "wait_time": 30,
       "is_open": true
     },
     "animal-treasure-island": {
@@ -76,12 +76,12 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 80,
+      "wait_time": 65,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 80,
+      "wait_time": 60,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -96,7 +96,7 @@
     },
     "peter-pan": {
       "name": "Peter Pan",
-      "wait_time": 25,
+      "wait_time": 10,
       "is_open": true
     },
     "baby-pilota": {
@@ -116,7 +116,7 @@
     },
     "flying-island": {
       "name": "Flying Island",
-      "wait_time": 30,
+      "wait_time": 20,
       "is_open": true
     },
     "funny-express": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

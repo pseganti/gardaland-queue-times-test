@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-10-30T10:36:53.543Z",
+  "generatedAt": "2026-10-31T10:03:49.539Z",
   "crowdForecast": [
-    {
-      "date": "2026-10-30",
-      "label": "venerdì 30 ottobre",
-      "hours": "17:00-22:00",
-      "crowdLevel": "75%*",
-      "advice": "express_recommended"
-    },
     {
       "date": "2026-10-31",
       "label": "sabato 31 ottobre",
@@ -31,28 +24,22 @@
       "date": "2026-11-03",
       "label": "martedì 3 novembre",
       "status": "closed_or_unknown"
+    },
+    {
+      "date": "2026-11-04",
+      "label": "mercoledì 4 novembre",
+      "status": "closed_or_unknown"
     }
   ],
   "bestDays": [
-    {
-      "date": "2026-10-31",
-      "label": "sabato 31 ottobre",
-      "hours": "10:00-00:00",
-      "crowdLevel": "89%*",
-      "weather": {
-        "tempMax": 16.5,
-        "precipProb": 20,
-        "weatherCode": 3
-      }
-    },
     {
       "date": "2026-11-01",
       "label": "domenica 1 novembre",
       "hours": "10:00-20:00",
       "crowdLevel": "95%*",
       "weather": {
-        "tempMax": 13.2,
-        "precipProb": 50,
+        "tempMax": 14,
+        "precipProb": 68,
         "weatherCode": 80
       }
     }

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-31T12:20:35Z",
-  "lastUpdate": "13:20",
+  "timestamp": "2026-10-31T12:30:52Z",
+  "lastUpdate": "13:30",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -16,7 +16,7 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 100,
+      "wait_time": 105,
       "is_open": true
     },
     "shaman": {
@@ -31,7 +31,7 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 35,
+      "wait_time": 40,
       "is_open": true
     },
     "fuga-da-atlantide": {
@@ -81,7 +81,7 @@
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 40,
+      "wait_time": 65,
       "is_open": true
     },
     "ortobruco-tour": {
@@ -136,7 +136,7 @@
     },
     "monorotaia": {
       "name": "Monorotaia",
-      "wait_time": 15,
+      "wait_time": 25,
       "is_open": true
     },
     "peppa-pig-land-il-trenino-di-nonno-pig": {

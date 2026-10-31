@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-31T14:10:35Z",
-  "lastUpdate": "15:10",
+  "timestamp": "2026-10-31T14:20:36Z",
+  "lastUpdate": "15:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
     "blue-tornado": {
       "name": "Blue Tornado",
-      "wait_time": 115,
+      "wait_time": 120,
       "is_open": true
     },
     "oblivion-the-black-hole": {
@@ -16,27 +16,27 @@
     },
     "raptor": {
       "name": "Raptor",
-      "wait_time": 130,
+      "wait_time": 140,
       "is_open": true
     },
     "shaman": {
       "name": "Shaman",
-      "wait_time": 80,
+      "wait_time": 85,
       "is_open": true
     },
     "space-vertigo": {
       "name": "Space Vertigo",
-      "wait_time": 50,
+      "wait_time": 40,
       "is_open": true
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 50,
+      "wait_time": 60,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 80,
+      "wait_time": 90,
       "is_open": true
     },
     "colorado-boat": {
@@ -46,47 +46,47 @@
     },
     "jumanji-the-adventure": {
       "name": "Jumanji - The Adventure",
-      "wait_time": 160,
+      "wait_time": 155,
       "is_open": true
     },
     "jumanji-the-labyrinth": {
       "name": "Jumanji The Labyrinth",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "jungle-rapids": {
       "name": "Jungle Rapids",
-      "wait_time": 40,
+      "wait_time": 35,
       "is_open": true
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 110,
+      "wait_time": 130,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
       "name": "Cinema 4D Experience: Prezzemolo e l'Enigma Svelato",
-      "wait_time": 30,
+      "wait_time": 40,
       "is_open": true
     },
     "animal-treasure-island": {
       "name": "Animal Treasure Island",
-      "wait_time": 20,
+      "wait_time": 25,
       "is_open": true
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 105,
+      "wait_time": 100,
       "is_open": true
     },
     "wolf-legend": {
       "name": "Wolf Legend",
-      "wait_time": 65,
+      "wait_time": 70,
       "is_open": true
     },
     "ortobruco-tour": {
       "name": "Ortobruco Tour",
-      "wait_time": 30,
+      "wait_time": 35,
       "is_open": true
     },
     "volaplano": {
@@ -171,7 +171,7 @@
     },
     "rocket-factory": {
       "name": "Rocket Factory",
-      "wait_time": 25,
+      "wait_time": 30,
       "is_open": true
     },
     "superbaby": {

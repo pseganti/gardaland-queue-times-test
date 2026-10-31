@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-31T21:40:36Z",
-  "lastUpdate": "22:40",
+  "timestamp": "2026-10-31T21:50:36Z",
+  "lastUpdate": "22:50",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 65,
+      "wait_time": 75,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -76,7 +76,7 @@
     },
     "dragon-rush": {
       "name": "Dragon Rush",
-      "wait_time": 65,
+      "wait_time": 60,
       "is_open": true
     },
     "wolf-legend": {
@@ -146,7 +146,7 @@
     },
     "peppa-pig-land-l-isola-dei-pirati": {
       "name": "Peppa Pig Land - L'isola dei Pirati",
-      "wait_time": 10,
+      "wait_time": 5,
       "is_open": true
     },
     "peppa-pig-land-la-casa-di-peppa-pig": {

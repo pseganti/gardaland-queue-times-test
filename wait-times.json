@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-01T09:10:36Z",
-  "lastUpdate": "10:10",
+  "timestamp": "2026-11-01T09:20:35Z",
+  "lastUpdate": "10:20",
   "source": "queue-times.com",
   "status": "active",
   "rides": {
@@ -31,12 +31,12 @@
     },
     "magic-house": {
       "name": "Magic House",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "fuga-da-atlantide": {
       "name": "Fuga da Atlantide",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "colorado-boat": {
@@ -61,7 +61,7 @@
     },
     "mammut": {
       "name": "Mammut",
-      "wait_time": 0,
+      "wait_time": 5,
       "is_open": true
     },
     "cinema-4d-experience-prezzemolo-e-l-enigma-svelato": {
@@ -92,7 +92,7 @@
     "volaplano": {
       "name": "Volaplano",
       "wait_time": 0,
-      "is_open": false
+      "is_open": true
     },
     "peter-pan": {
       "name": "Peter Pan",

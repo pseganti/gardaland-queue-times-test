@@ -3647,5 +3647,27 @@
       "caneva_aquapark": {},
       "gardaland_legoland": {}
     }
+  },
+  "2026-11-04": {
+    "date": "2026-11-04",
+    "categories": {
+      "gardaland": {},
+      "caneva_movieland_2parchi": {},
+      "gardaland_legoland_sealife": {},
+      "movieland": {
+        "Adulto": {
+          "price": "36.00",
+          "available": 15,
+          "soldToday": 0
+        },
+        "Ragazzo": {
+          "price": "29.00",
+          "available": 8,
+          "soldToday": 0
+        }
+      },
+      "caneva_aquapark": {},
+      "gardaland_legoland": {}
+    }
   }
 }

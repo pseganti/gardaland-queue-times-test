@@ -2,6 +2,7 @@
 // 1) sellitems: elenco dei biglietti in vendita (codice, titolo, prezzo adulto "a partire da", calendario sì/no)
 // 2) sellitem: per ogni biglietto con calendario, prezzo min/max e posti liberi di tutti i giorni in vendita
 //    (una chiamata per mese, la stessa che usa il calendario dello shop)
+// 3) performances: repliche degli spettacoli (es. Supermagic) con data, ora e luogo
 // Stesso metodo dello scraper Express: apre lo shop ufficiale per avere la sessione, poi chiama l'API.
 // Uscita: gardaland-tickets-export.json nella radice del repository.
 import fs from 'fs';
@@ -18,6 +19,9 @@ const SHOP_URL = `https://tickets.gardaland.it/b2c/ticketSale/tickets?category=$
 const API = 'https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1';
 const PAUSE_MS = 1500;   // pausa tra una chiamata e l'altra
 const MONTHS_AHEAD = 4;  // mesi letti per biglietto (mese corrente + 3)
+
+// Spettacoli da leggere (codice categoria dello shop, es. tickets.gardaland.it/b2c/ticketSale/shows?view=smagic)
+const SHOWS = [{ code: 'SMAGIC', title: 'Supermagic Elementi' }];
 
 // Se l'elenco sellitems non risponde, si leggono almeno questi biglietti con calendario
 const FALLBACK_DATED = [{ code: 'WINTFIX', eventAk: 'GDL.EVN86', title: '1 GIORNO MAGIC WINTER - Data Selezionata' }];
@@ -152,6 +156,45 @@ async function run() {
     products[p.code] = { title: p.title, eventAk: p.eventAk, days: out };
   }
 
+  // ── 3) Repliche degli spettacoli ──
+  // Nota: gli orari arrivano con una "Z" finale ma sono già ora italiana (lo shop mostra 21:00 per "21:00Z")
+  const shows = {};
+  for (const s of SHOWS) {
+    const prev = existing.shows?.[s.code];
+    const perfs = [];
+    let ok = true;
+    for (let pg = 1; pg <= 10; pg++) {
+      const q = `locale=it-IT&eventCategoryCode%5B%5D=${s.code}&filters%5B%5D=${s.code}&page=${pg}`;
+      const res = await call(`${API}/performances?${q}`, 'GET');
+      const list = res.data?.performances;
+      if (!Array.isArray(list)) { ok = false; console.warn(`-- spettacolo ${s.code} pagina ${pg}: ${res.error || 'risposta inattesa'}`); break; }
+      list.forEach(p => {
+        const [date, time] = String(p.datetime || '').replace('Z', '').split('T');
+        const [, timeEnd] = String(p.datetimeEnd || '').replace('Z', '').split('T');
+        if (!date || date < today) return;
+        perfs.push({
+          performanceAk: p.performanceAK,
+          date,
+          time: (time || '').slice(0, 5),
+          timeEnd: (timeEnd || '').slice(0, 5) || null,
+          place: p.fields?.place || null,
+          categories: (p.categories || []).map(c => c.code)   // es. SMAGIC = solo spettacolo, CSMAGIC = probabilmente parco + spettacolo
+        });
+      });
+      const total = Number(res.data?.pagination?.total) || 1;
+      await page.waitForTimeout(PAUSE_MS);
+      if (pg >= total) break;
+    }
+    if (ok) {
+      perfs.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+      shows[s.code] = { title: s.title, checkedAt: now(), performances: perfs };
+      okCount++;
+      console.log(`OK spettacolo ${s.code}: ${perfs.length} repliche`);
+    } else if (prev) {
+      shows[s.code] = { ...prev, performances: (prev.performances || []).filter(p => p.date >= today) };
+    }
+  }
+
   await browser.close();
 
   // Se non è riuscita nessuna lettura, il file resta com'è (niente dati cancellati per un errore temporaneo)
@@ -159,7 +202,7 @@ async function run() {
     console.warn('Nessun dato letto: file non modificato.');
     return;
   }
-  const result = { updatedAt: now(), source: 'https://tickets.gardaland.it', catalog, products };
+  const result = { updatedAt: now(), source: 'https://tickets.gardaland.it', catalog, products, shows };
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(result, null, 2));
   console.log(`Salvato ${OUTPUT_FILE}.`);
 }

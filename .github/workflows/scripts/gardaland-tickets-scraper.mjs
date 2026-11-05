@@ -1,6 +1,7 @@
-// Scraper prezzi biglietti Gardaland (data selezionata = prezzo dinamico per giorno).
-// Stesso metodo dello scraper Express: apre lo shop ufficiale per avere la sessione,
-// poi chiama dayPerformance per ogni giorno di apertura e salva priceMin/priceMax e disponibilità.
+// Scraper prezzi biglietti Gardaland.
+// 1) sellitems: elenco dei biglietti in vendita (codice, titolo, prezzo adulto "a partire da", calendario sì/no)
+// 2) dayPerformance: per ogni biglietto con calendario, prezzo min/max e posti liberi per ogni giorno di apertura
+// Stesso metodo dello scraper Express: apre lo shop ufficiale per avere la sessione, poi chiama l'API.
 // Uscita: gardaland-tickets-export.json nella radice del repository.
 import fs from 'fs';
 import path from 'path';
@@ -12,42 +13,32 @@ const ROOT = path.resolve(__dirname, '../../..');
 const OUTPUT_FILE = path.join(ROOT, 'gardaland-tickets-export.json');
 const HOURS_FILE = path.join(ROOT, 'opening-hours.json');
 
-// Biglietti da leggere. Per aggiungerne uno: codice sellitemAk e eventAk dallo shop (F12 → Rete → dayPerformance).
-const PRODUCTS = [
-  {
-    sellitemAk: 'WINTFIX',
-    eventAk: 'GDL.EVN86',
-    label: '1 Giorno Magic Winter - Data Selezionata',
-    from: '2026-12-05',
-    to: '2027-01-06'
-  }
-];
+const CATEGORY = 'GPARK';
+const SHOP_URL = `https://tickets.gardaland.it/b2c/ticketSale/tickets?category=${CATEGORY.toLowerCase()}`;
+const API = 'https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1';
+const PAUSE_MS = 1500;   // pausa tra una chiamata e l'altra
+const MAX_DAYS = 60;     // giorni massimi letti per biglietto a ogni giro
 
-const SHOP_URL = 'https://tickets.gardaland.it/b2c/ticketSale/tickets?category=GPARK';
-const API = 'https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1/dayPerformance';
-const PAUSE_MS = 1500;      // pausa tra una chiamata e l'altra
-const MAX_DAYS = 60;        // giorni massimi letti per prodotto a ogni giro
+// Se l'elenco sellitems non risponde, si leggono almeno questi biglietti con calendario
+const FALLBACK_DATED = [{ code: 'WINTFIX', eventAk: 'GDL.EVN86', title: '1 GIORNO MAGIC WINTER - Data Selezionata' }];
 
 const ymd = d => d.toISOString().slice(0, 10);
 const todayRome = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date());
+const readJson = (file, fallback) => { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; } };
+// "€ 12,50" → 12.5 ; prezzo 0 o non leggibile → null
+const toPrice = v => {
+  const n = typeof v === 'number' ? v : Number(String(v ?? '').replace(/[^\d,.-]/g, '').replace(/\.(?=\d{3}\b)/g, '').replace(',', '.'));
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
 
-function readJson(file, fallback) {
-  try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }
-}
-
-// Giorni da leggere: giorni di apertura di Gardaland (opening-hours.json) dentro il periodo del prodotto.
-// Se gli orari non coprono il periodo, si provano tutti i giorni (i giorni chiusi danno errore e vengono saltati).
-function datesFor(product, hours) {
-  const start = [product.from, todayRome()].sort()[1];
-  const end = product.to;
-  const known = Object.keys(hours || {}).sort();
-  const first = known[0] || '', last = known[known.length - 1] || '';
+// Giorni da leggere: solo i giorni di apertura di Gardaland (opening-hours.json) da oggi in poi.
+// Se il file orari non ha giorni futuri, si provano i prossimi 30 giorni (quelli non in vendita vengono saltati).
+function datesToRead(hours) {
+  const today = todayRome();
+  const open = Object.keys(hours || {}).filter(d => d >= today && hours[d]).sort().slice(0, MAX_DAYS);
+  if (open.length) return open;
   const out = [];
-  for (let d = new Date(start + 'T12:00:00Z'); ymd(d) <= end && out.length < MAX_DAYS; d.setUTCDate(d.getUTCDate() + 1)) {
-    const day = ymd(d);
-    const covered = first && day >= first && day <= last;
-    if (!covered || hours[day]) out.push(day);
-  }
+  for (let d = new Date(today + 'T12:00:00Z'); out.length < 30; d.setUTCDate(d.getUTCDate() + 1)) out.push(ymd(d));
   return out;
 }
 
@@ -77,61 +68,89 @@ async function run() {
   }
   console.log(`Token sessione: ${csrf ? 'presente' : 'NON PRESENTE'}`);
 
-  const out = { updatedAt: existing.updatedAt || null, source: 'https://tickets.gardaland.it', products: {} };
+  // Chiamata all'API dall'interno della pagina dello shop (stessa sessione del browser)
+  const call = (url, method, body) => page.evaluate(async ({ url, method, body, token }) => {
+    try {
+      const headers = { 'Accept': 'application/json, text/plain, */*', 'X-API-KEY': '42' };
+      if (body) headers['Content-Type'] = 'application/json';
+      if (token) headers['X-CSRF-Token'] = token;
+      const r = await fetch(url, { method, credentials: 'include', headers, body: body ? JSON.stringify(body) : undefined });
+      if (!r.ok) return { error: `HTTP ${r.status}: ${(await r.text()).slice(0, 120)}` };
+      return { data: await r.json() };
+    } catch (e) { return { error: e.message }; }
+  }, { url, method, body, token: csrf });
+
   let okCount = 0;
+  const now = () => new Date().toISOString();
 
-  for (const p of PRODUCTS) {
-    const prev = existing.products?.[p.sellitemAk]?.days || {};
-    const days = {};
-    // Tieni i giorni già letti e non ancora passati (se oggi la lettura fallisce resta l'ultimo dato, con la sua data)
-    Object.keys(prev).forEach(d => { if (d >= today) days[d] = prev[d]; });
+  // ── 1) Elenco biglietti in vendita ──
+  let catalog = existing.catalog || null;
+  const list = await call(`${API}/sellitems?locale=it-IT&category=${CATEGORY}&extraImage=true`, 'GET');
+  if (Array.isArray(list.data?.sellitem)) {
+    catalog = {
+      checkedAt: now(),
+      items: list.data.sellitem.map(s => ({
+        code: s.code,
+        title: s.fields?.title || s.code,
+        tagline: s.fields?.tagline || null,
+        price: toPrice(s.fields?.price),          // prezzo adulto "a partire da"
+        priceLabel: s.fields?.priceLabel || null,
+        hasCalendar: !!s.hasCalendar,
+        eventAk: s.eventAk || null
+      }))
+    };
+    okCount++;
+    catalog.items.forEach(i => console.log(`Elenco: ${i.code} | ${i.title} | ${i.price ?? '-'} € | calendario: ${i.hasCalendar}`));
+  } else {
+    console.warn('sellitems non letto:', list.error || 'risposta inattesa');
+  }
 
-    for (const day of datesFor(p, hours)) {
-      const res = await page.evaluate(async ({ api, body, token }) => {
-        try {
-          const headers = { 'Accept': 'application/json, text/plain, */*', 'Content-Type': 'application/json', 'X-API-KEY': '42' };
-          if (token) headers['X-CSRF-Token'] = token;
-          const r = await fetch(api, { method: 'POST', credentials: 'include', headers, body: JSON.stringify(body) });
-          if (!r.ok) return { error: `HTTP ${r.status}: ${(await r.text()).slice(0, 120)}` };
-          return { data: await r.json() };
-        } catch (e) { return { error: e.message }; }
-      }, {
-        api: API,
-        token: csrf,
-        body: { day, eventAk: p.eventAk, locale: 'it-IT', searchAttributes: {}, sellitemAk: p.sellitemAk, useSumEnvelopeCapacity: false }
+  // ── 2) Prezzi per giorno dei biglietti con calendario ──
+  const dated = (catalog?.items || []).filter(i => i.hasCalendar && i.eventAk);
+  const toRead = dated.length ? dated : FALLBACK_DATED;
+  const days = datesToRead(hours);
+  const products = {};
+
+  for (const p of toRead) {
+    const prevDays = existing.products?.[p.code]?.days || {};
+    const out = {};
+    // Tieni i giorni già letti e non passati: se oggi la lettura fallisce resta l'ultimo dato, con la sua data
+    Object.keys(prevDays).forEach(d => { if (d >= today) out[d] = prevDays[d]; });
+
+    for (const day of days) {
+      const res = await call(`${API}/dayPerformance`, 'POST', {
+        day, eventAk: p.eventAk, locale: 'it-IT', searchAttributes: {}, sellitemAk: p.code, useSumEnvelopeCapacity: false
       });
-
       const perf = res.data?.performances?.[0];
-      if (perf && (perf.priceMin != null || perf.priceMax != null)) {
-        days[day] = {
-          priceMin: perf.priceMin ?? null,   // ridotto
-          priceMax: perf.priceMax ?? null,   // intero
+      if (perf) {
+        out[day] = {
+          priceMin: toPrice(perf.priceMin),   // ridotto (null = prezzo non ancora disponibile)
+          priceMax: toPrice(perf.priceMax),   // intero
           available: perf.availability?.available ?? null,
           total: perf.availability?.total ?? null,
           level: perf.availability?.level ?? null,
-          checkedAt: new Date().toISOString()
+          checkedAt: now()
         };
         okCount++;
-        console.log(`OK ${p.sellitemAk} ${day}: ${perf.priceMin}–${perf.priceMax} €, liberi ${perf.availability?.available}`);
+        console.log(`OK ${p.code} ${day}: ${out[day].priceMin ?? '-'}–${out[day].priceMax ?? '-'} €, liberi ${out[day].available}`);
       } else {
-        console.warn(`-- ${p.sellitemAk} ${day}: ${res.error || 'nessuna performance (giorno chiuso o non in vendita)'}`);
+        console.warn(`-- ${p.code} ${day}: ${res.error || 'non in vendita'}`);
       }
       await page.waitForTimeout(PAUSE_MS);
     }
-
-    out.products[p.sellitemAk] = { label: p.label, eventAk: p.eventAk, from: p.from, to: p.to, days };
+    products[p.code] = { title: p.title, eventAk: p.eventAk, days: out };
   }
 
   await browser.close();
 
   // Se non è riuscita nessuna lettura, il file resta com'è (niente dati cancellati per un errore temporaneo)
   if (!okCount) {
-    console.warn('Nessun prezzo letto: file non modificato.');
+    console.warn('Nessun dato letto: file non modificato.');
     return;
   }
-  out.updatedAt = new Date().toISOString();
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(out, null, 2));
-  console.log(`Salvato ${OUTPUT_FILE} (${okCount} giorni letti).`);
+  const result = { updatedAt: now(), source: 'https://tickets.gardaland.it', catalog, products };
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(result, null, 2));
+  console.log(`Salvato ${OUTPUT_FILE}.`);
 }
 
 run().catch(e => { console.error(e); process.exit(1); });

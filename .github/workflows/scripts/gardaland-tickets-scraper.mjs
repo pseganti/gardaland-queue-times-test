@@ -1,6 +1,7 @@
 // Scraper prezzi biglietti Gardaland.
 // 1) sellitems: elenco dei biglietti in vendita (codice, titolo, prezzo adulto "a partire da", calendario sì/no)
-// 2) dayPerformance: per ogni biglietto con calendario, prezzo min/max e posti liberi per ogni giorno di apertura
+// 2) sellitem: per ogni biglietto con calendario, prezzo min/max e posti liberi di tutti i giorni in vendita
+//    (una chiamata per mese, la stessa che usa il calendario dello shop)
 // Stesso metodo dello scraper Express: apre lo shop ufficiale per avere la sessione, poi chiama l'API.
 // Uscita: gardaland-tickets-export.json nella radice del repository.
 import fs from 'fs';
@@ -11,13 +12,12 @@ import { chromium } from 'playwright';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../../..');
 const OUTPUT_FILE = path.join(ROOT, 'gardaland-tickets-export.json');
-const HOURS_FILE = path.join(ROOT, 'opening-hours.json');
 
 const CATEGORY = 'GPARK';
 const SHOP_URL = `https://tickets.gardaland.it/b2c/ticketSale/tickets?category=${CATEGORY.toLowerCase()}`;
 const API = 'https://tickets-api.gardaland.it/api/gdl-prod*base/b2c/v1';
 const PAUSE_MS = 1500;   // pausa tra una chiamata e l'altra
-const MAX_DAYS = 60;     // giorni massimi letti per biglietto a ogni giro
+const MONTHS_AHEAD = 4;  // mesi letti per biglietto (mese corrente + 3)
 
 // Se l'elenco sellitems non risponde, si leggono almeno questi biglietti con calendario
 const FALLBACK_DATED = [{ code: 'WINTFIX', eventAk: 'GDL.EVN86', title: '1 GIORNO MAGIC WINTER - Data Selezionata' }];
@@ -31,19 +31,19 @@ const toPrice = v => {
   return Number.isFinite(n) && n > 0 ? n : null;
 };
 
-// Giorni da leggere: solo i giorni di apertura di Gardaland (opening-hours.json) da oggi in poi.
-// Se il file orari non ha giorni futuri, si provano i prossimi 30 giorni (quelli non in vendita vengono saltati).
-function datesToRead(hours) {
-  const today = todayRome();
-  const open = Object.keys(hours || {}).filter(d => d >= today && hours[d]).sort().slice(0, MAX_DAYS);
-  if (open.length) return open;
+// Finestre mensili da leggere: dal primo del mese corrente, un mese per volta
+function monthWindows() {
+  const [y, m] = todayRome().split('-').map(Number);
   const out = [];
-  for (let d = new Date(today + 'T12:00:00Z'); out.length < 30; d.setUTCDate(d.getUTCDate() + 1)) out.push(ymd(d));
+  for (let i = 0; i < MONTHS_AHEAD; i++) {
+    const from = new Date(Date.UTC(y, m - 1 + i, 1));
+    const to = new Date(Date.UTC(y, m + i, 1));
+    out.push([ymd(from), ymd(to)]);
+  }
   return out;
 }
 
 async function run() {
-  const hours = readJson(HOURS_FILE, {}).gardaland || {};
   const existing = readJson(OUTPUT_FILE, {});
   const today = todayRome();
 
@@ -108,7 +108,6 @@ async function run() {
   // ── 2) Prezzi per giorno dei biglietti con calendario ──
   const dated = (catalog?.items || []).filter(i => i.hasCalendar && i.eventAk);
   const toRead = dated.length ? dated : FALLBACK_DATED;
-  const days = datesToRead(hours);
   const products = {};
 
   for (const p of toRead) {
@@ -117,27 +116,39 @@ async function run() {
     // Tieni i giorni già letti e non passati: se oggi la lettura fallisce resta l'ultimo dato, con la sua data
     Object.keys(prevDays).forEach(d => { if (d >= today) out[d] = prevDays[d]; });
 
-    for (const day of days) {
-      const res = await call(`${API}/dayPerformance`, 'POST', {
-        day, eventAk: p.eventAk, locale: 'it-IT', searchAttributes: {}, sellitemAk: p.code, useSumEnvelopeCapacity: false
+    const seen = new Set();   // giorni restituiti dallo shop in questo giro
+    const readWindows = [];   // mesi letti con successo
+    for (const [dateFrom, dateTo] of monthWindows()) {
+      const res = await call(`${API}/sellitem`, 'POST', {
+        locale: 'it-IT', dateFrom, dateTo, searchAttributes: {}, useSumEnvelopeCapacity: false, code: p.code
       });
-      const perf = res.data?.performances?.[0];
-      if (perf) {
-        out[day] = {
-          priceMin: toPrice(perf.priceMin),   // ridotto (null = prezzo non ancora disponibile)
-          priceMax: toPrice(perf.priceMax),   // intero
-          available: perf.availability?.available ?? null,
-          total: perf.availability?.total ?? null,
-          level: perf.availability?.level ?? null,
-          checkedAt: now()
-        };
+      const list = res.data?.days;
+      if (Array.isArray(list)) {
+        list.forEach(d => {
+          if (!d.date || d.date < today) return;
+          seen.add(d.date);
+          out[d.date] = {
+            priceMin: toPrice(d.priceMin),   // ridotto (null = prezzo non disponibile)
+            priceMax: toPrice(d.priceMax),   // intero
+            available: d.availability?.available ?? null,
+            total: d.availability?.total ?? null,
+            level: d.availability?.level ?? null,
+            checkedAt: now()
+          };
+        });
+        readWindows.push([dateFrom, dateTo]);
         okCount++;
-        console.log(`OK ${p.code} ${day}: ${out[day].priceMin ?? '-'}–${out[day].priceMax ?? '-'} €, liberi ${out[day].available}`);
+        console.log(`OK ${p.code} ${dateFrom}→${dateTo}: ${list.length} giorni in vendita`);
       } else {
-        console.warn(`-- ${p.code} ${day}: ${res.error || 'non in vendita'}`);
+        console.warn(`-- ${p.code} ${dateFrom}→${dateTo}: ${res.error || 'risposta senza giorni'}`);
       }
       await page.waitForTimeout(PAUSE_MS);
     }
+    // Un giorno che prima c'era e ora lo shop non restituisce più (tolto dalla vendita o esaurito) viene rimosso,
+    // ma solo nei mesi letti con successo
+    Object.keys(out).forEach(d => {
+      if (!seen.has(d) && readWindows.some(([f, t]) => d >= f && d <= t)) delete out[d];
+    });
     products[p.code] = { title: p.title, eventAk: p.eventAk, days: out };
   }
 

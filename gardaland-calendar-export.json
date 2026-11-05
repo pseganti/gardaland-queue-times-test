@@ -1,8 +1,8 @@
 {
   "metadata": {
     "created": "2026-08-15T17:23:15.278Z",
-    "lastUpdated": "2026-11-05T18:06:51.461Z",
-    "totalMonths": 2
+    "lastUpdated": "2026-11-05T18:16:41.599Z",
+    "totalMonths": 4
   },
   "months": {
     "2026-08": {
@@ -291,11 +291,281 @@
             "Halloween",
             "Rainy Day"
           ],
+          "forecast": false,
+          "closed": false,
           "dayOfWeek": "Sunday"
         }
       ],
-      "extractedAt": "2026-11-05T18:06:51.461Z",
-      "source": "https://queue-times.com/parks/12/calendar"
+      "extractedAt": "2026-11-05T18:16:32.491Z",
+      "source": "https://queue-times.com/parks/12/calendar/2026/11"
+    },
+    "2026-12": {
+      "monthKey": "2026-12",
+      "month": "December",
+      "year": 2026,
+      "totalDays": 18,
+      "days": [
+        {
+          "date": "2026-12-05",
+          "crowdLevel": "15%",
+          "crowdIntensity": "unknown",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-12-06",
+          "crowdLevel": "4%",
+          "crowdIntensity": "very-low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-12-07",
+          "crowdLevel": "1%",
+          "crowdIntensity": "very-low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-12-08",
+          "crowdLevel": "26%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [
+            "Public Holiday"
+          ],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-12-12",
+          "crowdLevel": "25%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-12-13",
+          "crowdLevel": "14%",
+          "crowdIntensity": "unknown",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-12-19",
+          "crowdLevel": "42%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-12-20",
+          "crowdLevel": "28%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-12-21",
+          "crowdLevel": "26%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-12-22",
+          "crowdLevel": "22%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-12-23",
+          "crowdLevel": "23%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-12-24",
+          "crowdLevel": "27%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-12-26",
+          "crowdLevel": "80%",
+          "crowdIntensity": "high",
+          "hours": "10:30-18:00",
+          "events": [
+            "Public Holiday"
+          ],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-12-27",
+          "crowdLevel": "50%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-12-28",
+          "crowdLevel": "44%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-12-29",
+          "crowdLevel": "36%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-12-30",
+          "crowdLevel": "36%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-12-31",
+          "crowdLevel": "42%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Thursday"
+        }
+      ],
+      "extractedAt": "2026-11-05T18:16:34.801Z",
+      "source": "https://queue-times.com/parks/12/calendar/2026/12"
+    },
+    "2027-01": {
+      "monthKey": "2027-01",
+      "month": "January",
+      "year": 2027,
+      "totalDays": 6,
+      "days": [
+        {
+          "date": "2027-01-01",
+          "crowdLevel": "37%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [
+            "Public Holiday"
+          ],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2027-01-02",
+          "crowdLevel": "76%",
+          "crowdIntensity": "high",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2027-01-03",
+          "crowdLevel": "63%",
+          "crowdIntensity": "high",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2027-01-04",
+          "crowdLevel": "56%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2027-01-05",
+          "crowdLevel": "43%",
+          "crowdIntensity": "medium",
+          "hours": "10:30-18:00",
+          "events": [],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2027-01-06",
+          "crowdLevel": "30%",
+          "crowdIntensity": "low",
+          "hours": "10:30-18:00",
+          "events": [
+            "Public Holiday"
+          ],
+          "forecast": true,
+          "closed": false,
+          "dayOfWeek": "Wednesday"
+        }
+      ],
+      "extractedAt": "2026-11-05T18:16:37.070Z",
+      "source": "https://queue-times.com/parks/12/calendar/2027/01"
     }
   }
 }

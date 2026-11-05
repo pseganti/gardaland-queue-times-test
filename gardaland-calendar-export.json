@@ -1,8 +1,8 @@
 {
   "metadata": {
     "created": "2026-08-15T17:23:15.278Z",
-    "lastUpdated": "2026-08-16T02:58:37.391Z",
-    "totalMonths": 1
+    "lastUpdated": "2026-11-05T18:06:51.461Z",
+    "totalMonths": 2
   },
   "months": {
     "2026-08": {
@@ -273,6 +273,28 @@
         }
       ],
       "extractedAt": "2026-08-16T02:58:37.391Z",
+      "source": "https://queue-times.com/parks/12/calendar"
+    },
+    "2026-11": {
+      "monthKey": "2026-11",
+      "month": "November",
+      "year": 2026,
+      "totalDays": 1,
+      "days": [
+        {
+          "date": "2026-11-01",
+          "crowdLevel": "77%",
+          "crowdIntensity": "high",
+          "hours": "10:00-20:00",
+          "events": [
+            "Public Holiday",
+            "Halloween",
+            "Rainy Day"
+          ],
+          "dayOfWeek": "Sunday"
+        }
+      ],
+      "extractedAt": "2026-11-05T18:06:51.461Z",
       "source": "https://queue-times.com/parks/12/calendar"
     }
   }

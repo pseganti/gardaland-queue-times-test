@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created": "2026-08-15T17:23:15.278Z",
-    "lastUpdated": "2026-11-05T18:16:41.599Z",
+    "lastUpdated": "2026-11-06T08:57:11.330Z",
     "totalMonths": 4
   },
   "months": {
@@ -296,7 +296,7 @@
           "dayOfWeek": "Sunday"
         }
       ],
-      "extractedAt": "2026-11-05T18:16:32.491Z",
+      "extractedAt": "2026-11-06T08:57:02.374Z",
       "source": "https://queue-times.com/parks/12/calendar/2026/11"
     },
     "2026-12": {
@@ -490,7 +490,7 @@
           "dayOfWeek": "Thursday"
         }
       ],
-      "extractedAt": "2026-11-05T18:16:34.801Z",
+      "extractedAt": "2026-11-06T08:57:04.706Z",
       "source": "https://queue-times.com/parks/12/calendar/2026/12"
     },
     "2027-01": {
@@ -564,7 +564,7 @@
           "dayOfWeek": "Wednesday"
         }
       ],
-      "extractedAt": "2026-11-05T18:16:37.070Z",
+      "extractedAt": "2026-11-06T08:57:06.991Z",
       "source": "https://queue-times.com/parks/12/calendar/2027/01"
     }
   }

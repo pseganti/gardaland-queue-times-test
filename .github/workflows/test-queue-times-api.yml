@@ -209,6 +209,26 @@ jobs:
         echo "====================="
         jq -r '.rides | to_entries[] | select(.value.is_open == true) | "\(.value.name): \(.value.wait_time // "n/a") min"' wait-times.json
 
+    - name: Update ride status history
+      if: steps.fetch_times.outputs.api_success == 'true'
+      run: |
+        # Storico aperture: a ogni lettura salva quali attrazioni risultano aperte (ultimi 4 giorni registrati).
+        # Serve al blocco "Attrazioni: com'è andata" delle pagine evento (chiuse / fermate / aperte tutto il giorno).
+        HIST=ride-status-history.json
+        [ -f "$HIST" ] || echo '{"days":{}}' > "$HIST"
+        DAY=$(TZ='Europe/Rome' date '+%Y-%m-%d')
+        NOW=$(TZ='Europe/Rome' date '+%H:%M')
+        TS=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+        jq --arg d "$DAY" --arg t "$NOW" --arg ts "$TS" --slurpfile w wait-times.json '
+          .updatedAt = $ts
+          | .source = "queue-times.com"
+          | .names = ($w[0].rides | with_entries(.value = .value.name))
+          | .days[$d] = (((.days[$d] // []) | map(select(.t != $t)))
+              + [{ t: $t, open: [$w[0].rides | to_entries[] | select(.value.is_open == true) | .key] }])
+          | .days = (.days | to_entries | sort_by(.key) | .[-4:] | from_entries)
+        ' "$HIST" > "$HIST.tmp" && mv "$HIST.tmp" "$HIST"
+        echo "📚 Storico: $(jq -r --arg d "$DAY" '.days[$d] | length' "$HIST") letture oggi"
+
     - name: Commit updated wait times
       if: steps.fetch_times.outputs.api_success == 'true'
       run: |
@@ -224,7 +244,7 @@ jobs:
           Access-Control-Allow-Headers: Content-Type
         EOF
     
-        git add wait-times.json _headers
+        git add wait-times.json ride-status-history.json _headers
         
         if git diff --staged --quiet; then
           echo "ℹ️ No changes to commit"

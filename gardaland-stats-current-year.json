@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "lastUpdated": "2026-11-08T09:41:31.485Z",
+    "lastUpdated": "2026-11-09T10:35:23.783Z",
     "source": "https://queue-times.com/parks/12/stats",
-    "totalRides": 33
+    "totalRides": 32
   },
   "rides": [
     {
@@ -32,13 +32,6 @@
       "isArchived": false,
       "avgWaitMinutes": 19,
       "avgMaxWaitMinutes": 33
-    },
-    {
-      "id": 445,
-      "name": "Colorado Boat",
-      "isArchived": false,
-      "avgWaitMinutes": 18,
-      "avgMaxWaitMinutes": 30
     },
     {
       "id": 1905,

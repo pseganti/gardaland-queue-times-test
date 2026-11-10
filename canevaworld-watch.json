@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T09:01:48.738Z",
+  "checkedAt": "2026-11-10T09:01:39.504Z",
   "pages": {
     "eventi": {
       "url": "https://www.canevaworld.it/eventi.html",
@@ -76,6 +76,23 @@
         "Promozioni Safari Giro Pizza": {
           "text": "Promozioni Safari Giro Pizza Scopri la Savana Interattiva con Pizza e bevande no limits! Promozioni Safari Pizza",
           "hash": "c8b376b1d64e"
+        }
+      }
+    },
+    "gardaland-offerte": {
+      "url": "https://www.gardaland.it/offerte/offerte-biglietti/",
+      "items": {
+        "Offerte Biglietti": {
+          "text": "Offerte Biglietti",
+          "hash": "b4dd085ba3d8"
+        },
+        "Gardaland Park": {
+          "text": "Gardaland Park",
+          "hash": "b61359e6d2e1"
+        },
+        "Spiacenti, nessuna offerta disponibile.": {
+          "text": "Spiacenti, nessuna offerta disponibile.",
+          "hash": "6f64f3b4a240"
         }
       }
     }

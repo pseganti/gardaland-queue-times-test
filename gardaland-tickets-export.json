@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-10T03:02:44.551Z",
+  "updatedAt": "2026-11-11T03:02:01.406Z",
   "source": "https://tickets.gardaland.it",
   "catalog": {
-    "checkedAt": "2026-11-10T03:02:33.863Z",
+    "checkedAt": "2026-11-11T03:01:39.385Z",
     "items": [
       {
         "code": "WINTOPE",
@@ -30,6 +30,15 @@
         "priceLabel": "A partire da",
         "hasCalendar": false,
         "eventAk": null
+      },
+      {
+        "code": "FAST30",
+        "title": "Gardaland Express",
+        "tagline": null,
+        "price": null,
+        "priceLabel": " ",
+        "hasCalendar": true,
+        "eventAk": "GDL.EVN67"
       }
     ]
   },
@@ -44,23 +53,23 @@
           "available": 14961,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-06": {
           "priceMin": 27,
           "priceMax": 29,
-          "available": 14952,
+          "available": 14951,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-07": {
           "priceMin": 27,
           "priceMax": 29,
-          "available": 14987,
+          "available": 14981,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-08": {
           "priceMin": 27,
@@ -68,15 +77,15 @@
           "available": 14982,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-12": {
           "priceMin": 27,
           "priceMax": 29,
-          "available": 14946,
+          "available": 14944,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-13": {
           "priceMin": 27,
@@ -84,7 +93,7 @@
           "available": 14973,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-19": {
           "priceMin": 27,
@@ -92,7 +101,7 @@
           "available": 14985,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-20": {
           "priceMin": 27,
@@ -100,7 +109,7 @@
           "available": 14987,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-21": {
           "priceMin": 27,
@@ -108,7 +117,7 @@
           "available": 14994,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-22": {
           "priceMin": 27,
@@ -116,7 +125,7 @@
           "available": 14997,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-23": {
           "priceMin": 27,
@@ -124,7 +133,7 @@
           "available": 14992,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-24": {
           "priceMin": 27,
@@ -132,23 +141,23 @@
           "available": 14998,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-26": {
+          "priceMin": 27,
+          "priceMax": 29,
+          "available": 14969,
+          "total": 15000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:43.969Z"
+        },
+        "2026-12-27": {
           "priceMin": 27,
           "priceMax": 29,
           "available": 14971,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
-        },
-        "2026-12-27": {
-          "priceMin": 27,
-          "priceMax": 29,
-          "available": 14974,
-          "total": 15000,
-          "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-28": {
           "priceMin": 27,
@@ -156,7 +165,7 @@
           "available": 14980,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-29": {
           "priceMin": 27,
@@ -164,7 +173,7 @@
           "available": 14996,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-30": {
           "priceMin": 27,
@@ -172,23 +181,23 @@
           "available": 14984,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2026-12-31": {
           "priceMin": 27,
           "priceMax": 29,
-          "available": 14995,
+          "available": 14985,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:36.422Z"
+          "checkedAt": "2026-11-11T03:01:43.969Z"
         },
         "2027-01-01": {
           "priceMin": 27,
           "priceMax": 29,
-          "available": 14987,
+          "available": 14983,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:38.354Z"
+          "checkedAt": "2026-11-11T03:01:46.197Z"
         },
         "2027-01-02": {
           "priceMin": 27,
@@ -196,7 +205,7 @@
           "available": 14996,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:38.354Z"
+          "checkedAt": "2026-11-11T03:01:46.197Z"
         },
         "2027-01-03": {
           "priceMin": 27,
@@ -204,7 +213,7 @@
           "available": 14997,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:38.354Z"
+          "checkedAt": "2026-11-11T03:01:46.197Z"
         },
         "2027-01-04": {
           "priceMin": 27,
@@ -212,7 +221,7 @@
           "available": 15000,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:38.354Z"
+          "checkedAt": "2026-11-11T03:01:46.197Z"
         },
         "2027-01-05": {
           "priceMin": 27,
@@ -220,7 +229,7 @@
           "available": 14997,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:38.354Z"
+          "checkedAt": "2026-11-11T03:01:46.197Z"
         },
         "2027-01-06": {
           "priceMin": 27,
@@ -228,7 +237,205 @@
           "available": 15000,
           "total": 15000,
           "level": "HIGH",
-          "checkedAt": "2026-11-10T03:02:38.354Z"
+          "checkedAt": "2026-11-11T03:01:46.197Z"
+        }
+      }
+    },
+    "FAST30": {
+      "title": "Gardaland Express",
+      "eventAk": "GDL.EVN67",
+      "days": {
+        "2026-12-05": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-06": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-07": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-08": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-12": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-13": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-19": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-20": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-21": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-22": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-23": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-24": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-26": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-27": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 997,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-28": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-29": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 993,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-30": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2026-12-31": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:53.900Z"
+        },
+        "2027-01-01": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 996,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:55.800Z"
+        },
+        "2027-01-02": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:55.800Z"
+        },
+        "2027-01-03": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:55.800Z"
+        },
+        "2027-01-04": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:55.800Z"
+        },
+        "2027-01-05": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:55.800Z"
+        },
+        "2027-01-06": {
+          "priceMin": 15,
+          "priceMax": 40,
+          "available": 1000,
+          "total": 1000,
+          "level": "HIGH",
+          "checkedAt": "2026-11-11T03:01:55.800Z"
         }
       }
     }
@@ -236,7 +443,7 @@
   "shows": {
     "SMAGIC": {
       "title": "Supermagic Elementi",
-      "checkedAt": "2026-11-10T03:02:44.515Z",
+      "checkedAt": "2026-11-11T03:02:01.373Z",
       "performances": [
         {
           "performanceAk": "GDL.EVN117.PRF2",

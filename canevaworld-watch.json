@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-12T09:01:31.837Z",
+  "checkedAt": "2026-11-13T09:01:59.720Z",
   "pages": {
     "eventi": {
       "url": "https://www.canevaworld.it/eventi.html",
@@ -82,17 +82,521 @@
     "gardaland-offerte": {
       "url": "https://www.gardaland.it/offerte/offerte-biglietti/",
       "items": {
-        "Offerte Biglietti": {
-          "text": "Offerte Biglietti",
-          "hash": "b4dd085ba3d8"
+        "SONO ARRIVATI I WONDER DAYS!": {
+          "text": "SONO ARRIVATI I WONDER DAYS!",
+          "hash": "1e4d9cdff6a3"
         },
-        "Gardaland Park": {
-          "text": "Gardaland Park",
-          "hash": "b61359e6d2e1"
+        "Abbonamento Gardaland": {
+          "text": "Abbonamento Gardaland",
+          "hash": "cf749fd6dd8d"
         },
-        "Spiacenti, nessuna offerta disponibile.": {
-          "text": "Spiacenti, nessuna offerta disponibile.",
-          "hash": "6f64f3b4a240"
+        "Con i Wonder Days fai il pieno di meraviglia e ti abboni al 2027 ad un prezzo speciale!": {
+          "text": "Con i Wonder Days fai il pieno di meraviglia e ti abboni al 2027 ad un prezzo speciale!",
+          "hash": "3560258a5039"
+        },
+        "1/1": {
+          "text": "1/1",
+          "hash": "e3b2823ec042"
+        },
+        "È il momento giusto per assicurarti il tuo Abbonamento 2027!": {
+          "text": "È il momento giusto per assicurarti il tuo Abbonamento 2027!",
+          "hash": "87ddeab95752"
+        },
+        "Scegliere oggi il tuo abbonamento significa regalarti fin da ora un anno intero di emozioni, avventure e occasioni per stare insieme alle persone che ami. Dalle prime giornate di primavera agli eventi più attesi della stagione, avrai sempre un motivo in più per tornare a Gardaland e creare nuovi ricordi indimenticabili.": {
+          "text": "Scegliere oggi il tuo abbonamento significa regalarti fin da ora un anno intero di emozioni, avventure e occasioni per stare insieme alle persone che ami. Dalle prime giornate di primavera agli eventi più attesi della stagione, avrai sempre un motivo in più per tornare a Gardaland e creare nuovi ricordi indimenticabili.",
+          "hash": "2583bc34a82c"
+        },
+        "Acquistando ora, puoi guardare al 2027 senza pensieri, sapendo di aver già scelto un anno di divertimento, esperienze da condividere e momenti di qualità da vivere insieme.": {
+          "text": "Acquistando ora, puoi guardare al 2027 senza pensieri, sapendo di aver già scelto un anno di divertimento, esperienze da condividere e momenti di qualità da vivere insieme.",
+          "hash": "c91ef0160a7a"
+        },
+        "🎄 E con gli Abbonamenti Gold e Platinum la meraviglia inizia ancora prima, grazie a Magic Winter 2026 incluso.": {
+          "text": "🎄 E con gli Abbonamenti Gold e Platinum la meraviglia inizia ancora prima, grazie a Magic Winter 2026 incluso.",
+          "hash": "4f382203f6fa"
+        },
+        "✨ Un'offerta speciale oggi. Un anno di emozioni, avventure e ricordi da costruire domani.": {
+          "text": "✨ Un'offerta speciale oggi. Un anno di emozioni, avventure e ricordi da costruire domani.",
+          "hash": "4f006c1e3efa"
+        },
+        "I Wonder Days durano solo fino al 30 novembre. Scegli l'Abbonamento più adatto a te e fai il pieno di meraviglia.": {
+          "text": "I Wonder Days durano solo fino al 30 novembre. Scegli l'Abbonamento più adatto a te e fai il pieno di meraviglia.",
+          "hash": "4c9fb84a6617"
+        },
+        "Scopri l'Offerta": {
+          "text": "Scopri l'Offerta",
+          "hash": "2014ad38da96"
+        },
+        "Abbonamenti: tutto il bello di Gardaland, tutto l'anno!": {
+          "text": "Abbonamenti: tutto il bello di Gardaland, tutto l'anno!",
+          "hash": "f6713f2cb8c1"
+        },
+        "Si ripaga già dal secondo ingresso": {
+          "text": "Si ripaga già dal secondo ingresso",
+          "hash": "f18817d52b16"
+        },
+        "Un'intera stagione di divertimento": {
+          "text": "Un'intera stagione di divertimento",
+          "hash": "a1c0e4460dea"
+        },
+        "Tanti ricordi da costruire": {
+          "text": "Tanti ricordi da costruire",
+          "hash": "35f2dbd4f4b2"
+        },
+        "Choose your Pass:": {
+          "text": "Choose your Pass:",
+          "hash": "888ff95648d2"
+        },
+        "ABBONAMENTO JUNIOR": {
+          "text": "ABBONAMENTO JUNIOR",
+          "hash": "2227bd9be0b4"
+        },
+        "NUOVO! Prezzo lancio:": {
+          "text": "NUOVO! Prezzo lancio:",
+          "hash": "8cc7979215df"
+        },
+        "59 €": {
+          "text": "59 €",
+          "hash": "15ba2e7b7fd3"
+        },
+        "Fino al 30 novembre": {
+          "text": "Fino al 30 novembre",
+          "hash": "499f7d1a4d18"
+        },
+        "Prezzo standard:": {
+          "text": "Prezzo standard:",
+          "hash": "9be9c49ef3cb"
+        },
+        "79 €": {
+          "text": "79 €",
+          "hash": "0942bd8e88e1"
+        },
+        "Dall'1 dicembre": {
+          "text": "Dall'1 dicembre",
+          "hash": "5059cf0ccb91"
+        },
+        "Rinnova per 59 €": {
+          "text": "Rinnova per 59 €",
+          "hash": "0441ad63d814"
+        },
+        "Prime grandi avventure": {
+          "text": "Prime grandi avventure",
+          "hash": "e9e87309bb16"
+        },
+        "Per bambini di altezza uguale o superiore a 90 cm e di età fino a 6 anni compiuti": {
+          "text": "Per bambini di altezza uguale o superiore a 90 cm e di età fino a 6 anni compiuti",
+          "hash": "130c05aac213"
+        },
+        "🎢 Ingressi illimitati a Gardaland Park": {
+          "text": "🎢 Ingressi illimitati a Gardaland Park",
+          "hash": "65268c74e86d"
+        },
+        "🚀 20% di sconto sul Negozio di Peppa Pig Land + Negozio Tiny Treasure (area Animal Treasure Island)": {
+          "text": "🚀 20% di sconto sul Negozio di Peppa Pig Land + Negozio Tiny Treasure (area Animal Treasure Island)",
+          "hash": "9f3d9e71f794"
+        },
+        "🎃 Vivi i grandi eventi della stagione insieme ai tuoi personaggi preferiti": {
+          "text": "🎃 Vivi i grandi eventi della stagione insieme ai tuoi personaggi preferiti",
+          "hash": "8c6a48c381a2"
+        },
+        "🎁 Gadget esclusivo": {
+          "text": "🎁 Gadget esclusivo",
+          "hash": "431eb847fc1b"
+        },
+        "Compra Ora": {
+          "text": "Compra Ora",
+          "hash": "b24200b61d62"
+        },
+        "ABBONAMENTO SILVER": {
+          "text": "ABBONAMENTO SILVER",
+          "hash": "b4544f0349b3"
+        },
+        "69 €": {
+          "text": "69 €",
+          "hash": "307b4a7e6a77"
+        },
+        "89 €": {
+          "text": "89 €",
+          "hash": "7cdd8866f114"
+        },
+        "Rinnova per 69 €": {
+          "text": "Rinnova per 69 €",
+          "hash": "0d8ba7470fe2"
+        },
+        "Divertimento senza pensieri": {
+          "text": "Divertimento senza pensieri",
+          "hash": "c6e0fdf22e63"
+        },
+        "🎢 Ingressi illimitati al Parco con alcune date escluse [clicca qui]": {
+          "text": "🎢 Ingressi illimitati al Parco con alcune date escluse [clicca qui]",
+          "hash": "d108deba0adc"
+        },
+        "🎃 Vivi i grandi eventi della stagione": {
+          "text": "🎃 Vivi i grandi eventi della stagione",
+          "hash": "e1b286d5cde8"
+        },
+        "✨ Un anno di emozioni senza pensieri!": {
+          "text": "✨ Un anno di emozioni senza pensieri!",
+          "hash": "45b9cbd611e3"
+        },
+        "ABBONAMENTO GOLD": {
+          "text": "ABBONAMENTO GOLD",
+          "hash": "598e11c1c2bd"
+        },
+        "109 €": {
+          "text": "109 €",
+          "hash": "7e946d1bffa8"
+        },
+        "Rinnova per 79 €": {
+          "text": "Rinnova per 79 €",
+          "hash": "4cbcd65f6a5a"
+        },
+        "Più magia, più emozioni": {
+          "text": "Più magia, più emozioni",
+          "hash": "8c2ccfd7a091"
+        },
+        "🐟 Ingressi illimitati a SEA LIFE": {
+          "text": "🐟 Ingressi illimitati a SEA LIFE",
+          "hash": "cfa2fdf821b2"
+        },
+        "🌊 Biglietti per LEGOLAND® Water Park per tutta la stagione al 50%": {
+          "text": "🌊 Biglietti per LEGOLAND® Water Park per tutta la stagione al 50%",
+          "hash": "4aad9e96376a"
+        },
+        "🎄 Magic Winter 2026 incluso": {
+          "text": "🎄 Magic Winter 2026 incluso",
+          "hash": "862e2c8cc0c6"
+        },
+        "🌟 L'abbonamento ideale per vivere ogni momento della stagione": {
+          "text": "🌟 L'abbonamento ideale per vivere ogni momento della stagione",
+          "hash": "2e8b19518261"
+        },
+        "ABBONAMENTO PLATINUM": {
+          "text": "ABBONAMENTO PLATINUM",
+          "hash": "9bb17bd44f99"
+        },
+        "129 €": {
+          "text": "129 €",
+          "hash": "aa88991c0f0e"
+        },
+        "159 €": {
+          "text": "159 €",
+          "hash": "1debf7d97618"
+        },
+        "Rinnova per 109 €": {
+          "text": "Rinnova per 109 €",
+          "hash": "7f2c0c4d0cac"
+        },
+        "L'esperienza premium": {
+          "text": "L'esperienza premium",
+          "hash": "d3273a34f802"
+        },
+        "🌊 Ingressi a LEGOLAND® Water Park per tutta la stagione": {
+          "text": "🌊 Ingressi a LEGOLAND® Water Park per tutta la stagione",
+          "hash": "9148c4c47a11"
+        },
+        "✨ Più vantaggi, più accessi, più meraviglia": {
+          "text": "✨ Più vantaggi, più accessi, più meraviglia",
+          "hash": "8196cafa6bbe"
+        },
+        "I bambini sotto 90 cm di altezza entrano gratuitamente.": {
+          "text": "I bambini sotto 90 cm di altezza entrano gratuitamente.",
+          "hash": "79730994ed37"
+        },
+        "Consulta le FAQ per dettagli e condizioni di ogni abbonamento.": {
+          "text": "Consulta le FAQ per dettagli e condizioni di ogni abbonamento.",
+          "hash": "016fdd351a20"
+        },
+        "Confronta i Vantaggi:": {
+          "text": "Confronta i Vantaggi:",
+          "hash": "e7e893a34f3c"
+        },
+        "INGRESSI A GARDALAND NEL 2027": {
+          "text": "INGRESSI A GARDALAND NEL 2027",
+          "hash": "919eca16c505"
+        },
+        "illimitati": {
+          "text": "illimitati",
+          "hash": "a4a4b7a1e764"
+        },
+        "(alcune date escluse)": {
+          "text": "(alcune date escluse)",
+          "hash": "823e0e2e97d5"
+        },
+        "Consulta le FAQ qui sotto": {
+          "text": "Consulta le FAQ qui sotto",
+          "hash": "7f8d85d8c8a2"
+        },
+        "per tutti i dettagli": {
+          "text": "per tutti i dettagli",
+          "hash": "70c09949131e"
+        },
+        "Magic Winter 2026 incluso": {
+          "text": "Magic Winter 2026 incluso",
+          "hash": "0d491a700632"
+        },
+        "INGRESSI A SEA LIFE AQUARIUM": {
+          "text": "INGRESSI A SEA LIFE AQUARIUM",
+          "hash": "65b1e5d40761"
+        },
+        "Con 19€ in più ingressi illimitati all'Acquario": {
+          "text": "Con 19€ in più ingressi illimitati all'Acquario",
+          "hash": "e71b170a7904"
+        },
+        "INGRESSI A LEGOLAND® Water Park": {
+          "text": "INGRESSI A LEGOLAND® Water Park",
+          "hash": "04694f747638"
+        },
+        "Biglietti per tutta la stagione di LEGOLAND® Water Park al 50% di sconto sulla tariffa giornaliera (soggetti a disponibilità giornaliera)": {
+          "text": "Biglietti per tutta la stagione di LEGOLAND® Water Park al 50% di sconto sulla tariffa giornaliera (soggetti a disponibilità giornaliera)",
+          "hash": "b3295e102f7f"
+        },
+        "Ingressi a LEGOLAND® Water Park per tutta la stagione (soggetti a disponibilità giornaliera e previa prenotazione)": {
+          "text": "Ingressi a LEGOLAND® Water Park per tutta la stagione (soggetti a disponibilità giornaliera e previa prenotazione)",
+          "hash": "408cde016ea9"
+        },
+        "INGRESSI FAST TRACK OGNI VOLTA CHE VISITI IL PARCO": {
+          "text": "INGRESSI FAST TRACK OGNI VOLTA CHE VISITI IL PARCO",
+          "hash": "4835efb9eafc"
+        },
+        "1 ingresso su 1 attrazione": {
+          "text": "1 ingresso su 1 attrazione",
+          "hash": "2c6722648867"
+        },
+        "10 ingressi su 5 attrazioni a scelta": {
+          "text": "10 ingressi su 5 attrazioni a scelta",
+          "hash": "6e433b7fa9c1"
+        },
+        "\"PORTA UN AMICO\" AL PARCO AD UN PREZZO SPECIALE": {
+          "text": "\"PORTA UN AMICO\" AL PARCO AD UN PREZZO SPECIALE",
+          "hash": "6af819da6c35"
+        },
+        "3 biglietti a 34 €": {
+          "text": "3 biglietti a 34 €",
+          "hash": "a82ce209f4cb"
+        },
+        "10 biglietti a 34 €": {
+          "text": "10 biglietti a 34 €",
+          "hash": "c133e37b57c6"
+        },
+        "20 biglietti a 34 €": {
+          "text": "20 biglietti a 34 €",
+          "hash": "894cc9168ced"
+        },
+        "BIGLIETTI OMAGGIO \"PORTA UN AMICO\" AL PARCO": {
+          "text": "BIGLIETTI OMAGGIO \"PORTA UN AMICO\" AL PARCO",
+          "hash": "b4517dc510ad"
+        },
+        "2 biglietti omaggio validi dal 25 marzo al 25 giugno 2027 (offerta valida fino al 30/11/2026)": {
+          "text": "2 biglietti omaggio validi dal 25 marzo al 25 giugno 2027 (offerta valida fino al 30/11/2026)",
+          "hash": "e02d9d607e89"
+        },
+        "OFFERTE ED ESPERIENZE ESCLUSIVE PER I NOSTRI ABBONATI": {
+          "text": "OFFERTE ED ESPERIENZE ESCLUSIVE PER I NOSTRI ABBONATI",
+          "hash": "6dfa5236c4ed"
+        },
+        "SCONTO 10% NEI PUNTI RISTORAZIONE DEL PARCO": {
+          "text": "SCONTO 10% NEI PUNTI RISTORAZIONE DEL PARCO",
+          "hash": "b2102d3dc439"
+        },
+        "SCONTO 10% NEI NEGOZI DEL PARCO": {
+          "text": "SCONTO 10% NEI NEGOZI DEL PARCO",
+          "hash": "ae4a5a20be17"
+        },
+        "20% nel negozio di Peppa Pig Land e Tiny Treasure + Gadget esclusivo": {
+          "text": "20% nel negozio di Peppa Pig Land e Tiny Treasure + Gadget esclusivo",
+          "hash": "553e2342e01f"
+        },
+        "SCONTO 15% SULLA CAMERA NEGLI HOTEL DI GARDALAND": {
+          "text": "SCONTO 15% SULLA CAMERA NEGLI HOTEL DI GARDALAND",
+          "hash": "ad7213f5180f"
+        },
+        "SCONTO 10% SULLA CENA AL TUTANKHAMON RESTAURANT": {
+          "text": "SCONTO 10% SULLA CENA AL TUTANKHAMON RESTAURANT",
+          "hash": "bb3fd672ec43"
+        },
+        "SCONTO 10% SU \"EXPERIENCES\" NEL PARCO": {
+          "text": "SCONTO 10% SU \"EXPERIENCES\" NEL PARCO",
+          "hash": "89d189f8580e"
+        },
+        "SCONTO 10% SU PACCHETTI FAST TRACK": {
+          "text": "SCONTO 10% SU PACCHETTI FAST TRACK",
+          "hash": "a48ab6af0e01"
+        },
+        "Consulta le FAQ per dettagli e condizioni di ogni abbonamento": {
+          "text": "Consulta le FAQ per dettagli e condizioni di ogni abbonamento",
+          "hash": "e7027e426d5c"
+        },
+        "Un mondo di avventure da vivere tutto l'anno:": {
+          "text": "Un mondo di avventure da vivere tutto l'anno:",
+          "hash": "c3d0b255f101"
+        },
+        "Shows e Meet & Greet": {
+          "text": "Shows e Meet & Greet",
+          "hash": "15f18a4e2194"
+        },
+        "La magia prende vita con spettacoli coinvolgenti, Meet & Greet e tanti amati personaggi pronti a rendere ogni giornata al Parco davvero speciale.": {
+          "text": "La magia prende vita con spettacoli coinvolgenti, Meet & Greet e tanti amati personaggi pronti a rendere ogni giornata al Parco davvero speciale.",
+          "hash": "232450d5a43c"
+        },
+        "SEA LIFE Aquarium": {
+          "text": "SEA LIFE Aquarium",
+          "hash": "d3ea8753146a"
+        },
+        "Il primo acquario interamente tematizzato d’Italia: un emozionante viaggio attraverso 40 vasche, dagli habitat d’acqua dolce del Lago di Garda fino ai mari e agli oceani più profondi.": {
+          "text": "Il primo acquario interamente tematizzato d’Italia: un emozionante viaggio attraverso 40 vasche, dagli habitat d’acqua dolce del Lago di Garda fino ai mari e agli oceani più profondi.",
+          "hash": "cfe9a72dbdb5"
+        },
+        "Gardaland Magic Halloween": {
+          "text": "Gardaland Magic Halloween",
+          "hash": "d66f190138de"
+        },
+        "Tra atmosfere sorprendenti, spettacoli coinvolgenti, aree tematizzate ed esperienze adrenaliniche, Gardaland Magic Halloween trasforma ogni visita in un’avventura tutta da vivere.": {
+          "text": "Tra atmosfere sorprendenti, spettacoli coinvolgenti, aree tematizzate ed esperienze adrenaliniche, Gardaland Magic Halloween trasforma ogni visita in un’avventura tutta da vivere.",
+          "hash": "251aabc773ef"
+        },
+        "Gardaland Magic Winter": {
+          "text": "Gardaland Magic Winter",
+          "hash": "691a4f9625a3"
+        },
+        "Atmosfere incantevoli, spettacoli emozionanti e la magia delle feste che avvolge ogni angolo del Resort: Gardaland Magic Winter crea momenti speciali da condividere con le persone che ami e ricordi preziosi da custodire tutto l’anno.": {
+          "text": "Atmosfere incantevoli, spettacoli emozionanti e la magia delle feste che avvolge ogni angolo del Resort: Gardaland Magic Winter crea momenti speciali da condividere con le persone che ami e ricordi preziosi da custodire tutto l’anno.",
+          "hash": "6961a221c69b"
+        },
+        "Attrazioni per tutte le età": {
+          "text": "Attrazioni per tutte le età",
+          "hash": "33187af424da"
+        },
+        "A Gardaland il divertimento unisce grandi e piccoli, con esperienze pensate per condividere emozioni e sorrisi a ogni età.": {
+          "text": "A Gardaland il divertimento unisce grandi e piccoli, con esperienze pensate per condividere emozioni e sorrisi a ogni età.",
+          "hash": "70c8398399ec"
+        },
+        "Go to slide 1": {
+          "text": "Go to slide 1",
+          "hash": "dfbdc0995ce3"
+        },
+        "Go to slide 2": {
+          "text": "Go to slide 2",
+          "hash": "b0d44b6f1279"
+        },
+        "Tutto quello che devi sapere è qui sotto:": {
+          "text": "Tutto quello che devi sapere è qui sotto:",
+          "hash": "99e115bb72c7"
+        },
+        "Validità di ogni Abbonamento": {
+          "text": "Validità di ogni Abbonamento",
+          "hash": "988046229673"
+        },
+        "Vantaggi e Sconti": {
+          "text": "Vantaggi e Sconti",
+          "hash": "a92158e145b3"
+        },
+        "Tutte le risposte alle tue domande": {
+          "text": "Tutte le risposte alle tue domande",
+          "hash": "e0a93f832fdf"
+        },
+        "Abbonamento Junior 2027": {
+          "text": "Abbonamento Junior 2027",
+          "hash": "9895001859d3"
+        },
+        "INGRESSI A GARDALAND": {
+          "text": "INGRESSI A GARDALAND",
+          "hash": "654216eb03ad"
+        },
+        "SCONTO NEI NEGOZI DEL PARCO": {
+          "text": "SCONTO NEI NEGOZI DEL PARCO",
+          "hash": "581a332fcc2b"
+        },
+        "ALTRI VANTAGGI": {
+          "text": "ALTRI VANTAGGI",
+          "hash": "a91ba2dc3d81"
+        },
+        "Abbonamento Silver 2027": {
+          "text": "Abbonamento Silver 2027",
+          "hash": "2e61a48cc00c"
+        },
+        "PORTA UN AMICO AL PARCO AD UN PREZZO SPECIALE": {
+          "text": "PORTA UN AMICO AL PARCO AD UN PREZZO SPECIALE",
+          "hash": "2acc4fc9ac7d"
+        },
+        "Abbonamento Gold 2027": {
+          "text": "Abbonamento Gold 2027",
+          "hash": "f7ed15773b0d"
+        },
+        "Abbonamento Platinum 2027": {
+          "text": "Abbonamento Platinum 2027",
+          "hash": "1612bdab08f4"
+        },
+        "Tutti gli abbonamenti": {
+          "text": "Tutti gli abbonamenti",
+          "hash": "decbb68fc9dd"
+        },
+        "DOVE POSSO RITIRARE IL MIO ABBONAMENTO?": {
+          "text": "DOVE POSSO RITIRARE IL MIO ABBONAMENTO?",
+          "hash": "262a744e7edd"
+        },
+        "E' POSSIBILE RICEVERE L'ABBONAMENTO IN FORMATO TESSERA?": {
+          "text": "E' POSSIBILE RICEVERE L'ABBONAMENTO IN FORMATO TESSERA?",
+          "hash": "c6ffe09c1fde"
+        },
+        "POSSO CEDERE O PRESTARE IL MIO ABBONAMENTO AD ALTRE PERSONE?": {
+          "text": "POSSO CEDERE O PRESTARE IL MIO ABBONAMENTO AD ALTRE PERSONE?",
+          "hash": "b899326fa470"
+        },
+        "COME SI ACCEDE ALL’AREA OFFERTE DEDICATE AGLI ABBONAMENTI?": {
+          "text": "COME SI ACCEDE ALL’AREA OFFERTE DEDICATE AGLI ABBONAMENTI?",
+          "hash": "2c54b02d9b61"
+        },
+        "E' POSSIBILE DOPO L'ACQUISTO MODIFICARE LA TIPOLOGIA DI ABBONAMENTO?": {
+          "text": "E' POSSIBILE DOPO L'ACQUISTO MODIFICARE LA TIPOLOGIA DI ABBONAMENTO?",
+          "hash": "81b2bbdb6909"
+        },
+        "NON HAI TROVATO UNA RISPOSTA ALLA TUA DOMANDA?": {
+          "text": "NON HAI TROVATO UNA RISPOSTA ALLA TUA DOMANDA?",
+          "hash": "5e753c1344b8"
+        },
+        "Cerchi le informazioni relative ad un precedente Abbonamento?": {
+          "text": "Cerchi le informazioni relative ad un precedente Abbonamento?",
+          "hash": "dd385542b3a7"
+        },
+        "Se hai acquistato il tuo Abbonamento Stagionale prima del 9 novembre 2026, clicca qui per visualizzare i vantaggi e le informazioni applicabili al tuo abbonamento.": {
+          "text": "Se hai acquistato il tuo Abbonamento Stagionale prima del 9 novembre 2026, clicca qui per visualizzare i vantaggi e le informazioni applicabili al tuo abbonamento.",
+          "hash": "3ac6938683bd"
+        },
+        "Visualizza i vantaggi degli Abbonamenti precedenti": {
+          "text": "Visualizza i vantaggi degli Abbonamenti precedenti",
+          "hash": "d8e5c0e6249a"
+        },
+        "Sempre un motivo per tornare.": {
+          "text": "Sempre un motivo per tornare.",
+          "hash": "bb6fe45ce040"
+        },
+        "Divertimento senza limiti": {
+          "text": "Divertimento senza limiti",
+          "hash": "5b4730c2eb4a"
+        },
+        "Vivi Gardaland tutte le volte che vuoi": {
+          "text": "Vivi Gardaland tutte le volte che vuoi",
+          "hash": "847d4be8e59c"
+        },
+        "Il tuo Abbonamento vale di più": {
+          "text": "Il tuo Abbonamento vale di più",
+          "hash": "769f66b3145c"
+        },
+        "Vantaggi esclusivi per gli abbonati": {
+          "text": "Vantaggi esclusivi per gli abbonati",
+          "hash": "75a375ce55d4"
+        },
+        "Più ricordi da condividere con le persone che ami": {
+          "text": "Più ricordi da condividere con le persone che ami",
+          "hash": "137c4c8ef130"
+        },
+        "Eventi e Stagioni speciali": {
+          "text": "Eventi e Stagioni speciali",
+          "hash": "2ad8bfa821d0"
+        },
+        "Vivi Gardaland in modi sempre diversi": {
+          "text": "Vivi Gardaland in modi sempre diversi",
+          "hash": "0076d4675b4a"
         }
       }
     }

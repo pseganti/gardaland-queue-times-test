@@ -1,21 +1,6 @@
 {
-  "generatedAt": "2026-11-16T12:18:36.263Z",
+  "generatedAt": "2026-11-19T12:20:03.389Z",
   "crowdForecast": [
-    {
-      "date": "2026-11-16",
-      "label": "lunedì 16 novembre",
-      "status": "closed_or_unknown"
-    },
-    {
-      "date": "2026-11-17",
-      "label": "martedì 17 novembre",
-      "status": "closed_or_unknown"
-    },
-    {
-      "date": "2026-11-18",
-      "label": "mercoledì 18 novembre",
-      "status": "closed_or_unknown"
-    },
     {
       "date": "2026-11-19",
       "label": "giovedì 19 novembre",
@@ -24,6 +9,21 @@
     {
       "date": "2026-11-20",
       "label": "venerdì 20 novembre",
+      "status": "closed_or_unknown"
+    },
+    {
+      "date": "2026-11-21",
+      "label": "sabato 21 novembre",
+      "status": "closed_or_unknown"
+    },
+    {
+      "date": "2026-11-22",
+      "label": "domenica 22 novembre",
+      "status": "closed_or_unknown"
+    },
+    {
+      "date": "2026-11-23",
+      "label": "lunedì 23 novembre",
       "status": "closed_or_unknown"
     }
   ],

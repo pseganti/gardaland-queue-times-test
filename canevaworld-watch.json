@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T09:01:27.180Z",
+  "checkedAt": "2026-11-20T09:01:40.175Z",
   "pages": {
     "eventi": {
       "url": "https://www.canevaworld.it/eventi.html",
@@ -194,6 +194,10 @@
           "text": "🚀 20% di sconto sul Negozio di Peppa Pig Land + Negozio Tiny Treasure (area Animal Treasure Island)",
           "hash": "9f3d9e71f794"
         },
+        "🪄 Tariffa ridotta sui biglietti Supermagic Elementi 2026": {
+          "text": "🪄 Tariffa ridotta sui biglietti Supermagic Elementi 2026",
+          "hash": "f8e1d945905d"
+        },
         "🎃 Vivi i grandi eventi della stagione insieme ai tuoi personaggi preferiti": {
           "text": "🎃 Vivi i grandi eventi della stagione insieme ai tuoi personaggi preferiti",
           "hash": "8c6a48c381a2"
@@ -386,9 +390,9 @@
           "text": "BIGLIETTI OMAGGIO \"PORTA UN AMICO\" AL PARCO",
           "hash": "b4517dc510ad"
         },
-        "2 biglietti omaggio validi dal 25 marzo al 25 giugno 2027 (offerta valida fino al 30/11/2026)": {
-          "text": "2 biglietti omaggio validi dal 25 marzo al 25 giugno 2027 (offerta valida fino al 30/11/2026)",
-          "hash": "e02d9d607e89"
+        "2 biglietti a data selezionata in omaggio, validi dal 25 marzo al 25 giugno 2027 (offerta valida fino al 30/11/2026)": {
+          "text": "2 biglietti a data selezionata in omaggio, validi dal 25 marzo al 25 giugno 2027 (offerta valida fino al 30/11/2026)",
+          "hash": "1575d9f3c96e"
         },
         "OFFERTE ED ESPERIENZE ESCLUSIVE PER I NOSTRI ABBONATI": {
           "text": "OFFERTE ED ESPERIENZE ESCLUSIVE PER I NOSTRI ABBONATI",
@@ -421,6 +425,10 @@
         "SCONTO 10% SU PACCHETTI FAST TRACK": {
           "text": "SCONTO 10% SU PACCHETTI FAST TRACK",
           "hash": "a48ab6af0e01"
+        },
+        "TARIFFA RIDOTTA SUI BIGLIETTI SUPERMAGIC ELEMENTI 2026": {
+          "text": "TARIFFA RIDOTTA SUI BIGLIETTI SUPERMAGIC ELEMENTI 2026",
+          "hash": "10dd4f8e62f0"
         },
         "Consulta le FAQ per dettagli e condizioni di ogni abbonamento": {
           "text": "Consulta le FAQ per dettagli e condizioni di ogni abbonamento",

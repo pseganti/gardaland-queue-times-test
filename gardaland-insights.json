@@ -1,11 +1,6 @@
 {
-  "generatedAt": "2026-11-23T13:53:20.554Z",
+  "generatedAt": "2026-11-24T14:25:45.462Z",
   "crowdForecast": [
-    {
-      "date": "2026-11-23",
-      "label": "lunedì 23 novembre",
-      "status": "closed_or_unknown"
-    },
     {
       "date": "2026-11-24",
       "label": "martedì 24 novembre",
@@ -24,6 +19,11 @@
     {
       "date": "2026-11-27",
       "label": "venerdì 27 novembre",
+      "status": "closed_or_unknown"
+    },
+    {
+      "date": "2026-11-28",
+      "label": "sabato 28 novembre",
       "status": "closed_or_unknown"
     }
   ],

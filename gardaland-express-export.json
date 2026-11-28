@@ -1,1 +1,207 @@
-{}
+{
+  "2026-12-05": {
+    "updatedAt": "2026-11-28T11:13:40.314Z",
+    "performanceAk": "GDL.EVN67.PRF1043",
+    "availability": {
+      "level": "HIGH",
+      "available": 992,
+      "total": 1000,
+      "generalAdmission": false
+    },
+    "products": {
+      "products": [
+        {
+          "productAk": "GDL.EVN1.MCC11130",
+          "sortOrder": 10,
+          "hasCalendar": true,
+          "fields": {
+            "fullTitle": "FASTRACK \"GIVE ME 5! WINTER EDITION\"",
+            "title": "FASTRACK \"GIVE ME 5! WINTER EDITION\"",
+            "sectionTitle": null,
+            "specificTitle": null,
+            "description": null,
+            "info": null,
+            "infoExtended": "<B>Fastrack entry to be used the day of the visit 1 time on 5 rides selected from this list:</B> Blue Tornado, Mammut, Space Vertigo, Oblivion, Jumanji The Adventure, Animal Treasure Island, Shaman, Volaplano, Magic House, Cinema 4D.<br><br>\n<B>PLUS YOU GET:</B> 20% discount in shops<SUP>1</SUP>\n<br><br>\n<B>IMPORTANT INFORMATION:</B>\n<UL><LI>Valid only on the day of the visit, to be made by 06.01.2027</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Fastrack.</LI>\n<LI>To use the Fastrack, download the ‘Gardaland Express’ App, go to the ‘Express’ section and scan the QR Code of this voucher to import it into \nthe App and manage your Fastrack.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the Fastrack service will NOT be guaranteed.</LI>\n</UL>\n<br><br>\nNote 1: the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office ‘Gardaland \nExpress’ from the opening until 1 PM and at the Gardaland Express point of sale ‘Mammut’ from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not \nvalid on snacks, drinks, cigarettes, photos, helium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at \nLegoland® and at the Jumanji Shop.",
+            "iframeUrl": null,
+            "onePurchasePerDay": null,
+            "purchasableDaysFromNow": null,
+            "isGift": null,
+            "isReservation": null,
+            "multipleCalendarsLabels": null,
+            "forceLoginAtCheckout": false,
+            "competitionName": null,
+            "imageSmall": null,
+            "subtitle": null
+          },
+          "gtm": {
+            "variant": null,
+            "category": null,
+            "brand": null
+          },
+          "price": {
+            "currency": "EUR",
+            "value": 15,
+            "tax": null
+          },
+          "priceIvaFatt": null,
+          "components": null,
+          "warning": {
+            "account": null,
+            "additionalInfo": null,
+            "dateFrom": {
+              "required": false
+            },
+            "dateTo": {
+              "required": false
+            },
+            "giftAid": {
+              "required": false
+            },
+            "mediaLink": {
+              "required": false
+            },
+            "peopleCount": null,
+            "eventList": [
+              {
+                "eventAk": "GDL.EVN67",
+                "quantity": 1,
+                "required": "REQUIRED"
+              }
+            ],
+            "saleRestriction": {
+              "min": null,
+              "max": 10
+            },
+            "saleValidity": {
+              "calendarAk": null,
+              "fromDate": null,
+              "fromTime": null,
+              "toDate": null,
+              "toTime": null
+            },
+            "variablePrice": null
+          },
+          "upsellAks": [],
+          "eventAks": [
+            "GDL.EVN67",
+            "GDL.EVN104"
+          ],
+          "productType": "TICKET",
+          "offers": [
+            "GDL",
+            "FST",
+            "EXP",
+            "ECM",
+            "PRB",
+            "WEXP",
+            "FAST30",
+            "FASTEX30",
+            "CROSS1"
+          ],
+          "timeSpan": null,
+          "extraType": null,
+          "redeem": null,
+          "capacityCode": null,
+          "subProducts": null,
+          "campaignCode": null
+        },
+        {
+          "productAk": "GDL.EVN1.MCC11131",
+          "sortOrder": 20,
+          "hasCalendar": true,
+          "fields": {
+            "fullTitle": "FASTRACK \"NO LIMITS! WINTER EDITION\"",
+            "title": "FASTRACK \"NO LIMITS! WINTER EDITION\"",
+            "sectionTitle": null,
+            "specificTitle": null,
+            "description": null,
+            "info": null,
+            "infoExtended": "<B>Unlimited Fastrack entries to be used the day of the visit on all these rides:</B> Volaplano, Rocket Factory, Mammut, Cimena 4D, Jumanji The Adventure, Wolf Legend, Animal Treasure Island, Dragon Rush, Blue Tornado, Magic House, Raptor, Oblivion, Space Vertigo, Shaman.<br><br>\n<B>PLUS YOU GET:</B> 20% discount in shops<SUP>1</SUP>\n<br><br>\n<B>IMPORTANT INFORMATION:</B>\n<UL>\n<LI>Valid only on the day of the visit, to be made by 06.01.2027</LI>\n<LI>Strictly personal, non-transferable and non-refundable.</LI>\n<LI>Regulations and safety restrictions displayed at the entrance to the attraction apply to each ride.</LI>\n<LI>Once purchased, it will not be possible to change the type of Fastrack.</LI>\n<LI>To use the Fastrack, download the ‘Gardaland Express’ App, go to the ‘Express’ section and scan the QR Code of this voucher to import it into \nthe App and manage your Fastrack.</LI>\n<LI>The Park reserves the right to cancel it in case of irregular or fraudulent use.</LI>\n<LI>Access to the rides may be interrupted in advance of the Park's closing time to allow the queue to clear.</LI>\n<LI>There may be cases where, due to maintenance, lack of electricity or particularly bad weather conditions, some attractions are not available.</LI>\n<LI>THIS VOUCHER DOES NOT INCLUDE ADMISSION TO THE PARK.</LI>\n<LI>In case of loss or impossibility to read correctly the Qr code/Mediacode of this voucher, the Fastrack service will NOT be guaranteed.</LI>\n</UL>\n<br>\n<br>\n<B>Note 1:</B> the coupon to get 20% discount at shops (discount valid on each single transaction) can be claimed at the dedicated ticket office \n‘Gardaland \nExpress’ from the opening until 1 PM and at the Gardaland Express point of sale ‘Mammut’ from 1 PM until the closing time of the Park, showing this \nvoucher. The discount is valid on a single receipt. Cannot be combined with other current promotions. Not \nvalid on snacks, drinks, cigarettes, photos, helium balloons, Peppa Pig items, 44 Gatti items, newsstand products, Gardaland Express, Single Ride, at \nLegoland® and at the Jumanji Shop.",
+            "iframeUrl": null,
+            "onePurchasePerDay": null,
+            "purchasableDaysFromNow": null,
+            "isGift": null,
+            "isReservation": null,
+            "multipleCalendarsLabels": null,
+            "forceLoginAtCheckout": false,
+            "competitionName": null,
+            "imageSmall": null,
+            "subtitle": null
+          },
+          "gtm": {
+            "variant": null,
+            "category": null,
+            "brand": null
+          },
+          "price": {
+            "currency": "EUR",
+            "value": 40,
+            "tax": null
+          },
+          "priceIvaFatt": null,
+          "components": null,
+          "warning": {
+            "account": null,
+            "additionalInfo": null,
+            "dateFrom": {
+              "required": false
+            },
+            "dateTo": {
+              "required": false
+            },
+            "giftAid": {
+              "required": false
+            },
+            "mediaLink": {
+              "required": false
+            },
+            "peopleCount": null,
+            "eventList": [
+              {
+                "eventAk": "GDL.EVN67",
+                "quantity": 1,
+                "required": "REQUIRED"
+              }
+            ],
+            "saleRestriction": {
+              "min": null,
+              "max": 10
+            },
+            "saleValidity": {
+              "calendarAk": null,
+              "fromDate": null,
+              "fromTime": null,
+              "toDate": null,
+              "toTime": null
+            },
+            "variablePrice": null
+          },
+          "upsellAks": [],
+          "eventAks": [
+            "GDL.EVN67",
+            "GDL.EVN104"
+          ],
+          "productType": "TICKET",
+          "offers": [
+            "GDL",
+            "FST",
+            "EXP",
+            "ECM",
+            "PRB",
+            "WEXP",
+            "FAST30",
+            "FASTEX30",
+            "CROSS1"
+          ],
+          "timeSpan": null,
+          "extraType": null,
+          "redeem": null,
+          "capacityCode": null,
+          "subProducts": null,
+          "campaignCode": null
+        }
+      ],
+      "redeemableGroups": null
+    }
+  }
+}
